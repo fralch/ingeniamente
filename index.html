@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniamente.com - Ingeniería para todos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 h-screen overflow-hidden flex">
+
+    <!-- Sidebar -->
+    <aside class="w-72 bg-gradient-to-b from-[#1a2f3f] to-[#1e3a4c] text-white flex-col hidden md:flex transition-all duration-300 z-20" id="sidebar">
+        <!-- Logo -->
+        <div class="h-20 flex items-center px-6 border-b border-white/10 mb-2">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-gear text-white text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold block leading-tight">Ingeniamente</span>
+                    <span class="text-xs text-blue-300">Learning Platform</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 px-3 space-y-1 overflow-y-auto no-scrollbar py-4">
+            
+            <div class="px-3 mb-3 mt-2">
+                <h3 class="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Principal</h3>
+            </div>
+            
+            <a href="#" class="nav-item active flex items-center px-4 py-3 gap-3 rounded-lg">
+                <i class="fa-solid fa-home w-5 text-lg"></i>
+                <span class="font-medium">Inicio</span>
+            </a>
+
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-file-lines w-5 text-lg"></i>
+                <span class="font-medium">Entradas</span>
+            </a>
+
+            <div class="px-3 mt-6 mb-3">
+                <h3 class="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Herramientas</h3>
+            </div>
+
+            <!-- Calculators Links -->
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-temperature-half w-5 text-lg"></i>
+                <span class="font-medium">Temperatura</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-ruler w-5 text-lg"></i>
+                <span class="font-medium">Longitud</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-vector-square w-5 text-lg"></i>
+                <span class="font-medium">Área</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-cube w-5 text-lg"></i>
+                <span class="font-medium">Volumen</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-weight-scale w-5 text-lg"></i>
+                <span class="font-medium">Peso</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-gauge-high w-5 text-lg"></i>
+                <span class="font-medium">Velocidad</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-compress w-5 text-lg"></i>
+                <span class="font-medium">Presión</span>
+            </a>
+            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
+                <i class="fa-solid fa-water w-5 text-lg"></i>
+                <span class="font-medium">Flujo</span>
+            </a>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="p-4 border-t border-white/10">
+            <div class="flex items-center gap-3 px-2 py-3 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">U</span>
+                </div>
+                <div class="flex-1">
+                    <div class="text-sm font-medium">Usuario</div>
+                    <div class="text-xs text-gray-400">Ver perfil</div>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical text-gray-400"></i>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-10 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative bg-gray-50">
+        
+        <!-- Header -->
+        <header class="h-16 bg-white header-shadow flex items-center justify-between px-6 shrink-0 z-10">
+            <div class="flex items-center gap-4">
+                <button class="text-gray-600 text-xl md:hidden" onclick="toggleSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="hidden md:block">
+                    <h2 class="text-lg font-bold text-gray-800">Biblioteca de Contenido</h2>
+                    <p class="text-xs text-gray-500">Explora todos nuestros recursos educativos</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors relative">
+                    <i class="fa-solid fa-bell text-gray-600"></i>
+                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <button class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-gear text-gray-600"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto p-6 md:p-8">
+            
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- Hero Section -->
+                <div class="mb-8 fade-in">
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-10 text-white shadow-xl">
+                        <h1 class="text-3xl md:text-4xl font-bold mb-3">Ingeniería para todos</h1>
+                        <p class="text-blue-100 mb-2">¿Qué quieres dominar hoy?</p>
+                        <p class="text-blue-100 mb-6 max-w-2xl">Descubre recursos, tutoriales y herramientas para impulsar tu aprendizaje en ingeniería mecánica y disciplinas relacionadas.</p>
+                        
+                        <div class="search-container max-w-2xl">
+                            <div class="flex bg-white rounded-xl overflow-hidden shadow-lg">
+                                <div class="flex items-center pl-4 pr-2">
+                                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                                </div>
+                                <input type="text" placeholder="Busca por tema, calculadora o concepto..." class="flex-1 px-3 py-4 text-gray-800 focus:outline-none text-sm">
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 transition-colors font-medium">
+                                    Buscar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <button class="filter-button px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                        Todos
+                    </button>
+                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                        Mecánica
+                    </button>
+                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                        Termodinámica
+                    </button>
+                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                        Fluidos
+                    </button>
+                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                        Control
+                    </button>
+                </div>
+
+                <!-- Content Cards Grid -->
+                <div id="content-grid" class="grid md:grid-cols-2 gap-5 mb-8">
+                 
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Proyectos de Ingeniería DIY (do it yourself)</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Son proyectos de construcción, experimentación o invención que puedes llevar a cabo por ti mismo, usando recursos y conocimientos técnicos propios. Este enfoque permite explorar conceptos de ingeniería y ciencias aplicadas mediante proyectos prácticos que puedes desarrollar con materiales accesibles y en el entorno doméstico.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Gestión de Mantenimiento</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Tipos de Mantenimiento aplicados en la industria.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Óleohidraulica</h3>
+                            <span class="category-badge">Fluidos</span>
+                        </div>
+                        <p class="text-sm text-gray-600">La oleohidráulica es una rama fundamental de la mecánica de fluidos aplicadas en la ingeniería moderna. Estas tecnologías han evolucionado y se han integrado en diversas aplicaciones industriales, desde maquinaria pesada hasta sistemas automatizados de producción.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Neumática</h3>
+                            <span class="category-badge">Fluidos</span>
+                        </div>
+                        <p class="text-sm text-gray-600">La neumática se enfoca en el uso de aire comprimido para transmitir y controlar energía.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Turbomáquinas</h3>
+                            <span class="category-badge">Fluidos</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Maquinas generadoras y transferencia de energía, entre las principales: Turbinas, Compresoras y Bombas.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Máquinas de control numérico computarizado</h3>
+                            <span class="category-badge">Control</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Maquinas de producción en serie, que funcionan con un código de programación.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Taller de consultoría en Ingeniería Mecánica</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Herramientas de gestión del Ingeniero Mecánico.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Tribología</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Se centra en el estudio del desgaste por fricción entre componentes, cómo evitarlo, los diferentes tipos de lubricantes, sus aplicaciones y el análisis de aceites.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Elementos de la máquina</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Componentes fundamentales diseñados para transmitir y transformar energía, movimiento y fuerzas dentro de sistemas mecánicos.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Diseño de Maquinas</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Proceso integral que implica la creación, desarrollo y optimización de sistemas y componentes mecánicos para cumplir requisitos de funcionalidad, durabilidad y eficiencia.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Termodinámica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Transferencia de calor y masa</h3>
+                            <span class="category-badge">Termodinámica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Movimiento de energía térmica y de partículas a través de diferentes medios; esencial para el diseño de intercambiadores de calor y reactores químicos.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Mecánica de fluidos</h3>
+                            <span class="category-badge">Fluidos</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Estudia el comportamiento de los fluidos en reposo y movimiento; base para el diseño de tuberías, bombas, compresores y sistemas hidráulicos.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Ingeniería de Control</h3>
+                            <span class="category-badge">Control</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Modelado, análisis y diseño de sistemas de control para gestionar el comportamiento dinámico de sistemas físicos y procesos.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Termodinámica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Termodinámica</h3>
+                            <span class="category-badge">Termodinámica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Estudio de la energía, el calor y el trabajo, y de las leyes que gobiernan las transformaciones energéticas en los sistemas.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Investigación de Operaciones</h3>
+                            <span class="category-badge">Control</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Disciplina que aplica métodos analíticos avanzados para tomar decisiones y optimizar sistemas usando modelos matemáticos y algoritmos.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Mecánica de Materiales</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Estudia el comportamiento de materiales sólidos bajo cargas, esencial para el diseño y análisis de estructuras y componentes.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Ingeniería Eléctrica</h3>
+                            <span class="category-badge">Control</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Estudio y aplicación de la electricidad, la electrónica y el electromagnetismo para el diseño y operación de sistemas eléctricos y electrónicos.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Estática</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Estudio de los cuerpos en equilibrio, esencial para analizar y diseñar estructuras que no deben moverse bajo fuerzas aplicadas.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Dinámica</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Estudio del movimiento de los cuerpos y las fuerzas que lo producen; clave para sistemas en movimiento desde mecanismos simples hasta automotrices.</p>
+                    </a>
+                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-gray-800">Física</h3>
+                            <span class="category-badge">Mecánica</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Ciencia que estudia la naturaleza y las propiedades de la materia y la energía; base de mecánica, termodinámica, electricidad y magnetismo, y óptica.</p>
+                    </a>
+                </div>
+
+            
+
+                <!-- Footer -->
+                <footer class="mt-12 pt-8 border-t border-gray-200 text-center">
+                    <div class="flex items-center justify-center gap-6 mb-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Acerca de</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Contacto</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Términos</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Privacidad</a>
+                    </div>
+                    <p class="text-gray-500 text-sm">&copy; 2.5 Ingeniamente.com - Todos los derechos reservados</p>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
