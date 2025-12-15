@@ -3,333 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingeniamente.com - Ingeniería para todos</title>
+    <title>Ingeniamente.com - Ingeniería Premium</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 h-screen overflow-hidden flex">
+<body class="bg-slate-50 text-slate-800 h-screen overflow-hidden flex selection:bg-blue-500 selection:text-white">
 
-    <!-- Sidebar -->
-    <aside class="w-72 bg-gradient-to-b from-[#1a2f3f] to-[#1e3a4c] text-white flex-col hidden md:flex transition-all duration-300 z-20" id="sidebar">
-        <!-- Logo -->
-        <div class="h-20 flex items-center px-6 border-b border-white/10 mb-2">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <i class="fa-solid fa-gear text-white text-lg"></i>
-                </div>
-                <div>
-                    <span class="text-xl font-bold block leading-tight">Ingeniamente</span>
-                    <span class="text-xs text-blue-300">Learning Platform</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="flex-1 px-3 space-y-1 overflow-y-auto no-scrollbar py-4">
-            
-            <div class="px-3 mb-3 mt-2">
-                <h3 class="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Principal</h3>
-            </div>
-            
-            <a href="#" class="nav-item active flex items-center px-4 py-3 gap-3 rounded-lg">
-                <i class="fa-solid fa-home w-5 text-lg"></i>
-                <span class="font-medium">Inicio</span>
-            </a>
-
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-file-lines w-5 text-lg"></i>
-                <span class="font-medium">Entradas</span>
-            </a>
-
-            <div class="px-3 mt-6 mb-3">
-                <h3 class="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Herramientas</h3>
-            </div>
-
-            <!-- Calculators Links -->
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-temperature-half w-5 text-lg"></i>
-                <span class="font-medium">Temperatura</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-ruler w-5 text-lg"></i>
-                <span class="font-medium">Longitud</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-vector-square w-5 text-lg"></i>
-                <span class="font-medium">Área</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-cube w-5 text-lg"></i>
-                <span class="font-medium">Volumen</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-weight-scale w-5 text-lg"></i>
-                <span class="font-medium">Peso</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-gauge-high w-5 text-lg"></i>
-                <span class="font-medium">Velocidad</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-compress w-5 text-lg"></i>
-                <span class="font-medium">Presión</span>
-            </a>
-            <a href="#" class="nav-item flex items-center px-4 py-3 gap-3 text-gray-300 rounded-lg">
-                <i class="fa-solid fa-water w-5 text-lg"></i>
-                <span class="font-medium">Flujo</span>
-            </a>
-        </nav>
-
-        <!-- User Profile -->
-        <div class="p-4 border-t border-white/10">
-            <div class="flex items-center gap-3 px-2 py-3 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
-                <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-                    <span class="text-white font-bold text-sm">U</span>
-                </div>
-                <div class="flex-1">
-                    <div class="text-sm font-medium">Usuario</div>
-                    <div class="text-xs text-gray-400">Ver perfil</div>
-                </div>
-                <i class="fa-solid fa-ellipsis-vertical text-gray-400"></i>
-            </div>
-        </div>
-    </aside>
+    <!-- Sidebar Container -->
+    <div id="sidebar-container" class="fixed inset-y-0 left-0 z-50 w-72 h-full transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none"></div>
 
     <!-- Mobile Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-10 hidden md:hidden" onclick="toggleSidebar()"></div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden md:hidden opacity-0 transition-opacity duration-300" onclick="toggleSidebar()"></div>
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col h-screen overflow-hidden relative bg-gray-50">
-        
-        <!-- Header -->
-        <header class="h-16 bg-white header-shadow flex items-center justify-between px-6 shrink-0 z-10">
-            <div class="flex items-center gap-4">
-                <button class="text-gray-600 text-xl md:hidden" onclick="toggleSidebar()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <div class="hidden md:block">
-                    <h2 class="text-lg font-bold text-gray-800">Biblioteca de Contenido</h2>
-                    <p class="text-xs text-gray-500">Explora todos nuestros recursos educativos</p>
-                </div>
-            </div>
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative z-0">
+        <!-- Background Blobs -->
+        <div class="blob -top-20 -right-20 opacity-50"></div>
+        <div class="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
 
-            <div class="flex items-center gap-3">
-                <button class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors relative">
-                    <i class="fa-solid fa-bell text-gray-600"></i>
-                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-                </button>
-                <button class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
-                    <i class="fa-solid fa-gear text-gray-600"></i>
-                </button>
-            </div>
-        </header>
+        <!-- Header Container -->
+        <div id="header-container" class="sticky top-0 z-40"></div>
 
         <!-- Scrollable Content -->
-        <div class="flex-1 overflow-y-auto p-6 md:p-8">
+        <div class="flex-1 overflow-y-auto px-4 py-8 md:p-8 relative z-10 scroll-smooth">
             
-            <div class="max-w-6xl mx-auto">
+            <div class="max-w-7xl mx-auto">
                 
                 <!-- Hero Section -->
-                <div class="mb-8 fade-in">
-                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-10 text-white shadow-xl">
-                        <h1 class="text-3xl md:text-4xl font-bold mb-3">Ingeniería para todos</h1>
-                        <p class="text-blue-100 mb-2">¿Qué quieres dominar hoy?</p>
-                        <p class="text-blue-100 mb-6 max-w-2xl">Descubre recursos, tutoriales y herramientas para impulsar tu aprendizaje en ingeniería mecánica y disciplinas relacionadas.</p>
+                <div class="mb-10 fade-in">
+                    <div class="bg-gradient-to-br from-[#2563eb] via-[#4f46e5] to-[#7c3aed] rounded-3xl p-8 md:p-12 text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden">
+                        <!-- Decorative Content -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                        <div class="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full blur-2xl -ml-10 -mb-10"></div>
                         
-                        <div class="search-container max-w-2xl">
-                            <div class="flex bg-white rounded-xl overflow-hidden shadow-lg">
-                                <div class="flex items-center pl-4 pr-2">
-                                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                        <div class="relative z-10">
+                            
+                            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Ingeniería para el <br class="hidden md:block">Futuro</h1>
+                            <p class="text-blue-100 mb-8 max-w-2xl text-lg font-light leading-relaxed">Domina conceptos complejos con herramientas simples. Explora nuestra biblioteca de recursos, simuladores y calculadoras.</p>
+                            
+                            <div class="search-container max-w-2xl">
+                                <div class="flex bg-white p-1.5 rounded-2xl shadow-xl transition-transform focus-within:scale-[1.01] duration-300">
+                                    <div class="flex items-center pl-4 pr-3 text-slate-400">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <input type="text" placeholder="¿Qué quieres aprender hoy?" class="flex-1 py-3 text-slate-800 focus:outline-none text-base placeholder-slate-400 bg-transparent font-medium">
+                                    <button class="bg-slate-900 hover:bg-slate-800 text-white px-8 rounded-xl transition-all duration-300 font-semibold shadow-lg shadow-slate-900/20">
+                                        Buscar
+                                    </button>
                                 </div>
-                                <input type="text" placeholder="Busca por tema, calculadora o concepto..." class="flex-1 px-3 py-4 text-gray-800 focus:outline-none text-sm">
-                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 transition-colors font-medium">
-                                    Buscar
-                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-               
-
                 <!-- Filters -->
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <button class="filter-button px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <button class="filter-button px-5 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
                         Todos
                     </button>
-                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                    <button class="filter-button px-5 py-2.5 bg-white text-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 transition-all border border-slate-200 hover:border-slate-300 hover:shadow-md">
                         Mecánica
                     </button>
-                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                    <button class="filter-button px-5 py-2.5 bg-white text-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 transition-all border border-slate-200 hover:border-slate-300 hover:shadow-md">
                         Termodinámica
                     </button>
-                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                    <button class="filter-button px-5 py-2.5 bg-white text-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 transition-all border border-slate-200 hover:border-slate-300 hover:shadow-md">
                         Fluidos
                     </button>
-                    <button class="filter-button px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-200">
+                    <button class="filter-button px-5 py-2.5 bg-white text-slate-600 rounded-xl text-sm font-medium hover:bg-slate-50 transition-all border border-slate-200 hover:border-slate-300 hover:shadow-md">
                         Control
                     </button>
                 </div>
 
                 <!-- Content Cards Grid -->
-                <div id="content-grid" class="grid md:grid-cols-2 gap-5 mb-8">
+                <!-- Hardcoded Content as requested -->
+                <div id="content-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                  
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Proyectos de Ingeniería DIY (do it yourself)</h3>
-                            <span class="category-badge">Mecánica</span>
+                    <!-- 1. Proyectos DIY -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-wrench text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
                         </div>
-                        <p class="text-sm text-gray-600">Son proyectos de construcción, experimentación o invención que puedes llevar a cabo por ti mismo, usando recursos y conocimientos técnicos propios. Este enfoque permite explorar conceptos de ingeniería y ciencias aplicadas mediante proyectos prácticos que puedes desarrollar con materiales accesibles y en el entorno doméstico.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Gestión de Mantenimiento</h3>
-                            <span class="category-badge">Mecánica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Proyectos de Ingeniería DIY</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Proyectos de construcción, experimentación o invención que puedes llevar a cabo por ti mismo, usando recursos propios.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Ver proyectos <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Tipos de Mantenimiento aplicados en la industria.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Óleohidraulica</h3>
-                            <span class="category-badge">Fluidos</span>
+
+                    <!-- 2. Gestión de Mantenimiento -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-clipboard-check text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-amber-50 text-amber-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
                         </div>
-                        <p class="text-sm text-gray-600">La oleohidráulica es una rama fundamental de la mecánica de fluidos aplicadas en la ingeniería moderna. Estas tecnologías han evolucionado y se han integrado en diversas aplicaciones industriales, desde maquinaria pesada hasta sistemas automatizados de producción.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Neumática</h3>
-                            <span class="category-badge">Fluidos</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Gestión de Mantenimiento</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Tipos de Mantenimiento aplicados en la industria para asegurar la operatividad.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Leer más <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">La neumática se enfoca en el uso de aire comprimido para transmitir y controlar energía.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Turbomáquinas</h3>
-                            <span class="category-badge">Fluidos</span>
+
+                    <!-- 3. Óleohidraulica -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-oil-can text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-cyan-50 text-cyan-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Fluidos</span>
                         </div>
-                        <p class="text-sm text-gray-600">Maquinas generadoras y transferencia de energía, entre las principales: Turbinas, Compresoras y Bombas.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Máquinas de control numérico computarizado</h3>
-                            <span class="category-badge">Control</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Óleohidraulica</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Rama fundamental de la mecánica de fluidos aplicada en maquinaria pesada y sistemas automatizados.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Maquinas de producción en serie, que funcionan con un código de programación.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Taller de consultoría en Ingeniería Mecánica</h3>
-                            <span class="category-badge">Mecánica</span>
+
+                    <!-- 4. Neumática -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-sky-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-wind text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-sky-50 text-sky-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Fluidos</span>
                         </div>
-                        <p class="text-sm text-gray-600">Herramientas de gestión del Ingeniero Mecánico.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Tribología</h3>
-                            <span class="category-badge">Mecánica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Neumática</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Uso de aire comprimido para transmitir y controlar energía en sistemas industriales.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Se centra en el estudio del desgaste por fricción entre componentes, cómo evitarlo, los diferentes tipos de lubricantes, sus aplicaciones y el análisis de aceites.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Elementos de la máquina</h3>
-                            <span class="category-badge">Mecánica</span>
+
+                    <!-- 5. Turbomáquinas -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-fan text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Fluidos</span>
                         </div>
-                        <p class="text-sm text-gray-600">Componentes fundamentales diseñados para transmitir y transformar energía, movimiento y fuerzas dentro de sistemas mecánicos.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Diseño de Maquinas</h3>
-                            <span class="category-badge">Mecánica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Turbomáquinas</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Máquinas generadoras y de transferencia de energía: Turbinas, Compresoras y Bombas.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Proceso integral que implica la creación, desarrollo y optimización de sistemas y componentes mecánicos para cumplir requisitos de funcionalidad, durabilidad y eficiencia.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Termodinámica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Transferencia de calor y masa</h3>
-                            <span class="category-badge">Termodinámica</span>
+
+                    <!-- 6. Control CNC -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-computer-mouse text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Control</span>
                         </div>
-                        <p class="text-sm text-gray-600">Movimiento de energía térmica y de partículas a través de diferentes medios; esencial para el diseño de intercambiadores de calor y reactores químicos.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Fluidos">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Mecánica de fluidos</h3>
-                            <span class="category-badge">Fluidos</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Control CNC</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Máquinas de control numérico computarizado para producción en serie mediante código.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Estudia el comportamiento de los fluidos en reposo y movimiento; base para el diseño de tuberías, bombas, compresores y sistemas hidráulicos.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Ingeniería de Control</h3>
-                            <span class="category-badge">Control</span>
+
+                    <!-- 7. Consultoría -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-briefcase text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
                         </div>
-                        <p class="text-sm text-gray-600">Modelado, análisis y diseño de sistemas de control para gestionar el comportamiento dinámico de sistemas físicos y procesos.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Termodinámica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Termodinámica</h3>
-                            <span class="category-badge">Termodinámica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Taller de Consultoría</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Herramientas y metodologías de gestión para el Ingeniero Mecánico.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Ver taller <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Estudio de la energía, el calor y el trabajo, y de las leyes que gobiernan las transformaciones energéticas en los sistemas.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Investigación de Operaciones</h3>
-                            <span class="category-badge">Control</span>
+
+                    <!-- 8. Tribología -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-droplet text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
                         </div>
-                        <p class="text-sm text-gray-600">Disciplina que aplica métodos analíticos avanzados para tomar decisiones y optimizar sistemas usando modelos matemáticos y algoritmos.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Mecánica de Materiales</h3>
-                            <span class="category-badge">Mecánica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Tribología</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Estudio del desgaste por fricción, lubricantes y su aplicación y análisis de aceites.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Aprender <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Estudia el comportamiento de materiales sólidos bajo cargas, esencial para el diseño y análisis de estructuras y componentes.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Control">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Ingeniería Eléctrica</h3>
-                            <span class="category-badge">Control</span>
+
+                    <!-- 9. Elementos de máquina -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-cogs text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-orange-50 text-orange-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
                         </div>
-                        <p class="text-sm text-gray-600">Estudio y aplicación de la electricidad, la electrónica y el electromagnetismo para el diseño y operación de sistemas eléctricos y electrónicos.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Estática</h3>
-                            <span class="category-badge">Mecánica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Elementos de Máquina</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Componentes diseñados para transmitir y transformar energía y movimiento.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Estudio de los cuerpos en equilibrio, esencial para analizar y diseñar estructuras que no deben moverse bajo fuerzas aplicadas.</p>
                     </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Dinámica</h3>
-                            <span class="category-badge">Mecánica</span>
+
+                    <!-- 10. Diseño de Maquinas -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-pen-ruler text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
                         </div>
-                        <p class="text-sm text-gray-600">Estudio del movimiento de los cuerpos y las fuerzas que lo producen; clave para sistemas en movimiento desde mecanismos simples hasta automotrices.</p>
-                    </a>
-                    <a href="#" class="card bg-white rounded-xl p-5 shadow-sm block fade-in" data-category="Mecánica">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-lg font-semibold text-gray-800">Física</h3>
-                            <span class="category-badge">Mecánica</span>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Diseño de Máquinas</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Creación, desarrollo y optimización de sistemas mecánicos para cumplir requisitos de eficiencia.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Ver más <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Ciencia que estudia la naturaleza y las propiedades de la materia y la energía; base de mecánica, termodinámica, electricidad y magnetismo, y óptica.</p>
                     </a>
+
+                    <!-- 11. Transferencia de calor y masa -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Termodinámica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-fire text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-red-50 text-red-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Termodinámica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Transferencia de Calor</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Movimiento de energía térmica y partículas. Esencial para intercambiadores y reactores.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 12. Mecánica de fluidos -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Fluidos">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-water text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-cyan-50 text-cyan-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Fluidos</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Mecánica de Fluidos</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Estudio del comportamiento de fluidos; base para el diseño de tuberías y sistemas hidráulicos.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 13. Ingeniería de Control -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-violet-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-sliders text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-violet-50 text-violet-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Control</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Ingeniería de Control</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Modelado y diseño de sistemas para gestionar el comportamiento dinámico de procesos físicos.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Ver temas <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 14. Termodinámica -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Termodinámica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-temperature-three-quarters text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Termodinámica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Termodinámica</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Estudio de la energía, el calor, el trabajo y las leyes de transformación energética.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Aprender <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 15. Investigación de Operaciones -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center text-fuchsia-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-chart-line text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-fuchsia-50 text-fuchsia-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Control</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Investigación de Operaciones</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Métodos analíticos avanzados para optimizar sistemas y tomar decisiones complejas.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 16. Mecánica de Materiales -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-stone-100 rounded-xl flex items-center justify-center text-stone-600 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-layer-group text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-stone-100 text-stone-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Mecánica de Materiales</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Comportamiento de los sólidos bajo cargas, deformaciones y tensiones.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Aprender <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 17. Ingeniería Eléctrica -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Control">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-bolt text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-yellow-50 text-yellow-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Control</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Ingeniería Eléctrica</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Electricidad, electrónica y electromagnetismo aplicados a sistemas industriales.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Ver más <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 18. Estática -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center text-zinc-600 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-archway text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-zinc-100 text-zinc-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Estática</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Estudio de cuerpos en equilibrio; esencial para el diseño de estructuras estables.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Aprender <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 19. Dinámica -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-lime-50 rounded-xl flex items-center justify-center text-lime-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-person-running text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-lime-50 text-lime-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Dinámica</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Estudio del movimiento de cuerpos y las fuerzas que lo producen.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Explorar <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- 20. Física -->
+                    <a href="#" class="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col h-full fade-in" data-category="Mecánica">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-500 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-atom text-xl"></i>
+                            </div>
+                            <span class="category-badge bg-teal-50 text-teal-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide">Mecánica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Física</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-1">Ciencia fundamental de la materia y la energía; base de toda ingeniería.</p>
+                        <div class="flex items-center text-blue-600 text-sm font-semibold mt-auto">
+                            Ver más <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
                 </div>
 
-            
+                <!-- Footer Container -->
+                <div id="footer-container"></div>
 
-                <!-- Footer -->
-                <footer class="mt-12 pt-8 border-t border-gray-200 text-center">
-                    <div class="flex items-center justify-center gap-6 mb-4">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Acerca de</a>
-                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Contacto</a>
-                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Términos</a>
-                        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm">Privacidad</a>
-                    </div>
-                    <p class="text-gray-500 text-sm">&copy; 2.5 Ingeniamente.com - Todos los derechos reservados</p>
-                </footer>
             </div>
         </div>
     </main>
