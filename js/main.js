@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     ]).then(() => {
         // Initialize logic that depends on loaded components
         highlightActiveLink();
+
+        // Auto-collapse Entradas dropdown after delay
+        setTimeout(() => {
+            const dropdown = document.getElementById('entradas-dropdown');
+            const button = dropdown?.previousElementSibling;
+            if (dropdown && button) {
+                toggleDropdown('entradas-dropdown', button);
+            }
+        }, 2000);
     });
 
     // Initialize Filters
