@@ -120,3 +120,16 @@ function initializeFilters() {
         });
     });
 }
+
+// Toggle Dropdown
+window.toggleDropdown = function (id, button) {
+    const dropdown = document.getElementById(id);
+    const arrow = button.querySelector('.fa-chevron-down');
+
+    if (dropdown) {
+        dropdown.classList.toggle('hidden');
+        if (arrow) {
+            arrow.classList.toggle('rotate-180');
+        }
+    }
+};
