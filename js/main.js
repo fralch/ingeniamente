@@ -1,10 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    const basePath = window.appBasePath || '';
+
     // Load Components
     Promise.all([
-        loadComponent('sidebar-container', 'components/sidebar.html'),
-        loadComponent('header-container', 'components/header.html'),
-        loadComponent('footer-container', 'components/footer.html')
+        loadComponent('sidebar-container', basePath + 'components/sidebar.html'),
+        loadComponent('header-container', basePath + 'components/header.html'),
+        loadComponent('footer-container', basePath + 'components/footer.html')
     ]).then(() => {
         // Initialize logic that depends on loaded components
         highlightActiveLink();
