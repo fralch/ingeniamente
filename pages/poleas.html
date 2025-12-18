@@ -59,6 +59,16 @@
                     <p class="text-lg text-slate-600 leading-relaxed">
                         Una polea es un dispositivo mecánico simple que consiste en una rueda, generalmente circular, que gira alrededor de un eje. La rueda tiene un canal periférico o ranura, conocido como garganta, por donde pasa una cuerda, correa, cadena o el elemento de transmisión.
                     </p>
+                    <!-- Imagen con mejor UX: skeleton + fade-in + alt descriptivo -->
+                    <figure class="relative w-full h-auto rounded-2xl overflow-hidden bg-slate-200" id="img-wrapper">
+                        <img
+                            src="../asset/poleas.jpg"
+                            alt="Conjunto de poleas metálicas en un sistema de grúa industrial"
+                            class="w-full h-auto object-contain opacity-0 transition-opacity duration-700 ease-in-out"
+                            onload="this.classList.remove('opacity-0')"
+                            loading="lazy"
+                        >
+                    </figure>
                 </div>
 
                 <!-- Componentes Principales -->
