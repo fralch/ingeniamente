@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]).then(() => {
         // Initialize logic that depends on loaded components
         highlightActiveLink();
+        updateSidebarLinks(basePath);
 
         // Auto-collapse Entradas dropdown after delay
         setTimeout(() => {
@@ -144,3 +145,20 @@ window.toggleDropdown = function (id, button) {
         }
     }
 };
+
+// Update Sidebar Links based on basePath
+function updateSidebarLinks(basePath) {
+    if (!basePath) return;
+
+    const sidebar = document.getElementById('sidebar-container');
+    if (!sidebar) return;
+
+    const links = sidebar.querySelectorAll('a');
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        // Only update relative paths that are not anchors or absolute URLs
+        if (href && href !== '#' && !href.startsWith('http') && !href.startsWith('//') && !href.startsWith('#')) {
+            link.setAttribute('href', basePath + href);
+        }
+    });
+}
