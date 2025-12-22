@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen overflow-hidden flex selection:bg-blue-500 selection:text-white">
+
+    <!-- Sidebar Container -->
+    <div id="sidebar-container" class="fixed inset-y-0 left-0 z-50 w-72 h-full transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none">
+        <%- include('partials/sidebar') %>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden md:hidden opacity-0 transition-opacity duration-300" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative z-0">
+        <!-- Background Blobs -->
+        <div class="blob -top-20 -right-20 opacity-50"></div>
+        <div class="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
+
+        <!-- Header Container -->
+        <div id="header-container" class="sticky top-0 z-40">
+            <%- include('partials/header') %>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-4 py-8 md:p-8 relative z-10 scroll-smooth">
+            
+            <div class="max-w-[98%] mx-auto">
+                <div class="mb-8 flex items-center justify-between">
+                    <h1 class="text-3xl font-bold text-slate-900">Panel de Administración</h1>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Admin Mode</span>
+                </div>
+
+                <div class="grid lg:grid-cols-4 gap-8">
+                    <!-- Formulario de Creación -->
+                    <div class="lg:col-span-3">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+                            <h2 class="text-xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-plus-circle text-blue-600"></i> Nueva Página
+                            </h2>
+                            
+                            <form action="/admin/create" method="POST" class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">Título de la Página</label>
+                                    <input type="text" name="title" id="titleInput" required placeholder="Ej: Introducción a la Termodinámica" 
+                                           class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-medium">
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Slug (URL)</label>
+                                        <input type="text" name="slug" id="slugInput" required placeholder="ej: intro-termodinamica" 
+                                               class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-medium text-slate-600">
+                                        <p class="text-xs text-slate-400 mt-1">La dirección web será: /p/<b>tu-slug</b></p>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Categoría</label>
+                                        <select name="category" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-medium text-slate-600">
+                                            <option value="General">General</option>
+                                            <option value="Mecánica">Mecánica</option>
+                                            <option value="Termodinámica">Termodinámica</option>
+                                            <option value="Fluidos">Fluidos</option>
+                                            <option value="Control">Control</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">Contenido de la Página</label>
+                                    <textarea id="contentEditor" name="content" rows="12" placeholder="Escribe tu contenido aquí..." 
+                                              class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-mono text-sm leading-relaxed"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl shadow-xl shadow-slate-900/20 transition-all hover:scale-[1.01] active:scale-[0.99]">
+                                    Publicar Página
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Lista de Páginas -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 sticky top-24">
+                            <h2 class="text-xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group text-blue-600"></i> Páginas Existentes
+                            </h2>
+                            
+                            <div class="space-y-3 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+                                <% if (pages && pages.length > 0) { %>
+                                    <% pages.forEach(function(p) { %>
+                                        <a href="/p/<%= p.slug %>" target="_blank" class="block p-4 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-200 transition-all group">
+                                            <h3 class="font-bold text-slate-700 group-hover:text-blue-700 text-sm mb-1 truncate"><%= p.title %></h3>
+                                            <div class="flex items-center justify-between text-xs">
+                                                <span class="text-slate-500 font-mono">/<%= p.slug %></span>
+                                                <span class="px-2 py-0.5 bg-white rounded-md shadow-sm text-slate-400 group-hover:text-blue-500"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                            </div>
+                                        </a>
+                                    <% }); %>
+                                <% } else { %>
+                                    <div class="text-center py-8 text-slate-400">
+                                        <i class="fa-regular fa-folder-open text-2xl mb-2"></i>
+                                        <p class="text-sm">No hay páginas creadas aún.</p>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="footer-container">
+                <%- include('partials/footer') %>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js"></script>
+    <script>
+        // Templates para el editor
+        const templates = [
+            {
+                title: 'Fundamentos (Grid 2 Columnas)',
+                description: 'Sección con tarjetas en grid de 2 columnas',
+                content: `
+                    <div class="mb-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="bg-blue-100 text-blue-700 w-8 h-8 flex items-center justify-center rounded-lg font-bold text-sm">1</span>
+                            <h3 class="text-xl font-bold text-slate-800">Fundamentos del Mantenimiento</h3>
+                        </div>
+                        
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <p class="text-slate-600 leading-relaxed mb-6">Introducción al tema...</p>
+                            
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <!-- Tarjeta 1 -->
+                                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4">
+                                    <div class="w-10 h-10 shrink-0 bg-red-100 text-red-500 rounded-lg flex items-center justify-center">
+                                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm mb-1">Reparación</h4>
+                                        <p class="text-xs text-slate-500 leading-relaxed">Acciones realizadas después de producirse una avería.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tarjeta 2 -->
+                                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4">
+                                    <div class="w-10 h-10 shrink-0 bg-orange-100 text-orange-500 rounded-lg flex items-center justify-center">
+                                        <i class="fa-solid fa-rotate"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm mb-1">Restauración</h4>
+                                        <p class="text-xs text-slate-500 leading-relaxed">Volver al estado operativo normal rápidamente.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Tarjeta 3 -->
+                                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4">
+                                    <div class="w-10 h-10 shrink-0 bg-purple-100 text-purple-500 rounded-lg flex items-center justify-center">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm mb-1">Evaluación</h4>
+                                        <p class="text-xs text-slate-500 leading-relaxed">Identificar la raíz del problema.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Tarjeta 4 -->
+                                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4">
+                                    <div class="w-10 h-10 shrink-0 bg-blue-100 text-blue-500 rounded-lg flex items-center justify-center">
+                                        <i class="fa-solid fa-clipboard-list"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm mb-1">Documentación</h4>
+                                        <p class="text-xs text-slate-500 leading-relaxed">Registros detallados para gestión futura.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: 'Tipos de Mantenimiento (Cajas de Color)',
+                description: 'Comparativa entre Planificado y No Planificado',
+                content: `
+                    <div class="mb-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="bg-blue-100 text-blue-700 w-8 h-8 flex items-center justify-center rounded-lg font-bold text-sm">2</span>
+                            <h3 class="text-xl font-bold text-slate-800">Tipos de Mantenimiento</h3>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Caja Amarilla -->
+                            <div class="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
+                                <div class="flex items-center gap-2 mb-3 text-yellow-700 font-bold">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <h4>Planificado</h4>
+                                </div>
+                                <p class="text-sm text-yellow-800 leading-relaxed">Se lleva a cabo cuando se detecta un problema incipiente y se programa una intervención.</p>
+                            </div>
+
+                            <!-- Caja Roja -->
+                            <div class="bg-red-50 p-6 rounded-2xl border border-red-100">
+                                <div class="flex items-center gap-2 mb-3 text-red-700 font-bold">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <h4>No Planificado</h4>
+                                </div>
+                                <p class="text-sm text-red-800 leading-relaxed">Se realiza en respuesta a fallas inesperadas y urgentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: 'Técnicas (Lista Vertical con Iconos)',
+                description: 'Lista de pasos o técnicas',
+                content: `
+                    <div class="mb-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="bg-blue-100 text-blue-700 w-8 h-8 flex items-center justify-center rounded-lg font-bold text-sm">3</span>
+                            <h3 class="text-xl font-bold text-slate-800">Técnicas de Mantenimiento</h3>
+                        </div>
+
+                        <div class="bg-white border border-slate-100 rounded-2xl divide-y divide-slate-100">
+                            <!-- Item 1 -->
+                            <div class="p-6 flex gap-4">
+                                <div class="text-blue-500 mt-1"><i class="fa-solid fa-stethoscope"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Diagnóstico de Fallas</h4>
+                                    <p class="text-sm text-slate-500 mt-1">Uso de herramientas como análisis de vibraciones.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="p-6 flex gap-4">
+                                <div class="text-blue-500 mt-1"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Reparación y Reemplazo</h4>
+                                    <p class="text-sm text-slate-500 mt-1">Intervención directa para reparar componentes.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="p-6 flex gap-4">
+                                <div class="text-blue-500 mt-1"><i class="fa-solid fa-check-double"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Pruebas y Validación</h4>
+                                    <p class="text-sm text-slate-500 mt-1">Asegurar que el equipo funcione correctamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: 'Beneficios y Desafíos (2 Columnas)',
+                description: 'Lista de Pros y Contras',
+                content: `
+                    <div class="mb-12">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="bg-blue-100 text-blue-700 w-8 h-8 flex items-center justify-center rounded-lg font-bold text-sm">4</span>
+                            <h3 class="text-xl font-bold text-slate-800">Beneficios y Desafíos</h3>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Beneficios -->
+                            <div>
+                                <h4 class="text-green-600 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-thumbs-up"></i> Beneficios</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-green-50 p-3 rounded-lg flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-green-600 mt-1 text-xs"></i>
+                                        <p class="text-sm text-green-900"><strong>Respuesta Inmediata:</strong> Minimiza impacto de fallas.</p>
+                                    </div>
+                                    <div class="bg-green-50 p-3 rounded-lg flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-green-600 mt-1 text-xs"></i>
+                                        <p class="text-sm text-green-900"><strong>Flexibilidad:</strong> No requiere planificación rigurosa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desafíos -->
+                            <div>
+                                <h4 class="text-red-600 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-thumbs-down"></i> Desafíos</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-red-50 p-3 rounded-lg flex items-start gap-3">
+                                        <i class="fa-solid fa-xmark text-red-600 mt-1 text-xs"></i>
+                                        <p class="text-sm text-red-900"><strong>Interrupciones:</strong> Paradas no planificadas.</p>
+                                    </div>
+                                    <div class="bg-red-50 p-3 rounded-lg flex items-start gap-3">
+                                        <i class="fa-solid fa-xmark text-red-600 mt-1 text-xs"></i>
+                                        <p class="text-sm text-red-900"><strong>Costos:</strong> Mayores costos a largo plazo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        ];
+
+        tinymce.init({
+            selector: '#contentEditor',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount code help fullscreen preview template',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat | template insertIcon code',
+            menubar: 'file edit view insert format tools table help',
+            templates: templates,
+            content_css: [
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+                'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap',
+                'https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css'
+            ],
+            font_family_formats: 'Inter=Inter,sans-serif; Outfit=Outfit,sans-serif; Arial=arial,helvetica,sans-serif; Courier New=courier new,courier,monospace',
+            extended_valid_elements: 'i[class|style],span[class|style],div[class|style]',
+            valid_children: '+body[style]',
+            height: 600,
+            branding: false,
+            promotion: false,
+            block_formats: 'Párrafo=p;Título 1=h1;Título 2=h2;Título 3=h3;Título 4=h4;Código=pre',
+            setup: function(editor) {
+                
+                // Botón personalizado para insertar iconos
+                editor.ui.registry.addButton('insertIcon', {
+                    text: 'Icono',
+                    icon: 'star-filled',
+                    tooltip: 'Insertar Icono FontAwesome',
+                    onAction: function (_) {
+                        const icons = [
+                            { class: 'fa-solid fa-screwdriver-wrench', label: 'Herramientas/Mantenimiento' },
+                            { class: 'fa-solid fa-gear', label: 'Engranaje/Config' },
+                            { class: 'fa-solid fa-lightbulb', label: 'Idea/Concepto' },
+                            { class: 'fa-solid fa-circle-exclamation', label: 'Alerta/Importante' },
+                            { class: 'fa-solid fa-check', label: 'Check/Correcto' },
+                            { class: 'fa-solid fa-xmark', label: 'Cruz/Error' },
+                            { class: 'fa-solid fa-magnifying-glass', label: 'Buscar/Análisis' },
+                            { class: 'fa-solid fa-chart-line', label: 'Gráfico/Tendencia' },
+                            { class: 'fa-solid fa-clipboard-list', label: 'Lista/Registro' },
+                            { class: 'fa-solid fa-calendar-days', label: 'Calendario/Planificación' },
+                            { class: 'fa-solid fa-rotate', label: 'Ciclo/Recurrente' },
+                            { class: 'fa-solid fa-industry', label: 'Industria' },
+                            { class: 'fa-solid fa-bolt', label: 'Energía' },
+                            { class: 'fa-solid fa-truck', label: 'Transporte' },
+                            { class: 'fa-solid fa-file-pdf', label: 'Documento' }
+                        ];
+
+                        const dialogConfig = {
+                            title: 'Insertar Icono',
+                            body: {
+                                type: 'panel',
+                                items: [
+                                    {
+                                        type: 'selectbox',
+                                        name: 'iconClass',
+                                        label: 'Selecciona un icono',
+                                        items: icons.map(i => ({ text: i.label, value: i.class }))
+                                    },
+                                    {
+                                        type: 'selectbox',
+                                        name: 'iconColor',
+                                        label: 'Color del Icono',
+                                        items: [
+                                            { text: 'Normal (Gris)', value: 'text-slate-600' },
+                                            { text: 'Azul', value: 'text-blue-600' },
+                                            { text: 'Rojo', value: 'text-red-500' },
+                                            { text: 'Verde', value: 'text-green-600' },
+                                            { text: 'Morado', value: 'text-purple-600' },
+                                            { text: 'Naranja', value: 'text-orange-500' }
+                                        ]
+                                    },
+                                    {
+                                        type: 'selectbox',
+                                        name: 'iconSize',
+                                        label: 'Tamaño',
+                                        items: [
+                                            { text: 'Normal', value: '' },
+                                            { text: 'Grande (lg)', value: 'text-lg' },
+                                            { text: 'Muy Grande (xl)', value: 'text-xl' },
+                                            { text: '2x', value: 'text-2xl' }
+                                        ]
+                                    }
+                                ]
+                            },
+                            buttons: [
+                                {
+                                    type: 'cancel',
+                                    text: 'Cancelar'
+                                },
+                                {
+                                    type: 'submit',
+                                    text: 'Insertar',
+                                    primary: true
+                                }
+                            ],
+                            onSubmit: function (api) {
+                                const data = api.getData();
+                                const content = `<i class="${data.iconClass} ${data.iconColor} ${data.iconSize} mr-2"></i> `;
+                                editor.insertContent(content);
+                                api.close();
+                            }
+                        };
+
+                        editor.windowManager.open(dialogConfig);
+                    }
+                });
+
+                editor.on('init', function() {
+                    // Editor inicializado
+                });
+            }
+        });
+
+        // Auto-generate slug from title
+        const titleInput = document.getElementById('titleInput');
+        const slugInput = document.getElementById('slugInput');
+
+        titleInput.addEventListener('input', function() {
+            const val = this.value;
+            const slug = val.toLowerCase()
+                .trim()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/[\s_-]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+            slugInput.value = slug;
+        });
+    </script>
+</body>
+</html>

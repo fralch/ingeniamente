@@ -21,6 +21,11 @@ async function loadComponent(elementId, filePath) {
     const container = document.getElementById(elementId);
     if (!container) return;
 
+    // Skip if content is already present (Server Side Rendered)
+    if (container.children.length > 0 || container.textContent.trim().length > 0) {
+        return;
+    }
+
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
