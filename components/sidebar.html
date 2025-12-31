@@ -62,38 +62,191 @@
 
         <!-- Calculators Links -->
         <div class="space-y-1">
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-temperature-three-quarters w-6 text-center text-slate-500 group-hover:text-emerald-400 transition-colors"></i>
-                <span class="font-medium text-sm">Temperatura</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-ruler-combined w-6 text-center text-slate-500 group-hover:text-amber-400 transition-colors"></i>
-                <span class="font-medium text-sm">Longitud</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-vector-square w-6 text-center text-slate-500 group-hover:text-rose-400 transition-colors"></i>
-                <span class="font-medium text-sm">Área</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-cube w-6 text-center text-slate-500 group-hover:text-cyan-400 transition-colors"></i>
-                <span class="font-medium text-sm">Volumen</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-weight-hanging w-6 text-center text-slate-500 group-hover:text-violet-400 transition-colors"></i>
-                <span class="font-medium text-sm">Peso</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-gauge-high w-6 text-center text-slate-500 group-hover:text-red-400 transition-colors"></i>
-                <span class="font-medium text-sm">Velocidad</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-arrows-down-to-line w-6 text-center text-slate-500 group-hover:text-orange-400 transition-colors"></i>
-                <span class="font-medium text-sm">Presión</span>
-            </a>
-            <a href="#" onclick="setActive(this)" class="nav-item group flex items-center px-4 py-3 gap-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white">
-                <i class="fa-solid fa-water w-6 text-center text-slate-500 group-hover:text-blue-400 transition-colors"></i>
-                <span class="font-medium text-sm">Flujo</span>
-            </a>
+            
+            <!-- Temperatura -->
+            <button onclick="toggleDropdown('calc-temp', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-temperature-three-quarters w-6 text-center text-slate-500 group-hover:text-emerald-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Temperatura</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-temp" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="temp-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="space-y-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="temp-unit" value="c" checked class="accent-blue-500"> Celsius</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="temp-unit" value="f" class="accent-blue-500"> Fahrenheit</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="temp-unit" value="k" class="accent-blue-500"> Kelvin</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="temp-unit" value="r" class="accent-blue-500"> Rankine</label>
+                </div>
+                <button onclick="calculateTemp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="temp-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Longitud -->
+            <button onclick="toggleDropdown('calc-length', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-ruler-combined w-6 text-center text-slate-500 group-hover:text-amber-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Longitud</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-length" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="length-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="length-unit" value="m" checked class="accent-blue-500"> Metros</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="length-unit" value="cm" class="accent-blue-500"> cm</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="length-unit" value="mm" class="accent-blue-500"> mm</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="length-unit" value="km" class="accent-blue-500"> km</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="length-unit" value="in" class="accent-blue-500"> Pulgadas</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="length-unit" value="ft" class="accent-blue-500"> Pies</label>
+                </div>
+                <button onclick="calculateLength()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="length-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Área -->
+            <button onclick="toggleDropdown('calc-area', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-vector-square w-6 text-center text-slate-500 group-hover:text-rose-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Área</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-area" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="area-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="area-unit" value="m2" checked class="accent-blue-500"> m²</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="area-unit" value="cm2" class="accent-blue-500"> cm²</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="area-unit" value="ft2" class="accent-blue-500"> ft²</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="area-unit" value="ha" class="accent-blue-500"> Hectáreas</label>
+                </div>
+                <button onclick="calculateArea()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="area-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Volumen -->
+            <button onclick="toggleDropdown('calc-volume', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-cube w-6 text-center text-slate-500 group-hover:text-cyan-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Volumen</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-volume" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="volume-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="volume-unit" value="m3" checked class="accent-blue-500"> m³</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="volume-unit" value="l" class="accent-blue-500"> Litros</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="volume-unit" value="gal" class="accent-blue-500"> Galones</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="volume-unit" value="ml" class="accent-blue-500"> mL</label>
+                </div>
+                <button onclick="calculateVolume()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="volume-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Peso -->
+            <button onclick="toggleDropdown('calc-weight', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-weight-hanging w-6 text-center text-slate-500 group-hover:text-violet-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Peso</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-weight" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="weight-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="weight-unit" value="kg" checked class="accent-blue-500"> kg</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="weight-unit" value="g" class="accent-blue-500"> g</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="weight-unit" value="lb" class="accent-blue-500"> lb</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="weight-unit" value="oz" class="accent-blue-500"> oz</label>
+                </div>
+                <button onclick="calculateWeight()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="weight-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Velocidad -->
+            <button onclick="toggleDropdown('calc-speed', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-gauge-high w-6 text-center text-slate-500 group-hover:text-red-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Velocidad</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-speed" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="speed-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="space-y-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="speed-unit" value="kmh" checked class="accent-blue-500"> km/h</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="speed-unit" value="ms" class="accent-blue-500"> m/s</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="speed-unit" value="mph" class="accent-blue-500"> mph</label>
+                </div>
+                <button onclick="calculateSpeed()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="speed-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Presión -->
+            <button onclick="toggleDropdown('calc-pressure', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-arrows-down-to-line w-6 text-center text-slate-500 group-hover:text-orange-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Presión</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-pressure" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="pressure-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="pressure-unit" value="bar" checked class="accent-blue-500"> bar</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="pressure-unit" value="psi" class="accent-blue-500"> psi</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="pressure-unit" value="pa" class="accent-blue-500"> Pascal</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="pressure-unit" value="atm" class="accent-blue-500"> atm</label>
+                </div>
+                <button onclick="calculatePressure()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="pressure-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+
+            <!-- Flujo -->
+            <button onclick="toggleDropdown('calc-flow', this)" class="w-full nav-item group flex items-center justify-between px-4 py-3 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
+                <div class="flex items-center gap-3 relative z-10 pointer-events-none">
+                    <i class="fa-solid fa-water w-6 text-center text-slate-500 group-hover:text-blue-400 transition-colors"></i>
+                    <span class="font-medium text-sm group-hover:translate-x-1 transition-transform">Flujo</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 rotate-180"></i>
+            </button>
+            <div id="calc-flow" class="hidden ml-4 mr-4 mb-4 bg-slate-800/50 rounded-lg p-3 space-y-3 border border-white/5 mt-1">
+                <div>
+                    <label class="text-[10px] uppercase text-slate-500 font-bold tracking-widest block mb-1">Valor</label>
+                    <input type="number" id="flow-input" class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="0">
+                </div>
+                <div class="space-y-1">
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="flow-unit" value="lmin" checked class="accent-blue-500"> L/min</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="flow-unit" value="gpm" class="accent-blue-500"> GPM (US)</label>
+                    <label class="flex items-center gap-2 text-xs text-slate-400 cursor-pointer hover:text-white"><input type="radio" name="flow-unit" value="m3h" class="accent-blue-500"> m³/h</label>
+                </div>
+                <button onclick="calculateFlow()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-1.5 rounded transition-colors shadow-lg shadow-emerald-900/20">Calcular</button>
+                <div id="flow-result" class="text-xs text-slate-300 space-y-1 hidden pt-2 border-t border-white/5"></div>
+            </div>
+            
         </div>
     </nav>
 
