@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Home from './pages/Home';
+import GestionMantenimiento from './pages/GestionMantenimiento';
+import Diy from './pages/Diy';
+import Oleohidraulica from './pages/Oleohidraulica';
+import Neumatica from './pages/Neumatica';
+import Tribologia from './pages/Tribologia';
+import ElementosMaquinas from './pages/ElementosMaquinas';
+import DisenioMecanico from './pages/DisenioMecanico';
+import Ejes from './pages/Ejes';
+import Fajas from './pages/Fajas';
+import Poleas from './pages/Poleas';
+import FMEA from './pages/FMEA';
+import CalculadoraMTBF from './pages/CalculadoraMTBF';
+import Rodamientos from './pages/Rodamientos';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="gestion-mantenimiento" element={<GestionMantenimiento />} />
+                <Route path="proyectos-diy" element={<Diy />} />
+                <Route path="oleohidraulica" element={<Oleohidraulica />} />
+                <Route path="neumatica" element={<Neumatica />} />
+                <Route path="tribologia" element={<Tribologia />} />
+                <Route path="elementos-maquinas" element={<ElementosMaquinas />} />
+                <Route path="disenio-mecanico" element={<DisenioMecanico />} />
+                <Route path="ejes" element={<Ejes />} />
+                <Route path="fajas" element={<Fajas />} />
+                <Route path="poleas" element={<Poleas />} />
+                <Route path="rodamiento" element={<Rodamientos />} />
+                <Route path="fmea" element={<FMEA />} />
+                <Route path="calculadora-mtbf" element={<CalculadoraMTBF />} />
+                {/* Other routes will be added here */}
+            </Route>
+        </Routes>
+    );
 }
-
-export default App

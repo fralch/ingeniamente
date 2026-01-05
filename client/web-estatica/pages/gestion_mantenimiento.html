@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Mantenimiento - Ingeniamente.com</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen overflow-hidden flex selection:bg-blue-500 selection:text-white">
+
+    <!-- Sidebar Container -->
+    <div id="sidebar-container" class="fixed inset-y-0 left-0 z-50 w-72 h-full transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none"></div>
+
+    <!-- Mobile Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden md:hidden opacity-0 transition-opacity duration-300" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative z-0">
+        <!-- Background Blobs -->
+        <div class="blob -top-20 -right-20 opacity-50"></div>
+        <div class="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
+
+        <!-- Header Container -->
+        <div id="header-container" class="sticky top-0 z-40"></div>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-4 py-8 md:p-8 relative z-10 scroll-smooth">
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 fade-in">
+                
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 font-heading">Gestión de Mantenimiento</h1>
+                 
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                    Dentro de la gestión de mantenimiento, tenemos 4 estrategias de mantenimiento, los cuales los podemos agrupar por tipos de mantenimiento, según la SMRP (The Society for Maintenance & Reliability Professionals).
+                </p>
+
+                <!-- Tipos de Mantenimientos -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i class="fa-solid fa-layer-group text-sm"></i></span>
+                        Tipos de Mantenimientos
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Proactivos -->
+                        <div class="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+                            <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center">
+                                <i class="fa-solid fa-shield-halved mr-2"></i> Mantenimiento Proactivo
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-emerald-700 bg-white/60 px-3 py-2 rounded-lg">
+                                    <i class="fa-solid fa-check-circle text-sm mr-2 opacity-70"></i> Mantenimiento Predictivo
+                                </li>
+                                <li class="flex items-center text-emerald-700 bg-white/60 px-3 py-2 rounded-lg">
+                                    <i class="fa-solid fa-check-circle text-sm mr-2 opacity-70"></i> Mantenimiento Preventivo
+                                </li>
+                                <li class="flex items-center text-emerald-700 bg-white/60 px-3 py-2 rounded-lg">
+                                    <i class="fa-solid fa-check-circle text-sm mr-2 opacity-70"></i> Mantenimiento Modificativo
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Reactivos -->
+                        <div class="bg-amber-50 rounded-2xl p-6 border border-amber-100">
+                            <h3 class="text-lg font-bold text-amber-800 mb-4 flex items-center">
+                                <i class="fa-solid fa-fire-extinguisher mr-2"></i> Mantenimiento Reactivo
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-amber-700 bg-white/60 px-3 py-2 rounded-lg">
+                                    <i class="fa-solid fa-circle-exclamation text-sm mr-2 opacity-70"></i> Mantenimiento Correctivo
+                                </li>
+                                <li class="flex items-center text-amber-700 bg-white/60 px-3 py-2 rounded-lg">
+                                    <i class="fa-solid fa-circle-exclamation text-sm mr-2 opacity-70"></i> Mantenimiento Modificativo
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detalles de Estrategias -->
+                <div class="space-y-12">
+                    
+                    <!-- 1. Predictivo -->
+                    <div id="predictivo" class="scroll-mt-24">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mr-4">
+                                <i class="fa-solid fa-chart-line text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-800 font-heading">Mantenimiento Predictivo</h2>
+                        </div>
+                        <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <p>El mantenimiento predictivo es una estrategia de gestión de activos que se ha convertido en un pilar fundamental en la industria moderna. Con el objetivo de maximizar la vida útil de los equipos y minimizar las interrupciones no planificadas, el mantenimiento predictivo utiliza técnicas avanzadas de monitoreo y análisis de datos para predecir cuándo ocurrirá una falla. Este enfoque proporciona una comprensión integral de su aplicación en la ingeniería mecánica.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Preventivo -->
+                    <div id="preventivo" class="scroll-mt-24">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mr-4">
+                                <i class="fa-solid fa-calendar-check text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-800 font-heading">Mantenimiento Preventivo</h2>
+                        </div>
+                        <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <p class="mb-4">El mantenimiento preventivo se refiere a la acción sistemática de revisar y realizar mantenimiento en equipos o aparatos de diferentes tipos (mecánicos, eléctricos, informáticos, etc.) con el objetivo de evitar averías causadas por el uso, desgaste o paso del tiempo.</p>
+                            <p class="mb-4">Este tipo de mantenimiento se adelanta a las posibles averías antes de que ocurran o contribuye a que sean menos frecuentes y menos costosas. Existen diferentes tipos de mantenimiento preventivo:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4">
+                                <li><strong>Mantenimiento programado:</strong> Se realiza según el tiempo, los kilómetros o las horas de funcionamiento.</li>
+                                <li><strong>Mantenimiento basado en condiciones:</strong> Se realiza en función de indicadores específicos.</li>
+                            </ul>
+                            <p>El mantenimiento preventivo es esencial para garantizar la disponibilidad y el rendimiento óptimo del equipo, y su planificación adecuada asegura que las tareas se realicen correctamente, a tiempo y de acuerdo con los objetivos establecidos.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Correctivo -->
+                    <div id="correctivo" class="scroll-mt-24">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 mr-4">
+                                <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-800 font-heading">Mantenimiento Correctivo</h2>
+                        </div>
+                        <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <p class="mb-4">El mantenimiento correctivo se refiere a las acciones tomadas después de que se haya producido una falla en un equipo o sistema, con el objetivo de devolverlo a su estado de funcionamiento normal.</p>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 my-6">
+                                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h4 class="font-bold text-slate-800 mb-2">Por avería</h4>
+                                    <p class="text-sm">Consiste en intervenir en el equipo o sistema después de que se haya producido una avería, con el fin de reparar el problema y restablecer su funcionamiento.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h4 class="font-bold text-slate-800 mb-2">Diferido</h4>
+                                    <p class="text-sm">Implica retrasar la reparación o sustitución de un componente o equipo hasta que sea más conveniente en términos de costos o disponibilidad de recursos.</p>
+                                </div>
+                            </div>
+
+                            <p class="mb-4">En el mantenimiento correctivo, la intervención se realiza después de que ocurra el fallo, lo que puede implicar una interrupción en la producción o el funcionamiento normal de las operaciones.</p>
+                            
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                                <p class="text-sm text-yellow-800"><strong>Nota importante:</strong> Si bien es necesario para abordar averías imprevistas, su enfoque reactivo puede resultar menos rentable que el preventivo o predictivo debido a mayores costos de reparación y tiempo de inactividad. Sin embargo, puede ser la opción adecuada cuando otros programas no son factibles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Modificativo -->
+                    <div id="modificativo" class="scroll-mt-24">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mr-4">
+                                <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-800 font-heading">Mantenimiento Modificativo</h2>
+                        </div>
+                        <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <p class="mb-4">El mantenimiento modificativo es una estrategia avanzada de gestión de activos que se centra en la <strong>mejora continua</strong> y la adaptación de equipos y sistemas para aumentar su eficiencia, fiabilidad y vida útil.</p>
+                            <p>A diferencia de otros tipos de mantenimiento que se centran en la reparación o prevención de fallas, el mantenimiento modificativo busca realizar <strong>cambios proactivos</strong> que optimicen el rendimiento del equipo.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Back to Home Button -->
+                <div class="mt-12 text-center">
+                    <a href="../index.html" class="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors font-semibold shadow-lg shadow-slate-900/20">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+
+                <!-- Footer Container -->
+                <div id="footer-container" class="mt-12 pt-8 border-t border-slate-100"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Set base path for components
+        window.appBasePath = '../';
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

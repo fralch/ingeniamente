@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento Modificativo - Ingeniamente.com</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen overflow-hidden flex selection:bg-blue-500 selection:text-white">
+
+    <!-- Sidebar Container -->
+    <div id="sidebar-container" class="fixed inset-y-0 left-0 z-50 w-72 h-full transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none"></div>
+
+    <!-- Mobile Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden md:hidden opacity-0 transition-opacity duration-300" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative z-0">
+        <!-- Background Blobs -->
+        <div class="blob -top-20 -right-20 opacity-50"></div>
+        <div class="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
+
+        <!-- Header Container -->
+        <div id="header-container" class="sticky top-0 z-40"></div>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-4 py-8 md:p-8 relative z-10 scroll-smooth">
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 fade-in">
+                
+                <!-- Hero Section -->
+                <div class="mb-10 border-b border-slate-100 pb-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Mejora Continua
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 font-heading">Mantenimiento Modificativo</h1>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        El mantenimiento modificativo es una estrategia avanzada de gestión de activos que se centra en la mejora continua y la adaptación de equipos y sistemas para aumentar su eficiencia, fiabilidad y vida útil. A diferencia de otros tipos de mantenimiento que se centran en la reparación o prevención de fallas, el mantenimiento modificativo busca realizar cambios proactivos que optimicen el rendimiento del equipo.
+                    </p>
+                </div>
+
+                <!-- Fundamentos -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3">1</span>
+                        Fundamentos del Mantenimiento Modificativo
+                    </h2>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <p class="text-slate-600 mb-6">
+                            El mantenimiento modificativo se basa en la premisa de que los equipos y sistemas pueden ser mejorados constantemente a través de modificaciones y actualizaciones. Estas mejoras pueden implicar cambios en el diseño, la configuración, los materiales o los procesos operativos.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start p-4 bg-white rounded-xl shadow-sm">
+                                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 mb-1">Optimización Continua</h3>
+                                    <p class="text-sm text-slate-500">Buscar constantemente maneras de mejorar el rendimiento y la eficiencia del equipo.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start p-4 bg-white rounded-xl shadow-sm">
+                                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 mb-1">Innovación</h3>
+                                    <p class="text-sm text-slate-500">Implementar nuevas tecnologías y metodologías para mejorar los sistemas existentes.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start p-4 bg-white rounded-xl shadow-sm">
+                                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-puzzle-piece"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 mb-1">Adaptabilidad</h3>
+                                    <p class="text-sm text-slate-500">Modificar el equipo para adaptarse a nuevas condiciones operativas o requisitos.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start p-4 bg-white rounded-xl shadow-sm">
+                                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 mb-1">Mejora de la Fiabilidad</h3>
+                                    <p class="text-sm text-slate-500">Aumentar la vida útil y reducir las tasas de fallos a través de mejoras específicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Técnicas -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3">2</span>
+                        Técnicas de Mantenimiento Modificativo
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-5 bg-white rounded-xl border border-slate-200 hover:border-purple-200 transition-colors shadow-sm">
+                            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mr-5 text-xl">
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Reingeniería de Componentes</h3>
+                                <p class="text-slate-600 text-sm">Rediseñar partes del equipo para mejorar su rendimiento o durabilidad.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-5 bg-white rounded-xl border border-slate-200 hover:border-purple-200 transition-colors shadow-sm">
+                            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mr-5 text-xl">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Actualización de Tecnología</h3>
+                                <p class="text-slate-600 text-sm">Integrar nuevas tecnologías, como sistemas de control avanzados o materiales de alta resistencia.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-5 bg-white rounded-xl border border-slate-200 hover:border-purple-200 transition-colors shadow-sm">
+                            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mr-5 text-xl">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Optimización de Procesos</h3>
+                                <p class="text-slate-600 text-sm">Ajustar los parámetros operativos para maximizar la eficiencia y minimizar el desgaste.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-5 bg-white rounded-xl border border-slate-200 hover:border-purple-200 transition-colors shadow-sm">
+                            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mr-5 text-xl">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Implementación de Mejores Prácticas</h3>
+                                <p class="text-slate-600 text-sm">Adoptar métodos operativos y de mantenimiento basados en las mejores prácticas de la industria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beneficios -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3">3</span>
+                        Beneficios del Mantenimiento Modificativo
+                    </h2>
+                    <div class="bg-purple-50 rounded-2xl p-8 border border-purple-100 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                        <ul class="space-y-4 relative z-10">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-purple-500 mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-slate-900">Mejora del Rendimiento:</strong>
+                                    <span class="text-slate-700 block text-sm mt-1">Las modificaciones pueden aumentar la eficiencia operativa y la capacidad de producción.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-purple-500 mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-slate-900">Aumento de la Vida Útil del Equipo:</strong>
+                                    <span class="text-slate-700 block text-sm mt-1">Las mejoras estructurales y funcionales pueden extender significativamente la vida útil de los activos.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-purple-500 mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-slate-900">Reducción de Costos a Largo Plazo:</strong>
+                                    <span class="text-slate-700 block text-sm mt-1">Los beneficios a largo plazo en términos de reducción de fallas y mejoras de rendimiento pueden resultar en ahorros significativos.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-purple-500 mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-slate-900">Flexibilidad Operativa:</strong>
+                                    <span class="text-slate-700 block text-sm mt-1">Permite que los equipos se adapten a nuevos requisitos de producción o cambios en las condiciones operativas.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Implementación -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3">4</span>
+                        Implementación
+                    </h2>
+                    <div class="relative pl-8 border-l-2 border-slate-200 space-y-8">
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-slate-800 mb-1">1. Evaluación Inicial</h4>
+                            <p class="text-sm text-slate-600">Identificar qué equipos y sistemas pueden beneficiarse más de las modificaciones.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-slate-800 mb-1">2. Análisis de Costos y Beneficios</h4>
+                            <p class="text-sm text-slate-600">Evaluar los costos de las modificaciones en comparación con los beneficios esperados.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-slate-800 mb-1">3. Diseño de Modificaciones</h4>
+                            <p class="text-sm text-slate-600">Desarrollar planes detallados incluyendo especificaciones técnicas y cronogramas.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-slate-800 mb-1">4. Pruebas y Validación</h4>
+                            <p class="text-sm text-slate-600">Implementar en entorno controlado y realizar pruebas para validar resultados.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-slate-800 mb-1">5. Implementación Completa</h4>
+                            <p class="text-sm text-slate-600">Desplegar las modificaciones a gran escala y monitorear su desempeño.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-sm"></span>
+                            <h4 class="font-bold text-slate-800 mb-1">6. Mejora Continua</h4>
+                            <p class="text-sm text-slate-600">Establecer un proceso para revisar y mejorar continuamente las modificaciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Casos de Estudio -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3">5</span>
+                        Casos de Estudio
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="text-blue-500 text-2xl mb-4"><i class="fa-solid fa-car"></i></div>
+                            <h3 class="font-bold text-slate-900 mb-2">Industria Automotriz</h3>
+                            <p class="text-sm text-slate-600">Toyota y Ford implementan modificaciones para mejorar la eficiencia y calidad en líneas de ensamblaje.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="text-emerald-500 text-2xl mb-4"><i class="fa-solid fa-solar-panel"></i></div>
+                            <h3 class="font-bold text-slate-900 mb-2">Energía Renovable</h3>
+                            <p class="text-sm text-slate-600">Modificaciones en sistemas de generación solar y eólica para maximizar producción y reducir costos.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="text-amber-500 text-2xl mb-4"><i class="fa-solid fa-utensils"></i></div>
+                            <h3 class="font-bold text-slate-900 mb-2">Alimentos y Bebidas</h3>
+                            <p class="text-sm text-slate-600">Nestlé y Coca-Cola modifican equipos para eficiencia y seguridad alimentaria.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desafíos -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span class="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3">6</span>
+                        Desafíos y Futuro
+                    </h2>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="grid md:grid-cols-3 gap-6 mb-8">
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2 flex items-center"><i class="fa-solid fa-money-bill text-slate-400 mr-2"></i> Costo Inicial</h4>
+                                <p class="text-sm text-slate-600">Puede requerir una inversión significativa, siendo una barrera para algunas organizaciones.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2 flex items-center"><i class="fa-solid fa-people-group text-slate-400 mr-2"></i> Gestión del Cambio</h4>
+                                <p class="text-sm text-slate-600">Resistencia organizacional ante cambios significativos en procesos operativos.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2 flex items-center"><i class="fa-solid fa-stopwatch text-slate-400 mr-2"></i> Interrupciones</h4>
+                                <p class="text-sm text-slate-600">Las modificaciones pueden causar pausas temporales en la producción.</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                            <h4 class="font-bold text-blue-900 mb-2"><i class="fa-solid fa-rocket mr-2"></i> Futuro Prometedor</h4>
+                            <p class="text-sm text-blue-800">
+                                Avances continuos en tecnología y metodologías facilitan la identificación e implementación de mejoras. La integración de herramientas de análisis de datos y simulación mejorará la precisión y efectividad de las modificaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Home Button -->
+                <div class="mt-12 text-center">
+                    <a href="../../index.html" class="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors font-semibold shadow-lg shadow-slate-900/20">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+
+                <!-- Footer Container -->
+                <div id="footer-container" class="mt-12 pt-8 border-t border-slate-100"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Set base path for components (2 levels deep)
+        window.appBasePath = '../../';
+    </script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

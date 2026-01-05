@@ -1,0 +1,303 @@
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+export default function FMEA() {
+    useEffect(() => {
+        if (window.MathJax) {
+            window.MathJax.typesetPromise && window.MathJax.typesetPromise();
+        }
+    }, []);
+
+    return (
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 fade-in">
+            
+            {/* Hero Section */}
+            <div className="mb-10 border-b border-slate-100 pb-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold uppercase tracking-wider mb-4">
+                    <i className="fa-solid fa-clipboard-check"></i> Gestión de Calidad
+                </div>
+                <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 font-heading">Análisis de Modos y Efectos de Fallo (FMEA)</h1>
+                <div className="prose text-lg text-slate-600 leading-relaxed">
+                    <p>
+                        El Análisis de Modos y Efectos de Fallo (FMEA) es una metodología sistemática utilizada para identificar y evaluar fallos potenciales en un sistema, proceso o producto. El objetivo principal de FMEA es mejorar la confiabilidad y seguridad, así como priorizar las acciones correctivas basadas en la criticidad de los fallos.
+                    </p>
+                </div>
+            </div>
+
+            {/* Historia */}
+            <div className="mb-12 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center font-heading">
+                    <i className="fa-solid fa-clock-rotate-left text-indigo-500 mr-2"></i> Historia y Evolución
+                </h2>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                    El FMEA se originó en la década de 1940 en la industria aeroespacial y militar de los Estados Unidos. Posteriormente, fue adoptado y desarrollado por la industria automotriz en la década de 1960, convirtiéndose en una herramienta esencial para la gestión de calidad y confiabilidad. Actualmente, el FMEA se aplica en diversas industrias, incluyendo manufactura, salud, servicios y más.
+                </p>
+            </div>
+
+            {/* Tipos de FMEA */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                    <span className="bg-indigo-100 text-indigo-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-layer-group"></i></span>
+                    Tipos de FMEA
+                </h2>
+                <p className="text-slate-600 mb-6">Existen varios tipos de FMEA, cada uno enfocado en diferentes aspectos del sistema:</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="font-bold text-slate-800 mb-2 text-indigo-600">1. FMEA de Diseño (DFMEA)</h3>
+                        <p className="text-sm text-slate-600">Se centra en identificar fallos potenciales en el diseño de un producto antes de que se fabrique.</p>
+                    </div>
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="font-bold text-slate-800 mb-2 text-indigo-600">2. FMEA de Proceso (PFMEA)</h3>
+                        <p className="text-sm text-slate-600">Se utiliza para analizar procesos de manufactura y ensamblaje, identificando fallos que pueden ocurrir durante la producción.</p>
+                    </div>
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="font-bold text-slate-800 mb-2 text-indigo-600">3. FMEA de Sistemas (SFMEA)</h3>
+                        <p className="text-sm text-slate-600">Evalúa fallos en sistemas completos, considerando la interacción entre diferentes componentes.</p>
+                    </div>
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="font-bold text-slate-800 mb-2 text-indigo-600">4. FMEA de Servicios</h3>
+                        <p className="text-sm text-slate-600">Se aplica en la industria de servicios para identificar fallos potenciales en la prestación de servicios.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Componentes Clave */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                    <span className="bg-indigo-100 text-indigo-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-key"></i></span>
+                    Componentes Clave
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-slate-50 p-5 rounded-xl text-center">
+                        <div className="text-3xl text-indigo-500 mb-3"><i className="fa-solid fa-triangle-exclamation"></i></div>
+                        <h3 className="font-bold text-slate-800 mb-2">Modo de Fallo</h3>
+                        <p className="text-xs text-slate-600">Describe cómo un componente o proceso puede fallar.</p>
+                    </div>
+                    <div className="bg-slate-50 p-5 rounded-xl text-center">
+                        <div className="text-3xl text-indigo-500 mb-3"><i className="fa-solid fa-burst"></i></div>
+                        <h3 className="font-bold text-slate-800 mb-2">Efecto del Fallo</h3>
+                        <p className="text-xs text-slate-600">Describe las consecuencias del fallo en el sistema o proceso.</p>
+                    </div>
+                    <div className="bg-slate-50 p-5 rounded-xl text-center">
+                        <div className="text-3xl text-indigo-500 mb-3"><i className="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3 className="font-bold text-slate-800 mb-2">Causa del Fallo</h3>
+                        <p className="text-xs text-slate-600">Identifica la causa raíz del fallo.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Pasos para Realizar */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                    <span className="bg-indigo-100 text-indigo-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-list-ol"></i></span>
+                    Pasos para Realizar un FMEA
+                </h2>
+                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <ol className="divide-y divide-slate-100">
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">1</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Formar un Equipo Multidisciplinario</h4>
+                                <p className="text-xs text-slate-600 mt-1">Incluir expertos de diversas áreas (diseño, producción, calidad, mantenimiento).</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">2</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Definir el Alcance</h4>
+                                <p className="text-xs text-slate-600 mt-1">Determinar el sistema, proceso o producto a analizar y el nivel de detalle.</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">3</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Identificar Modos de Fallo</h4>
+                                <p className="text-xs text-slate-600 mt-1">Listar todos los modos de fallo posibles para cada componente o paso.</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">4</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Evaluar los Efectos</h4>
+                                <p className="text-xs text-slate-600 mt-1">Describir las consecuencias de cada modo de fallo.</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">5</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Asignar Valores (S, O, D)</h4>
+                                <p className="text-xs text-slate-600 mt-1">Puntuar de 1 a 10: Severidad (S), Ocurrencia (O) y Detección (D).</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">6</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Calcular el RPN</h4>
+                                <p className="text-xs text-slate-600 mt-1">Índice de Prioridad de Riesgo: RPN = S x O x D.</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">7</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Priorizar Acciones Correctivas</h4>
+                                <p className="text-xs text-slate-600 mt-1">Basándose en el RPN, mitigar los fallos más críticos.</p>
+                            </div>
+                        </li>
+                        <li className="p-4 flex gap-4 hover:bg-slate-50 transition-colors">
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">8</span>
+                            <div>
+                                <h4 className="font-bold text-slate-800 text-sm">Implementar y Revisar</h4>
+                                <p className="text-xs text-slate-600 mt-1">Ejecutar acciones y revisar periódicamente para la mejora continua.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            {/* Cálculo RPN */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                    <span className="bg-indigo-100 text-indigo-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-calculator"></i></span>
+                    Cálculo del Índice de Prioridad de Riesgo (RPN)
+                </h2>
+                <p className="text-slate-600 mb-6">El RPN es una medida cuantitativa que ayuda a priorizar los fallos en función de su criticidad. Se calcula como:</p>
+                
+                <div className="bg-slate-900 text-white p-8 rounded-2xl text-center mb-8 shadow-lg">
+                    <div className="text-xl md:text-3xl font-mono">
+                        {'$$ RPN = S \\times O \\times D $$'}
+                    </div>
+                    <div className="text-sm text-slate-400 mt-2 font-mono">Severidad × Ocurrencia × Detección</div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-white p-4 rounded-xl border border-slate-200">
+                        <strong className="block text-indigo-600 mb-2">Severidad (S)</strong>
+                        <p className="text-xs text-slate-600">Mide la gravedad del efecto del fallo. Una puntuación alta indica un efecto severo.</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl border border-slate-200">
+                        <strong className="block text-indigo-600 mb-2">Ocurrencia (O)</strong>
+                        <p className="text-xs text-slate-600">Mide la probabilidad de que el fallo ocurra. Alta puntuación = alta probabilidad.</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl border border-slate-200">
+                        <strong className="block text-indigo-600 mb-2">Detección (D)</strong>
+                        <p className="text-xs text-slate-600">Probabilidad de detectar el fallo antes de que cause problema. Alta puntuación = baja probabilidad de detección.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Ejemplo FMEA Tabla */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                    <span className="bg-indigo-100 text-indigo-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-table"></i></span>
+                    Ejemplo de FMEA Simplificado
+                </h2>
+                <p className="text-slate-600 mb-4 text-sm">Supongamos un proceso de ensamblaje de un dispositivo electrónico:</p>
+                
+                <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                    <table className="w-full text-sm text-left text-slate-600">
+                        <thead className="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th className="px-6 py-3 font-bold">Modo de Fallo</th>
+                                <th className="px-6 py-3 font-bold">Efecto del Fallo</th>
+                                <th className="px-6 py-3 font-bold">Causa del Fallo</th>
+                                <th className="px-4 py-3 text-center font-bold">S</th>
+                                <th className="px-4 py-3 text-center font-bold">O</th>
+                                <th className="px-4 py-3 text-center font-bold">D</th>
+                                <th className="px-4 py-3 text-center font-bold bg-indigo-50 text-indigo-700">RPN</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                            <tr className="bg-white hover:bg-slate-50">
+                                <td className="px-6 py-4 font-medium text-slate-900">Componente defectuoso</td>
+                                <td className="px-6 py-4">Dispositivo no funciona</td>
+                                <td className="px-6 py-4">Proveedor envía componentes defectuosos</td>
+                                <td className="px-4 py-4 text-center">9</td>
+                                <td className="px-4 py-4 text-center">4</td>
+                                <td className="px-4 py-4 text-center">5</td>
+                                <td className="px-4 py-4 text-center font-bold text-indigo-600 bg-indigo-50">180</td>
+                            </tr>
+                            <tr className="bg-white hover:bg-slate-50">
+                                <td className="px-6 py-4 font-medium text-slate-900">Soldadura incorrecta</td>
+                                <td className="px-6 py-4">Cortocircuito</td>
+                                <td className="px-6 py-4">Error humano</td>
+                                <td className="px-4 py-4 text-center">8</td>
+                                <td className="px-4 py-4 text-center">3</td>
+                                <td className="px-4 py-4 text-center">6</td>
+                                <td className="px-4 py-4 text-center font-bold text-indigo-600 bg-indigo-50">144</td>
+                            </tr>
+                            <tr className="bg-white hover:bg-slate-50">
+                                <td className="px-6 py-4 font-medium text-slate-900">Tornillo suelto</td>
+                                <td className="px-6 py-4">Piezas se desensamblan</td>
+                                <td className="px-6 py-4">Herramienta mal calibrada</td>
+                                <td className="px-4 py-4 text-center">7</td>
+                                <td className="px-4 py-4 text-center">2</td>
+                                <td className="px-4 py-4 text-center">7</td>
+                                <td className="px-4 py-4 text-center font-bold text-indigo-600 bg-indigo-50">98</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p className="text-xs text-slate-500 mt-3 italic">
+                    En este ejemplo, el fallo con el RPN más alto (180) es el componente defectuoso, por lo que debería ser la prioridad principal para acciones correctivas.
+                </p>
+            </div>
+
+            {/* Beneficios y Limitaciones */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h2 className="text-xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span className="bg-green-100 text-green-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-thumbs-up"></i></span>
+                        Beneficios
+                    </h2>
+                    <ul className="space-y-3 text-slate-600 text-sm">
+                        <li className="flex items-start"><i className="fa-solid fa-check text-green-500 mt-1 mr-2"></i> <span><strong>Mejora de Confiabilidad:</strong> Identificar y mitigar fallos potenciales.</span></li>
+                        <li className="flex items-start"><i className="fa-solid fa-check text-green-500 mt-1 mr-2"></i> <span><strong>Reducción de Costos:</strong> Menos reparaciones, devoluciones y garantías.</span></li>
+                        <li className="flex items-start"><i className="fa-solid fa-check text-green-500 mt-1 mr-2"></i> <span><strong>Satisfacción del Cliente:</strong> Productos más confiables y seguros.</span></li>
+                        <li className="flex items-start"><i className="fa-solid fa-check text-green-500 mt-1 mr-2"></i> <span><strong>Cumplimiento Normativo:</strong> Ayuda a cumplir normas y estándares.</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 className="text-xl font-bold text-slate-800 mb-6 flex items-center font-heading">
+                        <span className="bg-red-100 text-red-600 w-8 h-8 rounded-lg flex items-center justify-center text-lg mr-3"><i className="fa-solid fa-thumbs-down"></i></span>
+                        Limitaciones
+                    </h2>
+                    <ul className="space-y-3 text-slate-600 text-sm">
+                        <li className="flex items-start"><i className="fa-solid fa-circle-exclamation text-red-500 mt-1 mr-2"></i> <span><strong>Tiempo y Recursos:</strong> Requiere inversión significativa.</span></li>
+                        <li className="flex items-start"><i className="fa-solid fa-circle-exclamation text-red-500 mt-1 mr-2"></i> <span><strong>Subjetividad:</strong> Puntuaciones pueden variar entre evaluadores.</span></li>
+                        <li className="flex items-start"><i className="fa-solid fa-circle-exclamation text-red-500 mt-1 mr-2"></i> <span><strong>Fallos Desconocidos:</strong> Puede no identificar fallos no previstos.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            {/* Herramientas */}
+            <div className="mb-12 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center font-heading">
+                    <i className="fa-solid fa-laptop-code text-indigo-500 mr-2"></i> Herramientas y Software
+                </h2>
+                <div className="flex flex-wrap gap-4">
+                    <span className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 font-semibold shadow-sm">APIS IQ-FMEA</span>
+                    <span className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 font-semibold shadow-sm">Xfmea (ReliaSoft)</span>
+                    <span className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 font-semibold shadow-sm">Pencil and Paper</span>
+                </div>
+                <p className="text-slate-600 text-sm mt-4">
+                    Existen diversas herramientas que facilitan la realización de FMEA. Aunque el software especializado es eficiente, es posible realizarlo manualmente utilizando plantillas.
+                </p>
+            </div>
+
+            {/* Conclusión */}
+            <div className="mb-12 border-l-4 border-indigo-500 pl-6">
+                <p className="text-slate-600 italic">
+                    "El Análisis de Modos y Efectos de Fallo (FMEA) es una metodología poderosa para identificar y priorizar fallos potenciales. Al realizar un FMEA, las organizaciones pueden mejorar la confiabilidad, reducir costos y aumentar la satisfacción del cliente. Al dominar el FMEA, podrás contribuir significativamente a la mejora continua de tu organización."
+                </p>
+            </div>
+
+            {/* Back to Home Button */}
+            <div className="mt-12 text-center">
+                <Link to="/" className="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors font-semibold shadow-lg shadow-slate-900/20">
+                    <i className="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                </Link>
+            </div>
+
+        </div>
+    );
+};
