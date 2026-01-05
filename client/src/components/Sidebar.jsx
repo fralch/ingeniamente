@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { calculateTemp, calculateLength, calculateArea, calculateVolume, calculateWeight, calculateSpeed, calculatePressure, calculateFlow } from '../utils/calculators';
+
+// ... (Rest of CalculatorResult and CalculatorDropdown remain unchanged, I will skip them in the replacement content if I can, but replace_file_content requires replacing the chunk.
+// Actually, I can do this in two chunks or one larger chunk if I include the import.
+// Let's do the import first as a separate edit or include it in a larger ReplaceFileContent call?
+// The tool allows "AllowMultiple". I'll use that.
+
+
 
 const CalculatorResult = ({ results }) => {
     if (!results) return null;
@@ -106,10 +114,10 @@ export default function Sidebar({ isOpen, onClose }) {
                         <h3 className="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Explorar</h3>
                     </div>
 
-                    <a href="#" className="nav-item active group flex items-center px-4 py-3.5 gap-3 rounded-xl transition-all duration-200 hover:bg-white/5 relative overflow-hidden">
+                    <Link to="/" className="nav-item active group flex items-center px-4 py-3.5 gap-3 rounded-xl transition-all duration-200 hover:bg-white/5 relative overflow-hidden">
                         <i className="fa-solid fa-house w-6 text-center text-blue-400 group-hover:text-blue-300 transition-colors"></i>
                         <span className="font-medium text-sm group-hover:translate-x-1 transition-transform">Inicio</span>
-                    </a>
+                    </Link>
 
                     {/* Entradas Dropdown */}
                     <button onClick={() => toggleDropdown('entradas')} className="w-full nav-item group flex items-center justify-between px-4 py-3.5 text-slate-400 rounded-xl transition-all duration-200 hover:bg-white/5 hover:text-white relative overflow-hidden cursor-pointer text-left">
@@ -120,8 +128,28 @@ export default function Sidebar({ isOpen, onClose }) {
                         <i className={`fa-solid fa-chevron-down text-xs transition-transform duration-200 relative z-10 ${openDropdown === 'entradas' ? '' : 'rotate-180'}`}></i>
                     </button>
                     <div className={`${openDropdown === 'entradas' ? 'block' : 'hidden'} ml-10 pl-3 border-l-2 border-blue-500/30 mt-1 mb-2 space-y-1`}>
-                        {['Mantenimiento Correctivo', 'Cálculadora de MTBF', 'Calculadora MTTR', 'Mantenimiento Preventivo', 'Mantenimiento Predictivo', 'Mantenimiento Modificativo', 'Rodamientos', 'Tribología', 'Diseño Mecánico', 'Oleohidráulica', 'Neumática', 'Fajas', 'Poleas', 'Ejes', 'FMEA'].map(item => (
-                            <a key={item} href="#" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">{item}</a>
+                        {[
+                            { label: 'Mantenimiento Correctivo', path: '/pages/mantenimiento/mantenimiento_correctivo.html', external: true },
+                            { label: 'Cálculadora de MTBF', path: '/calculadora-mtbf' },
+                            { label: 'Calculadora MTTR', path: '#' },
+                            { label: 'Mantenimiento Preventivo', path: '/pages/mantenimiento/mantenimiento_preventivo.html', external: true },
+                            { label: 'Mantenimiento Predictivo', path: '/pages/mantenimiento/mantenimiento_predictivo.html', external: true },
+                            { label: 'Mantenimiento Modificativo', path: '/pages/mantenimiento/mantenimiento_modificativo.html', external: true },
+                            { label: 'Rodamientos', path: '/rodamiento' },
+                            { label: 'Tribología', path: '/tribologia' },
+                            { label: 'Diseño Mecánico', path: '/disenio-mecanico' },
+                            { label: 'Oleohidráulica', path: '/oleohidraulica' },
+                            { label: 'Neumática', path: '/neumatica' },
+                            { label: 'Fajas', path: '/fajas' },
+                            { label: 'Poleas', path: '/poleas' },
+                            { label: 'Ejes', path: '/ejes' },
+                            { label: 'FMEA', path: '/fmea' },
+                        ].map((item, index) => (
+                            item.external ? (
+                                <a key={index} href={item.path} className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">{item.label}</a>
+                            ) : (
+                                <Link key={index} to={item.path} className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">{item.label}</Link>
+                            )
                         ))}
                     </div>
 
