@@ -59,4 +59,64 @@ exports.getAllTopics = async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
-}
+};
+
+exports.createTopic = async (req, res) => {
+    try {
+        const { title, slug, summary, content, image_url, categoryId } = req.body;
+        const newTopic = await Topic.create({
+            title,
+            slug,
+            summary,
+            content,
+            image_url,
+            categoryId
+        });
+        res.status(201).json(newTopic);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error creating topic' });
+    }
+};
+
+exports.updateTopic = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { title, slug, summary, content, image_url, categoryId } = req.body;
+        const topic = await Topic.findByPk(id);
+
+        if (!topic) {
+            return res.status(404).json({ message: 'Topic not found' });
+        }
+
+        topic.title = title || topic.title;
+        topic.slug = slug || topic.slug;
+        topic.summary = summary || topic.summary;
+        topic.content = content || topic.content;
+        topic.image_url = image_url || topic.image_url;
+        topic.categoryId = categoryId || topic.categoryId;
+
+        await topic.save();
+        res.json(topic);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error updating topic' });
+    }
+};
+
+exports.deleteTopic = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const topic = await Topic.findByPk(id);
+
+        if (!topic) {
+            return res.status(404).json({ message: 'Topic not found' });
+        }
+
+        await topic.destroy();
+        res.json({ message: 'Topic deleted successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error deleting topic' });
+    }
+};

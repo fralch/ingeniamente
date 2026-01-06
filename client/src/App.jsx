@@ -20,6 +20,10 @@ import MantenimientoPreventivo from './pages/MantenimientoPreventivo';
 import MantenimientoCorrectivo from './pages/MantenimientoCorrectivo';
 import MantenimientoModificativo from './pages/MantenimientoModificativo';
 
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
+import AdminPost from './pages/AdminPost';
+
 export default function App() {
     return (
         <Routes>
@@ -42,7 +46,11 @@ export default function App() {
                 <Route path="mantenimiento-preventivo" element={<MantenimientoPreventivo />} />
                 <Route path="mantenimiento-correctivo" element={<MantenimientoCorrectivo />} />
                 <Route path="mantenimiento-modificativo" element={<MantenimientoModificativo />} />
-                {/* Other routes will be added here */}
+                
+                {/* Blog / CMS Routes */}
+                <Route path="blog" element={<BlogList />} />
+                <Route path="blog/:slug" element={<BlogPost />} />
+                <Route path="admin" element={<AdminPost />} />
             </Route>
         </Routes>
     );
