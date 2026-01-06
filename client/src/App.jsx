@@ -15,6 +15,10 @@ import Poleas from './pages/Poleas';
 import FMEA from './pages/FMEA';
 import CalculadoraMTBF from './pages/CalculadoraMTBF';
 import Rodamientos from './pages/Rodamientos';
+import MantenimientoPredictivo from './pages/MantenimientoPredictivo';
+import MantenimientoPreventivo from './pages/MantenimientoPreventivo';
+import MantenimientoCorrectivo from './pages/MantenimientoCorrectivo';
+import MantenimientoModificativo from './pages/MantenimientoModificativo';
 
 export default function App() {
     return (
@@ -34,6 +38,10 @@ export default function App() {
                 <Route path="rodamiento" element={<Rodamientos />} />
                 <Route path="fmea" element={<FMEA />} />
                 <Route path="calculadora-mtbf" element={<CalculadoraMTBF />} />
+                <Route path="mantenimiento-predictivo" element={<MantenimientoPredictivo />} />
+                <Route path="mantenimiento-preventivo" element={<MantenimientoPreventivo />} />
+                <Route path="mantenimiento-correctivo" element={<MantenimientoCorrectivo />} />
+                <Route path="mantenimiento-modificativo" element={<MantenimientoModificativo />} />
                 {/* Other routes will be added here */}
             </Route>
         </Routes>

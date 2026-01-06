@@ -66,6 +66,11 @@ export default function GestionMantenimiento() {
                     </div>
                     <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
                         <p>El mantenimiento predictivo es una estrategia de gestión de activos que se ha convertido en un pilar fundamental en la industria moderna. Con el objetivo de maximizar la vida útil de los equipos y minimizar las interrupciones no planificadas, el mantenimiento predictivo utiliza técnicas avanzadas de monitoreo y análisis de datos para predecir cuándo ocurrirá una falla. Este enfoque proporciona una comprensión integral de su aplicación en la ingeniería mecánica.</p>
+                        <div className="mt-6">
+                            <Link to="/mantenimiento-predictivo" className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors inline-flex items-center group">
+                                Ver detalle completo <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -85,6 +90,11 @@ export default function GestionMantenimiento() {
                             <li><strong>Mantenimiento basado en condiciones:</strong> Se realiza en función de indicadores específicos.</li>
                         </ul>
                         <p>El mantenimiento preventivo es esencial para garantizar la disponibilidad y el rendimiento óptimo del equipo, y su planificación adecuada asegura que las tareas se realicen correctamente, a tiempo y de acuerdo con los objetivos establecidos.</p>
+                        <div className="mt-6">
+                            <Link to="/mantenimiento-preventivo" className="text-blue-600 font-semibold hover:text-blue-800 transition-colors inline-flex items-center group">
+                                Ver detalle completo <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -115,6 +125,11 @@ export default function GestionMantenimiento() {
                         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
                             <p className="text-sm text-yellow-800"><strong>Nota importante:</strong> Si bien es necesario para abordar averías imprevistas, su enfoque reactivo puede resultar menos rentable que el preventivo o predictivo debido a mayores costos de reparación y tiempo de inactividad. Sin embargo, puede ser la opción adecuada cuando otros programas no son factibles.</p>
                         </div>
+                        <div className="mt-6">
+                            <Link to="/mantenimiento-correctivo" className="text-rose-600 font-semibold hover:text-rose-800 transition-colors inline-flex items-center group">
+                                Ver detalle completo <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -129,6 +144,11 @@ export default function GestionMantenimiento() {
                     <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
                         <p className="mb-4">El mantenimiento modificativo es una estrategia avanzada de gestión de activos que se centra en la <strong>mejora continua</strong> y la adaptación de equipos y sistemas para aumentar su eficiencia, fiabilidad y vida útil.</p>
                         <p>A diferencia de otros tipos de mantenimiento que se centran en la reparación o prevención de fallas, el mantenimiento modificativo busca realizar <strong>cambios proactivos</strong> que optimicen el rendimiento del equipo.</p>
+                        <div className="mt-6">
+                            <Link to="/mantenimiento-modificativo" className="text-purple-600 font-semibold hover:text-purple-800 transition-colors inline-flex items-center group">
+                                Ver detalle completo <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 

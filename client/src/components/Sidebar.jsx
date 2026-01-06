@@ -129,12 +129,13 @@ export default function Sidebar({ isOpen, onClose }) {
                     </button>
                     <div className={`${openDropdown === 'entradas' ? 'block' : 'hidden'} ml-10 pl-3 border-l-2 border-blue-500/30 mt-1 mb-2 space-y-1`}>
                         {[
-                            { label: 'Mantenimiento Correctivo', path: '/pages/mantenimiento/mantenimiento_correctivo.html', external: true },
+                            { label: 'Gestión de Mantenimiento', path: '/gestion-mantenimiento' },
+                            { label: 'Mantenimiento Correctivo', path: '/mantenimiento-correctivo' },
+                            { label: 'Mantenimiento Preventivo', path: '/mantenimiento-preventivo' },
+                            { label: 'Mantenimiento Predictivo', path: '/mantenimiento-predictivo' },
+                            { label: 'Mantenimiento Modificativo', path: '/mantenimiento-modificativo' },
                             { label: 'Cálculadora de MTBF', path: '/calculadora-mtbf' },
                             { label: 'Calculadora MTTR', path: '#' },
-                            { label: 'Mantenimiento Preventivo', path: '/pages/mantenimiento/mantenimiento_preventivo.html', external: true },
-                            { label: 'Mantenimiento Predictivo', path: '/pages/mantenimiento/mantenimiento_predictivo.html', external: true },
-                            { label: 'Mantenimiento Modificativo', path: '/pages/mantenimiento/mantenimiento_modificativo.html', external: true },
                             { label: 'Rodamientos', path: '/rodamiento' },
                             { label: 'Tribología', path: '/tribologia' },
                             { label: 'Diseño Mecánico', path: '/disenio-mecanico' },
