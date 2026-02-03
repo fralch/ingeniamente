@@ -55,53 +55,94 @@
 
                 <div class="bg-white rounded-3xl shadow-xl overflow-hidden" id="intro-container">
                     <!-- Hero Image Area -->
-                    <div class="h-64 md:h-96 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 relative flex items-center justify-center overflow-hidden">
+                    <div class="h-48 md:h-64 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 relative flex items-center justify-center overflow-hidden">
                         <!-- Background Pattern -->
                         <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-                        
+
                         <div class="relative z-10 text-center p-8">
-                             <i class="fa-solid fa-trophy text-7xl md:text-8xl text-yellow-400 mb-4 drop-shadow-lg"></i>
+                             <i class="fa-solid fa-trophy text-6xl md:text-7xl text-yellow-400 mb-4 drop-shadow-lg"></i>
                         </div>
                     </div>
-                    
+
                     <div class="p-8 md:p-12">
                         <div class="flex items-center gap-2 mb-4">
                             <span class="text-xs font-bold tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">Ingeniería General</span>
-                            <span class="text-xs font-bold tracking-wider text-slate-500 uppercase">Trivia Semanal</span>
+                            <span class="text-xs font-bold tracking-wider text-slate-500 uppercase">Trivia</span>
                         </div>
 
-                        <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
                             ¿Cuánto dominas los fundamentos de la ingeniería?
                         </h1>
-                        
-                        <p class="text-xl text-slate-600 font-light leading-relaxed mb-8">
-                            Desde ciencia de materiales y mecánica de fluidos hasta electricidad y elementos de máquinas. Pon a prueba tus conocimientos técnicos con este desafío integral.
+
+                        <p class="text-lg text-slate-600 font-light leading-relaxed mb-6">
+                            Pon a prueba tus conocimientos técnicos con este desafío integral. Selecciona tu nivel de dificultad.
                         </p>
-                        
-                        <div class="flex items-center gap-6 mb-10 text-sm text-slate-500 border-y border-slate-100 py-6">
-                            <div class="flex items-center">
-                                <i class="fa-solid fa-user-pen mr-2 text-slate-400"></i>
-                                Por: Ingeniamente Team
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fa-regular fa-clock mr-2 text-slate-400"></i>
-                                Actualizado hoy
+
+                        <!-- Nivel Selection -->
+                        <div class="mb-8">
+                            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Selecciona tu nivel</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <!-- Básico -->
+                                <button onclick="selectLevel('basico')" id="btn-basico" class="level-btn group p-6 border-2 border-slate-200 rounded-2xl hover:border-green-400 hover:bg-green-50 transition-all duration-200 text-left">
+                                    <div class="flex items-center mb-3">
+                                        <div class="w-10 h-10 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mr-3 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-seedling"></i>
+                                        </div>
+                                        <span class="font-bold text-slate-800">Básico</span>
+                                    </div>
+                                    <p class="text-sm text-slate-500">Conceptos fundamentales y definiciones básicas de ingeniería.</p>
+                                    <div class="mt-3 flex items-center text-xs text-green-600 font-medium">
+                                        <i class="fa-solid fa-star mr-1"></i> Principiante
+                                    </div>
+                                </button>
+
+                                <!-- Intermedio -->
+                                <button onclick="selectLevel('intermedio')" id="btn-intermedio" class="level-btn group p-6 border-2 border-slate-200 rounded-2xl hover:border-yellow-400 hover:bg-yellow-50 transition-all duration-200 text-left">
+                                    <div class="flex items-center mb-3">
+                                        <div class="w-10 h-10 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center mr-3 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-cogs"></i>
+                                        </div>
+                                        <span class="font-bold text-slate-800">Intermedio</span>
+                                    </div>
+                                    <p class="text-sm text-slate-500">Aplicaciones prácticas y cálculos moderados.</p>
+                                    <div class="mt-3 flex items-center text-xs text-yellow-600 font-medium">
+                                        <i class="fa-solid fa-star mr-1"></i><i class="fa-solid fa-star mr-1"></i> Estudiante
+                                    </div>
+                                </button>
+
+                                <!-- Avanzado -->
+                                <button onclick="selectLevel('avanzado')" id="btn-avanzado" class="level-btn group p-6 border-2 border-slate-200 rounded-2xl hover:border-red-400 hover:bg-red-50 transition-all duration-200 text-left">
+                                    <div class="flex items-center mb-3">
+                                        <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mr-3 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-rocket"></i>
+                                        </div>
+                                        <span class="font-bold text-slate-800">Avanzado</span>
+                                    </div>
+                                    <p class="text-sm text-slate-500">Problemas complejos y análisis profundo.</p>
+                                    <div class="mt-3 flex items-center text-xs text-red-600 font-medium">
+                                        <i class="fa-solid fa-star mr-1"></i><i class="fa-solid fa-star mr-1"></i><i class="fa-solid fa-star mr-1"></i> Experto
+                                    </div>
+                                </button>
                             </div>
                         </div>
-                        
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                            <div class="space-y-2">
-                                <div class="flex items-center text-slate-700 font-medium">
-                                    <i class="fa-solid fa-circle-question w-6 text-blue-500"></i>
-                                    20 Preguntas en total
-                                </div>
-                                <div class="flex items-center text-slate-700 font-medium">
-                                    <i class="fa-solid fa-star w-6 text-yellow-500"></i>
-                                    Nivel: Intermedio
-                                </div>
+
+                        <div class="flex items-center gap-6 mb-6 text-sm text-slate-500 border-y border-slate-100 py-4">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-circle-question w-6 text-blue-500"></i>
+                                20 Preguntas aleatorias
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-database w-6 text-purple-500"></i>
+                                100+ preguntas por nivel
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div id="selected-level-display" class="text-slate-500 text-sm">
+                                <i class="fa-solid fa-hand-pointer mr-2"></i> Selecciona un nivel para comenzar
                             </div>
 
-                            <button onclick="initGame()" class="w-full md:w-auto bg-[#ff0000] hover:bg-red-700 text-white text-xl font-bold py-4 px-16 rounded-full transition-all duration-300 shadow-xl shadow-red-600/20 transform hover:-translate-y-1">
+                            <button onclick="initGame()" id="start-btn" disabled class="w-full md:w-auto bg-slate-300 text-slate-500 text-xl font-bold py-4 px-16 rounded-full transition-all duration-300 cursor-not-allowed">
                                 Comenzar
                             </button>
                         </div>

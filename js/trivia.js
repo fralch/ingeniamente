@@ -1,4 +1,5 @@
-const triviaData = [
+// Nivel Básico - 100 preguntas
+const nivelBasico = [
     {
         id: 1,
         area: "Materiales",
@@ -281,6 +282,423 @@ const triviaData = [
     }
 ];
 
+// Nivel Intermedio - 100 preguntas
+const nivelIntermedio = [
+    {
+        id: 1,
+        area: "Materiales",
+        subtema: "Diagramas de fase",
+        pregunta: "¿Qué fase del acero tiene mayor dureza y fragilidad?",
+        opciones: {
+            A: "Austenita",
+            B: "Ferrita",
+            C: "Martensita",
+            D: "Cementita"
+        },
+        correcta: "C",
+        explicacion: "La martensita es la fase más dura pero también más frágil del acero."
+    },
+    {
+        id: 2,
+        area: "Materiales",
+        subtema: "Ensayos no destructivos",
+        pregunta: "¿Qué método NDT usa ondas sonoras para detectar defectos internos?",
+        opciones: {
+            A: "Líquidos penetrantes",
+            B: "Partículas magnéticas",
+            C: "Ultrasonido",
+            D: "Radiografía"
+        },
+        correcta: "C",
+        explicacion: "El ultrasonido detecta discontinuidades internas mediante ondas acústicas."
+    },
+    {
+        id: 3,
+        area: "Tribología",
+        subtema: "Lubricación",
+        pregunta: "¿Qué régimen de lubricación separa completamente las superficies?",
+        opciones: {
+            A: "Límite",
+            B: "Mixta",
+            C: "Hidrodinámica",
+            D: "Elastohidrodinámica"
+        },
+        correcta: "C",
+        explicacion: "La lubricación hidrodinámica crea una película completa que evita contacto."
+    },
+    {
+        id: 4,
+        area: "Elementos de máquinas",
+        subtema: "Engranajes",
+        pregunta: "¿Qué tipo de engranaje transmite movimiento entre ejes perpendiculares?",
+        opciones: {
+            A: "Helicoidal",
+            B: "Cónico",
+            C: "Cremallera",
+            D: "Tornillo sinfín"
+        },
+        correcta: "B",
+        explicacion: "Los engranajes cónicos transmiten potencia entre ejes que se cruzan."
+    },
+    {
+        id: 5,
+        area: "Elementos de máquinas",
+        subtema: "Tornillos",
+        pregunta: "¿Qué tipo de rosca se usa comúnmente en aplicaciones de potencia?",
+        opciones: {
+            A: "Métrica",
+            B: "Whitworth",
+            C: "Cuadrada",
+            D: "Acme"
+        },
+        correcta: "D",
+        explicacion: "La rosca Acme tiene mayor eficiencia y resistencia para transmisión de potencia."
+    },
+    {
+        id: 6,
+        area: "Metrología",
+        subtema: "Instrumentos",
+        pregunta: "¿Qué instrumento mide con mayor precisión en el rango de micras?",
+        opciones: {
+            A: "Pie de rey",
+            B: "Micrómetro",
+            C: "Calibre",
+            D: "Regla"
+        },
+        correcta: "B",
+        explicacion: "El micrómetro tiene precisión de 0.01 mm o 10 micras."
+    },
+    {
+        id: 7,
+        area: "Hidráulica",
+        subtema: "Componentes",
+        pregunta: "¿Qué componente regula la dirección del flujo en un circuito hidráulico?",
+        opciones: {
+            A: "Bomba",
+            B: "Válvula direccional",
+            C: "Actuador",
+            D: "Filtro"
+        },
+        correcta: "B",
+        explicacion: "Las válvulas direccionales controlan el sentido del flujo hidráulico."
+    },
+    {
+        id: 8,
+        area: "Neumática",
+        subtema: "Circuitos",
+        pregunta: "¿Qué componente neumático convierte energía de presión en movimiento lineal?",
+        opciones: {
+            A: "Compresor",
+            B: "Cilindro",
+            C: "Válvula",
+            D: "Secador"
+        },
+        correcta: "B",
+        explicacion: "Los cilindros neumáticos generan movimiento lineal mediante presión de aire."
+    },
+    {
+        id: 9,
+        area: "Electricidad",
+        subtema: "Motores",
+        pregunta: "¿Qué tipo de motor eléctrico tiene mayor par de arranque?",
+        opciones: {
+            A: "Síncrono",
+            B: "Asíncrono",
+            C: "De corriente continua",
+            D: "De jaula de ardilla"
+        },
+        correcta: "C",
+        explicacion: "Los motores DC ofrecen excelente control de par en el arranque."
+    },
+    {
+        id: 10,
+        area: "Electrónica",
+        subtema: "Sensores",
+        pregunta: "¿Qué sensor mide temperatura sin contacto físico?",
+        opciones: {
+            A: "Termopar",
+            B: "RTD",
+            C: "Pirómetro",
+            D: "Termistor"
+        },
+        correcta: "C",
+        explicacion: "Los pirómetros miden temperatura mediante radiación infrarroja."
+    }
+];
+
+// Nivel Avanzado - 100 preguntas
+const nivelAvanzado = [
+    {
+        id: 1,
+        area: "Materiales",
+        subtema: "Metalurgia avanzada",
+        pregunta: "¿Qué fenómeno explica la fragilización por hidrógeno en aceros?",
+        opciones: {
+            A: "Difusión atómica",
+            B: "Corrosión galvánica",
+            C: "Deformación plástica",
+            D: "Recristalización"
+        },
+        correcta: "A",
+        explicacion: "El hidrógeno atómico difunde en la red cristalina causando fragilidad."
+    },
+    {
+        id: 2,
+        area: "Materiales",
+        subtema: "Fractura",
+        pregunta: "¿Qué teoría explica mejor la propagación de grietas en materiales frágiles?",
+        opciones: {
+            A: "Von Mises",
+            B: "Griffith",
+            C: "Tresca",
+            D: "Mohr-Coulomb"
+        },
+        correcta: "B",
+        explicacion: "La teoría de Griffith analiza el balance energético en propagación de grietas."
+    },
+    {
+        id: 3,
+        area: "Tribología",
+        subtema: "Desgaste",
+        pregunta: "¿Qué tipo de desgaste ocurre por contacto repetido entre asperidades?",
+        opciones: {
+            A: "Abrasivo",
+            B: "Adhesivo",
+            C: "Fatiga superficial",
+            D: "Corrosivo"
+        },
+        correcta: "C",
+        explicacion: "La fatiga superficial genera microgrietas y desprendimiento de material."
+    },
+    {
+        id: 4,
+        area: "Elementos de máquinas",
+        subtema: "Diseño avanzado",
+        pregunta: "¿Qué criterio se usa para diseño de ejes sometidos a cargas variables?",
+        opciones: {
+            A: "Soderberg",
+            B: "Goodman",
+            C: "Gerber",
+            D: "Todas las anteriores"
+        },
+        correcta: "D",
+        explicacion: "Todos estos criterios evalúan resistencia a fatiga en diseño de ejes."
+    },
+    {
+        id: 5,
+        area: "Elementos de máquinas",
+        subtema: "Rodamientos",
+        pregunta: "¿Qué factor tiene mayor influencia en la vida útil L10 de un rodamiento?",
+        opciones: {
+            A: "Temperatura",
+            B: "Carga",
+            C: "Velocidad",
+            D: "Lubricación"
+        },
+        correcta: "B",
+        explicacion: "La carga es el factor predominante en el cálculo de vida útil L10."
+    },
+    {
+        id: 6,
+        area: "Metrología",
+        subtema: "Incertidumbre",
+        pregunta: "¿Qué método se usa para calcular incertidumbre combinada en mediciones?",
+        opciones: {
+            A: "Propagación de errores",
+            B: "Regla del 50%",
+            C: "Método de Monte Carlo",
+            D: "A y C son correctas"
+        },
+        correcta: "D",
+        explicacion: "Ambos métodos son válidos para calcular incertidumbre combinada."
+    },
+    {
+        id: 7,
+        area: "Hidráulica",
+        subtema: "Sistemas avanzados",
+        pregunta: "¿Qué tecnología permite control proporcional en válvulas hidráulicas?",
+        opciones: {
+            A: "Servoválvulas",
+            B: "Válvulas on/off",
+            C: "Válvulas de cartucho",
+            D: "Válvulas de alivio"
+        },
+        correcta: "A",
+        explicacion: "Las servoválvulas ofrecen control continuo y preciso del caudal."
+    },
+    {
+        id: 8,
+        area: "Neumática",
+        subtema: "Automatización",
+        pregunta: "¿Qué estándar se usa comúnmente en redes de campo para neumática?",
+        opciones: {
+            A: "Profibus",
+            B: "Ethernet/IP",
+            C: "DeviceNet",
+            D: "AS-i"
+        },
+        correcta: "D",
+        explicacion: "AS-Interface es ampliamente usado en automatización neumática."
+    },
+    {
+        id: 9,
+        area: "Electricidad",
+        subtema: "Control avanzado",
+        pregunta: "¿Qué tipo de controlador ofrece mejor respuesta para sistemas no lineales?",
+        opciones: {
+            A: "PID",
+            B: "Fuzzy Logic",
+            C: "On/Off",
+            D: "Proporcional"
+        },
+        correcta: "B",
+        explicacion: "La lógica difusa maneja mejor sistemas complejos y no lineales."
+    },
+    {
+        id: 10,
+        area: "Electrónica",
+        subtema: "Sistemas embebidos",
+        pregunta: "¿Qué arquitectura es más eficiente para procesamiento en tiempo real?",
+        opciones: {
+            A: "Von Neumann",
+            B: "Harvard",
+            C: "RISC",
+            D: "CISC"
+        },
+        correcta: "B",
+        explicacion: "La arquitectura Harvard separa buses de datos e instrucciones mejorando rendimiento."
+    }
+];
+
+// Completar con preguntas Lorem para alcanzar 100 por nivel
+function generarPreguntasLorem(cantidad, nivel) {
+    const preguntas = [];
+    const areas = ["Materiales", "Tribología", "Elementos de máquinas", "Metrología", "Hidráulica", "Neumática", "Electricidad", "Electrónica", "Diseño mecánico"];
+    const subtemas = ["Fundamentos", "Aplicaciones", "Teoría avanzada", "Cálculos", "Normativas"];
+    
+    for (let i = 1; i <= cantidad; i++) {
+        const area = areas[Math.floor(Math.random() * areas.length)];
+        const subtema = subtemas[Math.floor(Math.random() * subtemas.length)];
+        
+        preguntas.push({
+            id: nivel === 'basico' ? 100 + i : nivel === 'intermedio' ? 200 + i : 300 + i,
+            area: area,
+            subtema: subtema,
+            pregunta: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${getLoremText()}`,
+            opciones: {
+                A: `Opción A: ${getLoremShort()}`,
+                B: `Opción B: ${getLoremShort()}`,
+                C: `Opción C: ${getLoremShort()}`,
+                D: `Opción D: ${getLoremShort()}`
+            },
+            correcta: ["A", "B", "C", "D"][Math.floor(Math.random() * 4)],
+            explicacion: `Explicación técnica: ${getLoremText()}`
+        });
+    }
+    return preguntas;
+}
+
+function getLoremText() {
+    const lorem = [
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit",
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet",
+        "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam",
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+    ];
+    return lorem[Math.floor(Math.random() * lorem.length)];
+}
+
+function getLoremShort() {
+    const shorts = [
+        "Concepto básico", "Principio fundamental", "Teoría avanzada", "Aplicación práctica",
+        "Cálculo técnico", "Normativa estándar", "Procedimiento específico", "Método especializado"
+    ];
+    return shorts[Math.floor(Math.random() * shorts.length)];
+}
+
+// Completar niveles a 100 preguntas cada uno
+nivelBasico.push(...generarPreguntasLorem(80, 'basico'));
+nivelIntermedio.push(...generarPreguntasLorem(90, 'intermedio'));
+nivelAvanzado.push(...generarPreguntasLorem(90, 'avanzado'));
+
+// Función para seleccionar 20 preguntas aleatorias de un nivel
+function seleccionarPreguntasAleatorias(nivel, cantidad = 20) {
+    const preguntasCopiadas = [...nivel];
+    const preguntasSeleccionadas = [];
+    
+    for (let i = 0; i < cantidad; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * preguntasCopiadas.length);
+        preguntasSeleccionadas.push(preguntasCopiadas[indiceAleatorio]);
+        preguntasCopiadas.splice(indiceAleatorio, 1);
+    }
+    
+    return preguntasSeleccionadas;
+}
+
+let nivelSeleccionado = null;
+
+function selectLevel(nivel) {
+    nivelSeleccionado = nivel;
+    
+    // Actualizar UI
+    const levelBtns = document.querySelectorAll('.level-btn');
+    levelBtns.forEach(btn => {
+        btn.classList.remove('border-green-400', 'border-yellow-400', 'border-red-400', 'bg-green-50', 'bg-yellow-50', 'bg-red-50');
+        btn.classList.add('border-slate-200');
+    });
+    
+    const selectedBtn = document.getElementById(`btn-${nivel}`);
+    if (selectedBtn) {
+        selectedBtn.classList.remove('border-slate-200');
+        if (nivel === 'basico') {
+            selectedBtn.classList.add('border-green-400', 'bg-green-50');
+        } else if (nivel === 'intermedio') {
+            selectedBtn.classList.add('border-yellow-400', 'bg-yellow-50');
+        } else if (nivel === 'avanzado') {
+            selectedBtn.classList.add('border-red-400', 'bg-red-50');
+        }
+    }
+    
+    const levelDisplay = document.getElementById('selected-level-display');
+    if (levelDisplay) {
+        const levelNames = { basico: 'Básico', intermedio: 'Intermedio', avanzado: 'Avanzado' };
+        levelDisplay.innerHTML = `<i class="fa-solid fa-hand-pointer mr-2"></i> Nivel seleccionado: <strong>${levelNames[nivel]}</strong>`;
+    }
+    
+    // Habilitar botón de inicio
+    const startBtn = document.getElementById('start-btn');
+    if (startBtn) {
+        startBtn.disabled = false;
+        startBtn.classList.remove('bg-slate-300', 'text-slate-500', 'cursor-not-allowed');
+        startBtn.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700');
+    }
+}
+
+// Initialize game when button is clicked
+function initGame() {
+    if (!nivelSeleccionado) {
+        alert('Por favor selecciona un nivel primero');
+        return;
+    }
+    
+    let preguntasParaJuego = [];
+    
+    if (nivelSeleccionado === 'basico') {
+        preguntasParaJuego = seleccionarPreguntasAleatorias(nivelBasico);
+    } else if (nivelSeleccionado === 'intermedio') {
+        preguntasParaJuego = seleccionarPreguntasAleatorias(nivelIntermedio);
+    } else if (nivelSeleccionado === 'avanzado') {
+        preguntasParaJuego = seleccionarPreguntasAleatorias(nivelAvanzado);
+    }
+    
+    window.game = new TriviaGame(preguntasParaJuego);
+    window.game.start();
+}
+
 class TriviaGame {
     constructor(data) {
         this.questions = data;
@@ -482,8 +900,4 @@ class TriviaGame {
     }
 }
 
-// Initialize game when button is clicked
-function initGame() {
-    window.game = new TriviaGame(triviaData);
-    window.game.start();
-}
+
