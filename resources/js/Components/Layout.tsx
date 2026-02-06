@@ -19,7 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Sidebar Container */}
       <div 
         id="sidebar-container" 
-        className={`fixed inset-y-0 left-0 z-50 w-72 h-full transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none`}
+        className={`fixed inset-y-0 left-0 z-50 w-72 h-screen transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none`}
       >
         <Sidebar toggleSidebar={toggleSidebar} />
       </div>
