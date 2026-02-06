@@ -8,7 +8,9 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
-Route::get('/trivia', [TriviaController::class, 'index'])->name('trivia');
+Route::get('/trivia', function () {
+    return Inertia::render('Trivia');
+})->name('trivia');
 Route::get('/api/trivia/questions/{level}', [TriviaController::class, 'getQuestions'])->name('trivia.questions');
 
 Route::get('/calculadora-mtbf', function () {
@@ -26,19 +28,19 @@ Route::prefix('pages')->name('pages.')->group(function () {
     })->name('diy');
 
     Route::get('/ejes', function () {
-        return view('pages.ejes');
+        return Inertia::render('Ejes');
     })->name('ejes');
 
     Route::get('/elementos-maquinas', function () {
-        return view('pages.elementos-maquinas');
+        return Inertia::render('ElementosMaquinas');
     })->name('elementos-maquinas');
 
     Route::get('/fajas', function () {
-        return view('pages.fajas');
+        return Inertia::render('Fajas');
     })->name('fajas');
 
     Route::get('/fmea', function () {
-        return view('pages.fmea');
+        return Inertia::render('Fmea');
     })->name('fmea');
 
     Route::get('/gestion-mantenimiento', function () {
@@ -46,41 +48,41 @@ Route::prefix('pages')->name('pages.')->group(function () {
     })->name('gestion-mantenimiento');
 
     Route::get('/neumatica', function () {
-        return view('pages.neumatica');
+        return Inertia::render('Neumatica');
     })->name('neumatica');
 
     Route::get('/oleohidraulica', function () {
-        return view('pages.oleohidraulica');
+        return Inertia::render('Oleohidraulica');
     })->name('oleohidraulica');
 
     Route::get('/poleas', function () {
-        return view('pages.poleas');
+        return Inertia::render('Poleas');
     })->name('poleas');
 
     Route::get('/rodamiento', function () {
-        return view('pages.rodamiento');
+        return Inertia::render('Rodamiento');
     })->name('rodamiento');
 
     Route::get('/tribologia', function () {
-        return view('pages.tribologia');
+        return Inertia::render('Tribologia');
     })->name('tribologia');
 
     // Mantenimiento Subpages
     Route::prefix('mantenimiento')->name('mantenimiento.')->group(function () {
         Route::get('/correctivo', function () {
-            return view('pages.mantenimiento.correctivo');
+            return Inertia::render('Mantenimiento/Correctivo');
         })->name('correctivo');
 
         Route::get('/modificativo', function () {
-            return view('pages.mantenimiento.modificativo');
+            return Inertia::render('Mantenimiento/Modificativo');
         })->name('modificativo');
 
         Route::get('/predictivo', function () {
-            return view('pages.mantenimiento.predictivo');
+            return Inertia::render('Mantenimiento/Predictivo');
         })->name('predictivo');
 
         Route::get('/preventivo', function () {
-            return view('pages.mantenimiento.preventivo');
+            return Inertia::render('Mantenimiento/Preventivo');
         })->name('preventivo');
     });
 });

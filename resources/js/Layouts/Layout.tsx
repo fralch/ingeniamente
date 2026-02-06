@@ -37,12 +37,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Ingeniamente.com - I
                     <div className="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
 
                     {/* Header Container */}
-                    <div id="header-container" className="sticky top-0 z-40">
+                    <div id="header-container" className="z-40">
                         <Header toggleSidebar={toggleSidebar} />
                     </div>
 
                     {/* Scrollable Content */}
-                    <div className="flex-1 overflow-y-auto px-4 py-8 md:p-8 relative z-10 scroll-smooth">
+                    <div className="flex-1 overflow-y-auto px-4 py-4 md:px-8 md:py-6 relative z-10 scroll-smooth">
                         <div className="max-w-7xl mx-auto">
                             {children}
                         </div>
