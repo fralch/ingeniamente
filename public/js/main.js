@@ -2,40 +2,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const basePath = window.appBasePath || '';
 
-    // Load Components
-    Promise.all([
-        loadComponent('sidebar-container', basePath + 'components/sidebar.html'),
-        loadComponent('header-container', basePath + 'components/header.html'),
-        loadComponent('footer-container', basePath + 'components/footer.html')
-    ]).then(() => {
-        // Initialize logic that depends on loaded components
-        highlightActiveLink();
-        updateSidebarLinks(basePath);
-    });
+
+    // Layout and components are now handled by Laravel Blade
+    // so we don't need to dynamically load them via fetch.
+
+    // Initialize logic that depends on loaded components (if any, though highlightActiveLink is empty)
+    highlightActiveLink();
+    updateSidebarLinks(basePath);
+
 
     // Initialize Filters
     initializeFilters();
 });
-
-async function loadComponent(elementId, filePath) {
-    const container = document.getElementById(elementId);
-    if (!container) return;
-
-    try {
-        const response = await fetch(filePath);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const html = await response.text();
-        container.innerHTML = html;
-    } catch (error) {
-        console.error('Error loading component:', error);
-        container.innerHTML = `<div class="p-4 bg-red-50 text-red-600 rounded-lg text-sm border border-red-100">
-            <strong>Error loading ${filePath}</strong><br>
-            Please run this project on a local server.
-        </div>`;
-    }
-}
 
 // Toggle Sidebar for Mobile
 window.toggleSidebar = function () {
@@ -166,11 +144,11 @@ function formatResultItem(label, value) {
 }
 
 // Temperatura
-window.calculateTemp = function() {
+window.calculateTemp = function () {
     const val = parseFloat(document.getElementById('temp-input').value);
     const unit = document.getElementById('temp-unit').value;
     const resultDiv = document.getElementById('temp-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -181,19 +159,19 @@ window.calculateTemp = function() {
 
     if (unit === 'c') {
         c = val;
-        f = (val * 9/5) + 32;
+        f = (val * 9 / 5) + 32;
         k = val + 273.15;
         re = val * 0.8;
         ra = (val + 273.15) * 1.8;
     } else if (unit === 'f') {
-        c = (val - 32) * 5/9;
+        c = (val - 32) * 5 / 9;
         f = val;
-        k = (val - 32) * 5/9 + 273.15;
-        re = (val - 32) * 4/9;
+        k = (val - 32) * 5 / 9 + 273.15;
+        re = (val - 32) * 4 / 9;
         ra = val + 459.67;
     } else if (unit === 'k') {
         c = val - 273.15;
-        f = (val - 273.15) * 9/5 + 32;
+        f = (val - 273.15) * 9 / 5 + 32;
         k = val;
         re = (val - 273.15) * 0.8;
         ra = val * 1.8;
@@ -204,10 +182,10 @@ window.calculateTemp = function() {
         re = val;
         ra = (val * 2.25) + 491.67;
     } else if (unit === 'ra') {
-        c = (val - 491.67) * 5/9;
+        c = (val - 491.67) * 5 / 9;
         f = val - 459.67;
-        k = val * 5/9;
-        re = (val - 491.67) * 4/9;
+        k = val * 5 / 9;
+        re = (val - 491.67) * 4 / 9;
         ra = val;
     }
 
@@ -222,11 +200,11 @@ window.calculateTemp = function() {
 };
 
 // Longitud
-window.calculateLength = function() {
+window.calculateLength = function () {
     const val = parseFloat(document.getElementById('length-input').value);
     const unit = document.getElementById('length-unit').value;
     const resultDiv = document.getElementById('length-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -235,7 +213,7 @@ window.calculateLength = function() {
 
     // Convert to meters first
     let m;
-    switch(unit) {
+    switch (unit) {
         case 'm': m = val; break;
         case 'cm': m = val / 100; break;
         case 'km': m = val * 1000; break;
@@ -266,11 +244,11 @@ window.calculateLength = function() {
 };
 
 // Área
-window.calculateArea = function() {
+window.calculateArea = function () {
     const val = parseFloat(document.getElementById('area-input').value);
     const unit = document.getElementById('area-unit').value;
     const resultDiv = document.getElementById('area-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -279,7 +257,7 @@ window.calculateArea = function() {
 
     // Convert to m2
     let m2;
-    switch(unit) {
+    switch (unit) {
         case 'm2': m2 = val; break;
         case 'km2': m2 = val * 1000000; break;
         case 'cm2': m2 = val / 10000; break;
@@ -306,11 +284,11 @@ window.calculateArea = function() {
 };
 
 // Volumen
-window.calculateVolume = function() {
+window.calculateVolume = function () {
     const val = parseFloat(document.getElementById('volume-input').value);
     const unit = document.getElementById('volume-unit').value;
     const resultDiv = document.getElementById('volume-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -319,7 +297,7 @@ window.calculateVolume = function() {
 
     // Convert to m3
     let m3;
-    switch(unit) {
+    switch (unit) {
         case 'm3': m3 = val; break;
         case 'l': m3 = val / 1000; break;
         case 'in3': m3 = val * 0.000016387064; break;
@@ -348,11 +326,11 @@ window.calculateVolume = function() {
 };
 
 // Peso
-window.calculateWeight = function() {
+window.calculateWeight = function () {
     const val = parseFloat(document.getElementById('weight-input').value);
     const unit = document.getElementById('weight-unit').value;
     const resultDiv = document.getElementById('weight-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -361,7 +339,7 @@ window.calculateWeight = function() {
 
     // Convert to kg
     let kg;
-    switch(unit) {
+    switch (unit) {
         case 'kg': kg = val; break;
         case 'lb': kg = val * 0.45359237; break;
         case 'oz': kg = val * 0.028349523125; break;
@@ -392,11 +370,11 @@ window.calculateWeight = function() {
 };
 
 // Velocidad
-window.calculateSpeed = function() {
+window.calculateSpeed = function () {
     const val = parseFloat(document.getElementById('speed-input').value);
     const unit = document.getElementById('speed-unit').value;
     const resultDiv = document.getElementById('speed-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -405,7 +383,7 @@ window.calculateSpeed = function() {
 
     // Convert to m/s
     let ms;
-    switch(unit) {
+    switch (unit) {
         case 'ms': ms = val; break;
         case 'kmh': ms = val / 3.6; break;
         case 'ft_min': ms = val * 0.00508; break;
@@ -426,11 +404,11 @@ window.calculateSpeed = function() {
 };
 
 // Presión
-window.calculatePressure = function() {
+window.calculatePressure = function () {
     const val = parseFloat(document.getElementById('pressure-input').value);
     const unit = document.getElementById('pressure-unit').value;
     const resultDiv = document.getElementById('pressure-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -439,7 +417,7 @@ window.calculatePressure = function() {
 
     // Convert to Pascal (Pa)
     let pa;
-    switch(unit) {
+    switch (unit) {
         case 'pa': pa = val; break;
         case 'bar': pa = val * 100000; break;
         case 'mmh2o': pa = val * 9.80665; break;
@@ -470,11 +448,11 @@ window.calculatePressure = function() {
 };
 
 // Flujo
-window.calculateFlow = function() {
+window.calculateFlow = function () {
     const val = parseFloat(document.getElementById('flow-input').value);
     const unit = document.getElementById('flow-unit').value;
     const resultDiv = document.getElementById('flow-result');
-    
+
     if (isNaN(val)) {
         resultDiv.innerHTML = '<span class="text-red-400 text-xs col-span-2 text-center">Ingrese un valor válido</span>';
         resultDiv.classList.remove('hidden');
@@ -483,7 +461,7 @@ window.calculateFlow = function() {
 
     // Convert to Litros por minuto (L/min)
     let lmin;
-    switch(unit) {
+    switch (unit) {
         case 'm3s': lmin = val * 60000; break;
         case 'm3m': lmin = val * 1000; break;
         case 'm3h': lmin = val * 16.6666667; break;

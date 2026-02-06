@@ -1,27 +1,28 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 use App\Http\Controllers\TriviaController;
 
 Route::get('/', function () {
-    return view('home');
+    return Inertia::render('Home');
 })->name('home');
 
 Route::get('/trivia', [TriviaController::class, 'index'])->name('trivia');
 Route::get('/api/trivia/questions/{level}', [TriviaController::class, 'getQuestions'])->name('trivia.questions');
 
 Route::get('/calculadora-mtbf', function () {
-    return view('pages.calculadora-mtbf');
+    return Inertia::render('CalculadoraMtbf');
 })->name('calculators.mtbf');
 
 // Static Pages
 Route::prefix('pages')->name('pages.')->group(function () {
     Route::get('/disenio-mecanico', function () {
-        return view('pages.disenio-mecanico');
+        return Inertia::render('DisenioMecanico');
     })->name('disenio-mecanico');
 
     Route::get('/diy', function () {
-        return view('pages.diy');
+        return Inertia::render('DIY');
     })->name('diy');
 
     Route::get('/ejes', function () {
@@ -41,7 +42,7 @@ Route::prefix('pages')->name('pages.')->group(function () {
     })->name('fmea');
 
     Route::get('/gestion-mantenimiento', function () {
-        return view('pages.gestion-mantenimiento');
+        return Inertia::render('GestionMantenimiento');
     })->name('gestion-mantenimiento');
 
     Route::get('/neumatica', function () {

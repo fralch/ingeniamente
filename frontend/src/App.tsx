@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import DIY from './pages/DIY'
+import GestionMantenimiento from './pages/GestionMantenimiento'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/diy" element={<DIY />} />
-          <Route path="/gestion-mantenimiento" element={<div>Gestión de Mantenimiento</div>} />
+          <Route path="/gestion-mantenimiento" element={<GestionMantenimiento />} />
           <Route path="/oleohidraulica" element={<div>Oleohidráulica</div>} />
           <Route path="/neumatica" element={<div>Neumática</div>} />
           <Route path="/tribologia" element={<div>Tribología</div>} />
