@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Head } from '@inertiajs/react';
-import Sidebar from '../Components/Sidebar';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -22,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Ingeniamente.com - I
             <div className="bg-slate-50 text-slate-800 h-screen overflow-hidden flex selection:bg-blue-500 selection:text-white">
                 {/* Sidebar Container */}
                 <div id="sidebar-container" className={`fixed inset-y-0 left-0 z-50 w-72 h-full transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none`}>
-                    <Sidebar />
+                    <Sidebar toggleSidebar={toggleSidebar} />
                 </div>
 
                 {/* Mobile Overlay */}
@@ -34,7 +34,6 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Ingeniamente.com - I
                 <main className="flex-1 flex flex-col h-screen overflow-hidden relative z-0">
                     {/* Background Blobs */}
                     <div className="blob -top-20 -right-20 opacity-50"></div>
-                    <div className="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
 
                     {/* Header Container */}
                     <div id="header-container" className="z-40">

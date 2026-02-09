@@ -35,7 +35,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="flex-1 flex flex-col min-h-screen overflow-hidden relative z-0">
         {/* Background Blobs */}
         <div className="blob -top-20 -right-20 opacity-50"></div>
-        <div className="blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 opacity-30"></div>
 
         {/* Header Container */}
         <div id="header-container" className="sticky top-0 z-40">
