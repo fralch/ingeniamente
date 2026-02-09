@@ -236,16 +236,16 @@ export default function Modificativo() {
                     </div>
                     <div>
                         <h4 className="font-bold text-slate-800 mb-2 flex items-center"><i className="fa-solid fa-people-group text-slate-400 mr-2"></i> Gestión del Cambio</h4>
-                        <p class="text-sm text-slate-600">Resistencia organizacional ante cambios significativos en procesos operativos.</p>
+                        <p className="text-sm text-slate-600">Resistencia organizacional ante cambios significativos en procesos operativos.</p>
                     </div>
                     <div>
                         <h4 className="font-bold text-slate-800 mb-2 flex items-center"><i className="fa-solid fa-stopwatch text-slate-400 mr-2"></i> Interrupciones</h4>
-                        <p class="text-sm text-slate-600">Las modificaciones pueden causar pausas temporales en la producción.</p>
+                        <p className="text-sm text-slate-600">Las modificaciones pueden causar pausas temporales en la producción.</p>
                     </div>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                    <h4 class="font-bold text-blue-900 mb-2"><i className="fa-solid fa-rocket mr-2"></i> Futuro Prometedor</h4>
-                    <p class="text-sm text-blue-800">
+                    <h4 className="font-bold text-blue-900 mb-2"><i className="fa-solid fa-rocket mr-2"></i> Futuro Prometedor</h4>
+                    <p className="text-sm text-blue-800">
                         Avances continuos en tecnología y metodologías facilitan la identificación e implementación de mejoras. La integración de herramientas de análisis de datos y simulación mejorará la precisión y efectividad de las modificaciones.
                     </p>
                 </div>

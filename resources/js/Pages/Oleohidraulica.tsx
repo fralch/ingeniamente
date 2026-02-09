@@ -185,20 +185,20 @@ export default function Oleohidraulica() {
             </h2>
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                 <p className="text-slate-600 mb-4">La oleohidráulica tiene una amplia gama de aplicaciones en diferentes industrias:</p>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
+                <ul className="space-y-3">
+                    <li className="flex items-start">
                         <i className="fa-solid fa-check text-cyan-500 mt-1 mr-3 text-sm"></i>
                         <span className="text-slate-700"><strong>Maquinaria Pesada:</strong> Excavadoras, grúas y cargadores frontales utilizan sistemas oleohidráulicos para mover grandes cargas con precisión.</span>
                     </li>
-                    <li class="flex items-start">
+                    <li className="flex items-start">
                         <i className="fa-solid fa-check text-cyan-500 mt-1 mr-3 text-sm"></i>
                         <span className="text-slate-700"><strong>Aeronáutica:</strong> Los sistemas hidráulicos son cruciales en los aviones para operar los controles de vuelo y el tren de aterrizaje.</span>
                     </li>
-                    <li class="flex items-start">
+                    <li className="flex items-start">
                         <i className="fa-solid fa-check text-cyan-500 mt-1 mr-3 text-sm"></i>
                         <span className="text-slate-700"><strong>Industria Manufacturera:</strong> Prensas hidráulicas, máquinas de moldeo por inyección y equipos de ensamblaje utilizan oleohidráulica para operaciones precisas y de alta fuerza.</span>
                     </li>
-                    <li class="flex items-start">
+                    <li className="flex items-start">
                         <i className="fa-solid fa-check text-cyan-500 mt-1 mr-3 text-sm"></i>
                         <span className="text-slate-700"><strong>Automoción:</strong> Los sistemas de frenos hidráulicos y las transmisiones automáticas son ejemplos de aplicaciones oleohidráulicas en vehículos.</span>
                     </li>
@@ -214,8 +214,8 @@ export default function Oleohidraulica() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                    <h3 className="font-bold text-emerald-600 mb-4 flex items-center"><i class="fa-solid fa-thumbs-up mr-2"></i> Ventajas</h3>
-                    <ul class="space-y-3">
+                    <h3 className="font-bold text-emerald-600 mb-4 flex items-center"><i className="fa-solid fa-thumbs-up mr-2"></i> Ventajas</h3>
+                    <ul className="space-y-3">
                         <li className="flex items-start bg-emerald-50 p-3 rounded-lg">
                             <i className="fa-solid fa-check text-emerald-500 mt-1 mr-3 text-xs"></i>
                             <span className="text-sm text-slate-700"><strong>Alta Relación de Potencia a Peso:</strong> Pueden generar grandes fuerzas con componentes relativamente pequeños.</span>
@@ -231,8 +231,8 @@ export default function Oleohidraulica() {
                     </ul>
                 </div>
                 <div>
-                    <h3 className="font-bold text-rose-600 mb-4 flex items-center"><i class="fa-solid fa-thumbs-down mr-2"></i> Desventajas</h3>
-                    <ul class="space-y-3">
+                    <h3 className="font-bold text-rose-600 mb-4 flex items-center"><i className="fa-solid fa-thumbs-down mr-2"></i> Desventajas</h3>
+                    <ul className="space-y-3">
                         <li className="flex items-start bg-rose-50 p-3 rounded-lg">
                             <i className="fa-solid fa-xmark text-rose-500 mt-1 mr-3 text-xs"></i>
                             <span className="text-sm text-slate-700"><strong>Posibilidad de Fugas de Aceite:</strong> Las fugas pueden causar problemas ambientales y de seguridad.</span>
