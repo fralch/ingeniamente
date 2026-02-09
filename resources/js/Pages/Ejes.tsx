@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Ejes() {
 
@@ -11,7 +10,7 @@ export default function Ejes() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Ejes Mecánicos</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -191,6 +190,6 @@ export default function Ejes() {
             </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

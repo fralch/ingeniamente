@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Fmea() {
 
@@ -11,7 +10,7 @@ export default function Fmea() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Análisis de Modos y Efectos de Fallo (FMEA)</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -255,6 +254,6 @@ export default function Fmea() {
             </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

@@ -18,7 +18,7 @@ Route::get('/calculadora-mtbf', function () {
 })->name('calculators.mtbf');
 
 // Static Pages
-Route::prefix('pages')->name('pages.')->group(function () {
+Route::name('pages.')->group(function () {
     Route::get('/disenio-mecanico', function () {
         return Inertia::render('DisenioMecanico');
     })->name('disenio-mecanico');

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Rodamiento() {
 
@@ -11,7 +10,7 @@ export default function Rodamiento() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Rodamientos: Fundamentos y Tipos</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -226,6 +225,6 @@ export default function Rodamiento() {
             </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

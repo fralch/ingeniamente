@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Tribologia() {
 
@@ -11,7 +10,7 @@ export default function Tribologia() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Tribología</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -213,6 +212,6 @@ export default function Tribologia() {
             </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

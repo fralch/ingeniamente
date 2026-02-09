@@ -1,10 +1,9 @@
 
-import Layout from '../Layouts/Layout';
 import { Head, Link } from '@inertiajs/react';
 
 const DisenioMecanico = () => {
     return (
-        <Layout title="Diseño Mecánico - Ingeniamente.com">
+        <>
             <Head title="Diseño Mecánico" />
             
             <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 animate-fade-in-up">
@@ -202,7 +201,7 @@ const DisenioMecanico = () => {
                 </div>
 
             </div>
-        </Layout>
+        </>
     );
 };
 

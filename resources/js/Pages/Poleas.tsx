@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Poleas() {
 
@@ -11,7 +10,7 @@ export default function Poleas() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Poleas: Fundamentos y Aplicaciones</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -172,6 +171,6 @@ export default function Poleas() {
             </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

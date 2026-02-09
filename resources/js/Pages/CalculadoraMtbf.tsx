@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Layout from '../Layouts/Layout';
 import { Head } from '@inertiajs/react';
 
 const CalculadoraMtbf = () => {
@@ -37,7 +36,7 @@ const CalculadoraMtbf = () => {
     };
 
     return (
-        <Layout title="Calculadora de MTBF - Ingeniamente.com">
+        <>
             <Head title="Calculadora de MTBF" />
             
             {/* Hero Section */}
@@ -179,7 +178,7 @@ const CalculadoraMtbf = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     );
 };
 

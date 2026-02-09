@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Preventivo() {
 
@@ -12,7 +11,7 @@ export default function Preventivo() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Mantenimiento Preventivo</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -194,7 +193,7 @@ export default function Preventivo() {
                     <li>El objetivo de este indicador es medir la disponibilidad de los equipos, con la finalidad de incrementarla, ya que en la medida que esto ocurra, significara que se disminuye el tiempo de los paros por falla o paros no programados del equipo.</li>
                 </ul>
                 
-                <h3 class="font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-3">Ecuación de la Disponibilidad</h3>
+                <h3 className="font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-3">Ecuación de la Disponibilidad</h3>
                 <p className="text-slate-600 mb-4">La disponibilidad de un equipo puede ser expresada a través de la expresión:</p>
                 
                 <div className="flex flex-wrap justify-center gap-8 py-6 bg-white rounded-xl shadow-sm mb-4">
@@ -258,6 +257,6 @@ export default function Preventivo() {
             </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 interface Option {
   [key: string]: string;
@@ -149,7 +148,7 @@ export default function Trivia() {
   const accuracy = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0;
 
   return (
-    <Layout>
+    <>
       <Head title="Trivia de Ingeniería - Ingeniamente.com" />
       
       <div className="max-w-4xl mx-auto fade-in">
@@ -430,6 +429,6 @@ export default function Trivia() {
             </div>
         )}
       </div>
-    </Layout>
+    </>
   );
 }

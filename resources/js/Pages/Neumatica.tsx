@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Head, Link } from '@inertiajs/react';
-import Layout from '@/Layouts/Layout';
 
 export default function Neumatica() {
 
@@ -11,7 +10,7 @@ export default function Neumatica() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Neumática: Principios y Aplicaciones</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -249,6 +248,6 @@ export default function Neumatica() {
         </div>
 
       </div>
-    </Layout>
+    </>
   );
 }
