@@ -5,9 +5,10 @@ import Footer from './Footer'
 
 interface LayoutProps {
   children: React.ReactNode
+  isContentScrollable?: boolean
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, isContentScrollable = true }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const toggleSidebar = () => {
@@ -15,11 +16,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 
   return (
-    <div className="bg-slate-50 text-slate-800 min-h-screen flex">
+    <div className="bg-slate-50 text-slate-800 h-screen overflow-hidden flex">
       {/* Sidebar Container */}
       <div 
         id="sidebar-container" 
-        className={`fixed inset-y-0 left-0 z-50 w-72 h-screen transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none`}
+        className={`fixed inset-y-0 left-0 z-50 w-72 h-full transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 shadow-2xl md:shadow-none`}
       >
         <Sidebar toggleSidebar={toggleSidebar} />
       </div>
@@ -32,7 +33,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       ></div>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col min-h-screen overflow-hidden relative z-0">
+      <main className="flex-1 flex flex-col h-full overflow-hidden relative z-0">
         {/* Background Blobs */}
         <div className="blob -top-20 -right-20 opacity-50"></div>
 
@@ -42,12 +43,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
 
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto px-4 py-8 md:p-8 relative z-10 scroll-smooth">
-          <div className="max-w-7xl mx-auto">
+        <div className={`flex-1 ${isContentScrollable ? 'overflow-y-auto' : 'overflow-hidden flex flex-col'} px-4 py-8 md:p-8 relative z-10 scroll-smooth`}>
+          <div className={`max-w-7xl mx-auto ${isContentScrollable ? '' : 'h-full flex flex-col w-full'}`}>
             {children}
           </div>
 
-          <Footer />
+          {isContentScrollable && <Footer />}
         </div>
       </main>
     </div>

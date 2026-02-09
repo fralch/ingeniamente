@@ -13,7 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar: _toggleSidebar }) => {
   }
 
   return (
-    <aside className="w-72 bg-slate-900 text-white flex flex-col h-screen transition-all duration-300 shadow-2xl z-50">
+    <aside className="w-72 bg-slate-900 text-white flex flex-col h-full transition-all duration-300 shadow-2xl z-50">
       {/* Logo */}
       <div className="h-20 flex items-center px-6 mb-2 relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
