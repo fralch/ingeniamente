@@ -1,37 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './Pages/Home'
-import DIY from './Pages/DIY'
-import GestionMantenimiento from './Pages/GestionMantenimiento'
+import './bootstrap';
+import '../css/app.css';
 
-function App() {
-  return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/diy" element={<DIY />} />
-          <Route path="/gestion-mantenimiento" element={<GestionMantenimiento />} />
-          <Route path="/oleohidraulica" element={<div>Oleohidráulica</div>} />
-          <Route path="/neumatica" element={<div>Neumática</div>} />
-          <Route path="/tribologia" element={<div>Tribología</div>} />
-          <Route path="/elementos-maquinas" element={<div>Elementos de Máquinas</div>} />
-          <Route path="/disenio-mecanico" element={<div>Diseño Mecánico</div>} />
-          <Route path="/fmea" element={<div>FMEA</div>} />
-          <Route path="/trivia" element={<div>Trivia</div>} />
-          <Route path="/mantenimiento/correctivo" element={<div>Mantenimiento Correctivo</div>} />
-          <Route path="/mantenimiento/preventivo" element={<div>Mantenimiento Preventivo</div>} />
-          <Route path="/mantenimiento/predictivo" element={<div>Mantenimiento Predictivo</div>} />
-          <Route path="/mantenimiento/modificativo" element={<div>Mantenimiento Modificativo</div>} />
-          <Route path="/rodamiento" element={<div>Rodamientos</div>} />
-          <Route path="/calculadora-mtbf" element={<div>Cálculadora MTBF</div>} />
-          <Route path="/fajas" element={<div>Fajas</div>} />
-          <Route path="/poleas" element={<div>Poleas</div>} />
-          <Route path="/ejes" element={<div>Ejes</div>} />
-        </Routes>
-      </Layout>
-    </Router>
-  )
-}
+import { createRoot } from 'react-dom/client';
+import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import Layout from './components/Layout';
 
-export default App
+const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
+
+createInertiaApp({
+    title: (title) => `${title} - ${appName}`,
+    resolve: (name) => {
+        const pages = import.meta.glob('./Pages/**/*.tsx');
+        return resolvePageComponent(`./Pages/${name}.tsx`, pages).then((page: any) => {
+            page.default.layout = page.default.layout || ((page: any) => <Layout>{page}</Layout>);
+            return page;
+        });
+    },
+    setup({ el, App, props }) {
+        const root = createRoot(el);
+        root.render(<App {...props} />);
+    },
+    progress: {
+        color: '#4B5563',
+    },
+});

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 
 const GestionMantenimiento: React.FC = () => {
   return (
@@ -67,7 +67,7 @@ const GestionMantenimiento: React.FC = () => {
           </div>
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
             <p className="mb-6">El mantenimiento predictivo es una estrategia de gestión de activos que se ha convertido en un pilar fundamental en la industria moderna. Con el objetivo de maximizar la vida útil de los equipos y minimizar las interrupciones no planificadas, el mantenimiento predictivo utiliza técnicas avanzadas de monitoreo y análisis de datos para predecir cuándo ocurrirá una falla. Este enfoque proporciona una comprensión integral de su aplicación en la ingeniería mecánica.</p>
-            <Link to="/pages/mantenimiento/predictivo" className="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+            <Link href="/pages/mantenimiento/predictivo" className="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
               Ver detalle completo <i className="fa-solid fa-arrow-right ml-2"></i>
             </Link>
           </div>
@@ -83,7 +83,7 @@ const GestionMantenimiento: React.FC = () => {
           </div>
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
             <p className="mb-4">El mantenimiento preventivo se refiere a la acción sistemática de revisar y realizar mantenimiento en equipos o aparatos de diferentes tipos (mecánicos, eléctricos, informáticos, etc.) con el objetivo de evitar averías causadas por el uso, desgaste o paso del tiempo.</p>
-            <Link to="/pages/mantenimiento/preventivo" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+            <Link href="/pages/mantenimiento/preventivo" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
               Ver detalle completo <i className="fa-solid fa-arrow-right ml-2"></i>
             </Link>
           </div>
@@ -99,7 +99,7 @@ const GestionMantenimiento: React.FC = () => {
           </div>
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
             <p className="mb-4">El mantenimiento correctivo se refiere a las acciones tomadas después de que se haya producido una falla en un equipo o sistema, con el objetivo de devolverlo a su estado de funcionamiento normal.</p>
-            <Link to="/pages/mantenimiento/correctivo" className="inline-flex items-center text-rose-600 font-semibold hover:text-rose-800 transition-colors">
+            <Link href="/pages/mantenimiento/correctivo" className="inline-flex items-center text-rose-600 font-semibold hover:text-rose-800 transition-colors">
               Ver detalle completo <i className="fa-solid fa-arrow-right ml-2"></i>
             </Link>
           </div>
@@ -115,7 +115,7 @@ const GestionMantenimiento: React.FC = () => {
           </div>
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-100">
             <p className="mb-4">El mantenimiento modificativo es una estrategia avanzada de gestión de activos que se centra en la <strong>mejora continua</strong> y la adaptación de equipos y sistemas para aumentar su eficiencia, fiabilidad y vida útil.</p>
-            <Link to="/pages/mantenimiento/modificativo" className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors">
+            <Link href="/pages/mantenimiento/modificativo" className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors">
               Ver detalle completo <i className="fa-solid fa-arrow-right ml-2"></i>
             </Link>
           </div>
@@ -125,7 +125,7 @@ const GestionMantenimiento: React.FC = () => {
 
       {/* Back to Home Button */}
       <div className="mt-12 text-center">
-        <Link to="/" className="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors font-semibold shadow-lg shadow-slate-900/20">
+        <Link href="/" className="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors font-semibold shadow-lg shadow-slate-900/20">
           <i className="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
         </Link>
       </div>

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 
 const DIY: React.FC = () => {
   return (
     <div className="fade-in">
       <div className="mb-8">
-        <Link to="/" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium mb-4">
+        <Link href="/" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium mb-4">
           <i className="fa-solid fa-arrow-left"></i>
           Volver al inicio
         </Link>

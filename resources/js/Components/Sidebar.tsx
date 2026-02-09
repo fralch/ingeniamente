@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 
 interface SidebarProps {
   toggleSidebar: () => void
@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar: _toggleSidebar }) => {
           <h3 className="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Explorar</h3>
         </div>
 
-        <Link to="/" className="nav-item group flex items-center px-4 py-3.5 gap-3 rounded-xl transition-all duration-200 hover:bg-white/5 relative overflow-hidden">
+        <Link href="/" className="nav-item group flex items-center px-4 py-3.5 gap-3 rounded-xl transition-all duration-200 hover:bg-white/5 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <i className="fa-solid fa-house w-6 text-center text-blue-400 group-hover:text-blue-300 transition-colors"></i>
           <span className="font-medium text-sm group-hover:translate-x-1 transition-transform">Inicio</span>
@@ -55,22 +55,22 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar: _toggleSidebar }) => {
 
           {activeDropdown === 'entradas' && (
             <div className="ml-10 pl-3 border-l-2 border-blue-500/30 mt-1 mb-2 space-y-1">
-              <Link to="/mantenimiento/correctivo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Correctivo</Link>
-              <Link to="/calculadora-mtbf" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Cálculadora de MTBF</Link>
-              <Link to="#" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Calculadora MTTR</Link>
-              <Link to="/mantenimiento/preventivo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Preventivo</Link>
-              <Link to="/mantenimiento/predictivo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Predictivo</Link>
-              <Link to="/mantenimiento/modificativo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Modificativo</Link>
-              <Link to="/rodamiento" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Rodamientos</Link>
-              <Link to="/tribologia" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Tribología</Link>
-              <Link to="/disenio-mecanico" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Diseño Mecánico</Link>
-              <Link to="/oleohidraulica" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Oleohidráulica</Link>
-              <Link to="/neumatica" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Neumática</Link>
-              <Link to="/fajas" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Fajas</Link>
-              <Link to="/poleas" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Poleas</Link>
-              <Link to="/ejes" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Ejes</Link>
-              <Link to="#" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Calc. Mantenimiento</Link>
-              <Link to="/fmea" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">FMEA</Link>
+              <Link href="/mantenimiento/correctivo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Correctivo</Link>
+              <Link href="/calculadora-mtbf" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Cálculadora de MTBF</Link>
+              <Link href="#" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Calculadora MTTR</Link>
+              <Link href="/mantenimiento/preventivo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Preventivo</Link>
+              <Link href="/mantenimiento/predictivo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Predictivo</Link>
+              <Link href="/mantenimiento/modificativo" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Mantenimiento Modificativo</Link>
+              <Link href="/rodamiento" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Rodamientos</Link>
+              <Link href="/tribologia" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Tribología</Link>
+              <Link href="/disenio-mecanico" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Diseño Mecánico</Link>
+              <Link href="/oleohidraulica" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Oleohidráulica</Link>
+              <Link href="/neumatica" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Neumática</Link>
+              <Link href="/fajas" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Fajas</Link>
+              <Link href="/poleas" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Poleas</Link>
+              <Link href="/ejes" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Ejes</Link>
+              <Link href="#" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Calc. Mantenimiento</Link>
+              <Link href="/fmea" className="block px-4 py-2 text-xs text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">FMEA</Link>
             </div>
           )}
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 
 const Home: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <div className="mb-10">
         <div className="bg-gradient-to-br from-[#2563eb] via-[#4f46e5] to-[#7c3aed] rounded-3xl p-8 md:p-12 text-white shadow-2xl shadow-blue-900/20 relative overflow-hidden">
           {/* Trivia Button */}
-          <Link to="/trivia" className="absolute top-4 right-4 md:top-6 md:right-6 z-30 group no-underline">
+          <Link href="/trivia" className="absolute top-4 right-4 md:top-6 md:right-6 z-30 group no-underline">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 p-2 pr-5 rounded-full flex items-center gap-3 hover:bg-white/20 transition-all duration-300 shadow-lg cursor-pointer transform hover:scale-105">
               <div className="bg-gradient-to-r from-yellow-400 to-orange-500 w-10 h-10 rounded-full flex items-center justify-center shadow-md animate-[pulse_0.8s_ease-in-out_infinite]">
                 <i className="fa-solid fa-trophy text-white text-sm"></i>
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
       {/* Content Cards Grid */}
       <div id="content-grid" className="columns-1 md:columns-2 lg:columns-3 gap-6 mb-12">
         {/* 1. Proyectos DIY */}
-        <Link to="/diy" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="/diy" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-wrench text-xl"></i>
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 2. Gestión de Mantenimiento */}
-        <Link to="/gestion-mantenimiento" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="/gestion-mantenimiento" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-clipboard-check text-xl"></i>
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 3. Óleohidraulica */}
-        <Link to="/oleohidraulica" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
+        <Link href="/oleohidraulica" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-oil-can text-xl"></i>
@@ -110,7 +110,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 4. Neumática */}
-        <Link to="/neumatica" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
+        <Link href="/neumatica" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-sky-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-wind text-xl"></i>
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 5. Turbomáquinas */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-fan text-xl"></i>
@@ -140,7 +140,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 6. Control CNC */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-computer-mouse text-xl"></i>
@@ -155,7 +155,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 7. Consultoría */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-briefcase text-xl"></i>
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 8. Tribología */}
-        <Link to="/tribologia" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="/tribologia" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-droplet text-xl"></i>
@@ -185,7 +185,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 9. Elementos de máquina */}
-        <Link to="/elementos-maquinas" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="/elementos-maquinas" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-cogs text-xl"></i>
@@ -200,7 +200,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 10. Diseño Mecánico */}
-        <Link to="/disenio-mecanico" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="/disenio-mecanico" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-pencil-ruler text-xl"></i>
@@ -215,7 +215,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 11. Transferencia de calor y masa */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Termodinámica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Termodinámica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-fire text-xl"></i>
@@ -230,7 +230,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 12. Mecánica de fluidos */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Fluidos">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-water text-xl"></i>
@@ -245,7 +245,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 13. Ingeniería de Control */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-violet-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-sliders text-xl"></i>
@@ -260,7 +260,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 14. Termodinámica */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Termodinámica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Termodinámica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-temperature-three-quarters text-xl"></i>
@@ -275,7 +275,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 15. Investigación de Operaciones */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center text-fuchsia-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-chart-line text-xl"></i>
@@ -290,7 +290,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 16. Mecánica de Materiales */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-stone-100 rounded-xl flex items-center justify-center text-stone-600 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-layer-group text-xl"></i>
@@ -305,7 +305,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 17. Ingeniería Eléctrica */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Control">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-bolt text-xl"></i>
@@ -320,7 +320,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 18. Estática */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center text-zinc-600 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-archway text-xl"></i>
@@ -335,7 +335,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 19. Dinámica */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-lime-50 rounded-xl flex items-center justify-center text-lime-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-person-running text-xl"></i>
@@ -350,7 +350,7 @@ const Home: React.FC = () => {
         </Link>
 
         {/* 20. Física */}
-        <Link to="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
+        <Link href="#" className="card group bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 border border-slate-100 hover:border-blue-100 flex flex-col break-inside-avoid mb-6 fade-in" data-category="Mecánica">
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-500 group-hover:scale-110 transition-transform duration-300">
               <i className="fa-solid fa-atom text-xl"></i>
