@@ -1,0 +1,201 @@
+ID;Área;Subtema;Pregunta;A;B;C;D;Respuesta correcta;Explicación técnica
+1;Materiales;Propiedades mecánicas;¿Qué propiedad mecánica indica cuánta energía puede absorber un material antes de fracturarse?;Dureza;Tenacidad;Elasticidad;Fragilidad;B;La tenacidad mide la energía absorbida antes de la fractura, combinando resistencia y ductilidad.
+2;Materiales;Tratamientos térmicos;¿Qué tratamiento térmico aumenta principalmente la dureza del acero?;Recocido;Templado;Normalizado;Revenido suave;B;El templado produce una estructura martensítica que incrementa la dureza.
+3;Materiales;Modos de falla;¿Qué tipo de falla se produce por cargas repetitivas en el tiempo?;Fluencia;Fatiga;Impacto;Deformación térmica;B;La fatiga ocurre por esfuerzos cíclicos incluso por debajo del límite elástico.
+4;Materiales;Ensayos mecánicos;¿Qué ensayo determina la resistencia máxima a tracción de un material?;Rockwell;Tracción;Izod;Brinell;B;El ensayo de tracción permite obtener el esfuerzo máximo antes de la rotura.
+5;Materiales;Corrosión;¿Qué tipo de corrosión ataca áreas muy localizadas del metal?;Uniforme;Galvánica;Picadura;Intergranular;C;La corrosión por picadura genera pequeños agujeros profundos y es muy peligrosa.
+6;Materiales;Temperatura;¿Qué fenómeno ocurre cuando un metal trabaja por encima de su temperatura crítica durante largo tiempo?;Fatiga;Ablandamiento;Fluencia;Fragilización;C;La fluencia es la deformación progresiva bajo carga constante y alta temperatura.
+7;Tribología;Fricción;¿Qué coeficiente se usa para analizar el inicio del movimiento?;Cinético;Dinámico;Estático;Rodadura;C;El coeficiente de fricción estática determina si un cuerpo comienza a moverse.
+8;Elementos de máquinas;Rodamientos;¿Cuál es la función principal de un rodamiento?;Aumentar fricción;Reducir fricción;Transmitir potencia;Absorber impacto;B;Los rodamientos reducen la fricción entre partes móviles.
+9;Elementos de máquinas;Rodamientos;¿Qué factor reduce más la vida útil de un rodamiento?;Exceso de lubricación;Contaminación;Baja velocidad;Alta precisión;B;Partículas contaminantes generan desgaste acelerado.
+10;Elementos de máquinas;Fajas;¿Qué provoca el patinaje de una faja?;Exceso de tensión;Baja fricción;Exceso de fricción;Alta rigidez;B;Un bajo coeficiente de fricción causa deslizamiento entre faja y polea.
+11;Metrología;Ajustes;¿Qué tipo de ajuste permite siempre el movimiento entre piezas?;Ajuste con interferencia;Ajuste de transición;Ajuste con juego;Ajuste forzado;C;El ajuste con juego garantiza holgura entre eje y agujero.
+12;Metrología;Tolerancias;¿Para qué sirven las tolerancias dimensionales?;Aumentar costos;Controlar calidad;Eliminar errores;Evitar mediciones;B;Permiten controlar variaciones aceptables en fabricación.
+13;Hidráulica;Principios;¿Qué principio establece que la presión se transmite igual en todas direcciones?;Bernoulli;Pascal;Arquímedes;Newton;B;El principio de Pascal es base de los sistemas hidráulicos.
+14;Hidráulica;Fluidos;¿Qué propiedad del fluido influye directamente en las pérdidas por fricción?;Densidad;Viscosidad;Color;Presión atmosférica;B;La viscosidad mide la resistencia interna al flujo.
+15;Neumática;Aire comprimido;¿Qué ventaja principal tiene la neumática frente a la hidráulica?;Mayor fuerza;Mayor precisión;Mayor limpieza;Menor ruido;C;La neumática es más limpia y segura en ambientes sensibles.
+16;Fluidos;Flujo;¿Qué tipo de flujo se caracteriza por trayectorias ordenadas?;Turbulento;Caótico;Laminar;Compresible;C;En flujo laminar las partículas siguen trayectorias paralelas.
+17;Electricidad;Fundamentos;¿Qué magnitud eléctrica se mide en amperios?;Voltaje;Potencia;Corriente;Resistencia;C;El amperio es la unidad de corriente eléctrica.
+18;Electricidad;Seguridad;¿Qué dispositivo protege contra sobrecorriente?;Transformador;Interruptor termomagnético;Relé de tiempo;Sensor;B;El interruptor termomagnético protege ante sobrecargas y cortocircuitos.
+19;Electrónica;Componentes;¿Cuál es la función principal de una resistencia?;Almacenar energía;Limitar corriente;Amplificar señal;Rectificar voltaje;B;La resistencia controla el paso de corriente eléctrica.
+20;Diseño mecánico;Seguridad;¿Qué se busca principalmente con un factor de seguridad?;Reducir peso;Aumentar eficiencia;Prevenir fallas;Disminuir costos;C;El factor de seguridad compensa incertidumbres en diseño y operación.
+21;Materiales;Elasticidad;¿Qué propiedad describe la capacidad de un material de recuperar su forma original tras retirar la carga?;Ductilidad;Plasticidad;Elasticidad;Tenacidad;C;La elasticidad permite que el material vuelva a su forma original sin deformación permanente.
+22;Materiales;Dureza;¿Qué ensayo se utiliza comúnmente para medir la dureza superficial en aceros?;Tracción;Izod;Rockwell;Fatiga;C;El ensayo Rockwell es rápido y muy usado en aceros industriales.
+23;Materiales;Estructura;¿Qué estructura cristalina se forma en el acero después del templado?;Perlita;Ferrita;Austenita;Martensita;D;El templado genera martensita, responsable del aumento de dureza.
+24;Tribología;Lubricación;¿Cuál es la función principal del lubricante en un sistema mecánico?;Aumentar fricción;Reducir desgaste;Aumentar temperatura;Incrementar rigidez;B;El lubricante reduce fricción y desgaste entre superficies en contacto.
+25;Tribología;Regímenes;¿En qué régimen de lubricación existe contacto directo entre superficies?;Hidrodinámico;Elastohidrodinámico;Límite;Hidrostático;C;En lubricación límite el lubricante no separa completamente las superficies.
+26;Elementos de máquinas;Rodamientos;¿Qué tipo de rodamiento soporta mejor cargas radiales?;Axial;De bolas;De rodillos;De empuje;C;Los rodamientos de rodillos tienen mayor área de contacto para cargas radiales.
+27;Elementos de máquinas;Rodamientos;¿Qué parámetro se usa para estimar la vida nominal de un rodamiento?;Diámetro;Velocidad;Carga dinámica;Temperatura;C;La vida L10 se calcula en función de la carga dinámica equivalente.
+28;Elementos de máquinas;Fajas;¿Qué tipo de faja es más común para transmisión de potencia industrial?;Faja plana;Faja redonda;Faja dentada;Faja en V;D;Las fajas en V ofrecen buena adherencia y eficiencia.
+29;Metrología;Ajustes;¿Qué ajuste se usa típicamente para un rodamiento montado en un eje?;Con juego;De transición;Con interferencia;Libre;C;El ajuste con interferencia evita el deslizamiento del aro interno.
+30;Metrología;Tolerancias;¿Qué sistema de tolerancias es más usado en fabricación mecánica?;ISO;SAE;DIN antiguo;ASTM;A;El sistema ISO de ajustes y tolerancias es el más difundido internacionalmente.
+31;Hidráulica;Componentes;¿Cuál es la función principal de una bomba hidráulica?;Aumentar presión;Generar caudal;Almacenar fluido;Reducir temperatura;B;"La bomba genera caudal; la presión depende de la carga del sistema."
+32;Hidráulica;Seguridad;¿Qué válvula protege un sistema hidráulico contra sobrepresión?;Direccional;De caudal;De alivio;Check;C;La válvula de alivio limita la presión máxima del sistema.
+33;Neumática;Componentes;¿Qué elemento elimina impurezas del aire comprimido?;Regulador;Lubricador;Filtro;Compresor;C;El filtro retiene partículas y humedad del aire.
+34;Neumática;Actuadores;¿Qué actuador neumático genera movimiento lineal?;Motor;Turbina;Cilindro;Ventilador;C;Los cilindros neumáticos convierten energía neumática en movimiento lineal.
+35;Fluidos;Propiedades;¿Qué propiedad relaciona esfuerzo cortante con gradiente de velocidad?;Densidad;Presión;Viscosidad;Caudal;C;La viscosidad mide la resistencia interna al flujo.
+36;Fluidos;Pérdidas;¿Qué factor incrementa las pérdidas de carga en una tubería?;Superficie lisa;Mayor diámetro;Mayor rugosidad;Menor longitud;C;La rugosidad aumenta la fricción fluido-pared.
+37;Electricidad;Circuitos;¿Qué ley relaciona voltaje, corriente y resistencia?;Faraday;Ohm;Kirchhoff;Coulomb;B;La ley de Ohm establece V = I·R.
+38;Electricidad;Potencia;¿Cómo se calcula la potencia eléctrica?;V / I;I / R;V · I;R · I;C;La potencia eléctrica es el producto del voltaje por la corriente.
+39;Electrónica;Semiconductores;¿Qué componente permite el paso de corriente en un solo sentido?;Resistencia;Capacitor;Diodo;Transistor;C;El diodo rectifica la corriente.
+40;Diseño mecánico;Fallas;¿Qué tipo de falla es más peligrosa por ocurrir sin aviso previo?;Dúctil;Plástica;Frágil;Térmica;C;La falla frágil ocurre sin deformación apreciable previa.
+41;Materiales;Ductilidad;¿Qué propiedad indica la capacidad de un material de deformarse plásticamente antes de romperse?;Dureza;Fragilidad;Ductilidad;Elasticidad;C;La ductilidad mide la deformación plástica previa a la fractura.
+42;Materiales;Fragilidad;¿Qué material presenta generalmente comportamiento frágil a temperatura ambiente?;Acero bajo carbono;Aluminio;Vidrio;Cobre;C;El vidrio falla de forma frágil, sin deformación plástica apreciable.
+43;Materiales;Ensayos;¿Qué ensayo se utiliza para evaluar resistencia al impacto?;Tracción;Rockwell;Izod;Fluencia;C;El ensayo Izod mide la energía absorbida ante impacto.
+44;Tribología;Desgaste;¿Qué tipo de desgaste ocurre por partículas duras entre superficies?;Adhesivo;Abrasivo;Fatiga;Corrosivo;B;El desgaste abrasivo se produce por partículas duras que rayan la superficie.
+45;Tribología;Fricción;¿Qué acción reduce más la fricción entre superficies metálicas?;Aumentar carga;Pulir sin lubricar;Lubricar;Aumentar área;C;La lubricación reduce fricción y desgaste.
+46;Elementos de máquinas;Engranajes;¿Qué tipo de engranaje se usa para transmitir movimiento entre ejes paralelos?;Cónico;Tornillo sin fin;Helicoidal;Recto;D;Los engranajes rectos se usan comúnmente entre ejes paralelos.
+47;Elementos de máquinas;Engranajes;¿Qué engranaje permite transmitir movimiento entre ejes que se cruzan a 90°?;Recto;Helicoidal;Cónico;Planetario;C;Los engranajes cónicos transmiten potencia entre ejes que se intersectan.
+48;Elementos de máquinas;Fajas;¿Qué ventaja principal tiene una faja dentada?;Bajo costo;No patina;Alta elasticidad;Mayor ruido;B;Las fajas dentadas eliminan el deslizamiento.
+49;Metrología;Instrumentos;¿Qué instrumento se usa para medir diámetros internos con precisión?;Regla;Vernier;Micrómetro interior;Cinta métrica;C;El micrómetro interior permite mediciones internas precisas.
+50;Metrología;Unidades;¿Cuál es la unidad del sistema internacional para la longitud?;Pulgada;Metro;Milímetro;Centímetro;B;El metro es la unidad base de longitud en el SI.
+51;Hidráulica;Actuadores;¿Qué elemento transforma energía hidráulica en movimiento lineal?;Bomba;Válvula;Cilindro;Filtro;C;El cilindro hidráulico convierte energía hidráulica en movimiento lineal.
+52;Hidráulica;Fluidos;¿Qué ocurre si aumenta la viscosidad del fluido en una tubería?;Disminuyen pérdidas;Aumenta caudal;Aumentan pérdidas;No cambia nada;C;Mayor viscosidad incrementa las pérdidas por fricción.
+53;Neumática;Seguridad;¿Por qué la neumática es considerada más segura que la hidráulica?;Mayor presión;Menor fuerza;Usa aire;Es más barata;C;El aire no contamina ni genera derrames peligrosos.
+54;Neumática;Presión;¿Qué unidad se usa comúnmente para presión neumática industrial?;Watt;Pascal;Bar;Voltio;C;El bar es ampliamente usado en sistemas neumáticos industriales.
+55;Fluidos;Hidrostática;¿Qué ley explica el empuje que actúa sobre un cuerpo sumergido?;Pascal;Bernoulli;Arquímedes;Newton;C;El principio de Arquímedes explica el empuje en fluidos.
+56;Fluidos;Dinámica;¿Qué número adimensional indica el régimen de flujo?;Mach;Reynolds;Prandtl;Euler;B;El número de Reynolds determina si el flujo es laminar o turbulento.
+57;Electricidad;Corriente;¿Qué tipo de corriente se usa comúnmente en redes domésticas?;Continua;Alterna;Pulsante;Directa;B;La corriente alterna se usa en sistemas eléctricos domésticos.
+58;Electricidad;Medición;¿Qué instrumento mide corriente eléctrica?;Voltímetro;Amperímetro;Ohmímetro;Wattímetro;B;El amperímetro mide corriente eléctrica.
+59;Electrónica;Capacitores;¿Cuál es la función principal de un capacitor?;Limitar corriente;Almacenar energía;Rectificar señal;Amplificar señal;B;El capacitor almacena energía eléctrica en un campo eléctrico.
+60;Diseño mecánico;Normas;¿Por qué se utilizan normas técnicas en ingeniería?;Aumentar costos;Unificar criterios;Limitar diseños;Reducir calidad;B;Las normas aseguran compatibilidad, seguridad y calidad.
+61;Materiales;Módulos;¿Qué propiedad mide la rigidez de un material?;Dureza;Límite elástico;Módulo de elasticidad;Tenacidad;C;El módulo de elasticidad indica la relación esfuerzo–deformación elástica.
+62;Materiales;Plasticidad;¿Qué ocurre cuando un material supera su límite elástico?;Recupera su forma;Se rompe;Se deforma plásticamente;Se endurece;C;Superado el límite elástico aparece deformación permanente.
+63;Materiales;Aleaciones;¿Qué elemento se agrega al acero para mejorar resistencia a la corrosión?;Carbono;Níquel;Cromo;Manganeso;C;El cromo forma una capa pasiva protectora (aceros inoxidables).
+64;Tribología;Lubricantes;¿Qué tipo de lubricante se usa comúnmente en rodamientos de baja velocidad y alta carga?;Aceite ligero;Grasa;Agua;Aire;B;La grasa permanece más tiempo en contacto en bajas velocidades.
+65;Tribología;Fricción;¿Qué factor NO influye directamente en la fricción seca?;Material;Fuerza normal;Área aparente;Estado superficial;C;En fricción seca ideal, el área aparente no influye directamente.
+66;Elementos de máquinas;Tornillería;¿Qué tipo de tornillo se usa principalmente para unión desmontable?;Remache;Perno;Soldadura;Chaveta;B;Los pernos permiten uniones desmontables.
+67;Elementos de máquinas;Chavetas;¿Cuál es la función de una chaveta?;Reducir fricción;Transmitir torque;Aumentar velocidad;Sellar fluidos;B;Las chavetas transmiten par entre eje y cubo.
+68;Elementos de máquinas;Acoplamientos;¿Qué función cumple un acoplamiento flexible?;Aumentar potencia;Compensar desalineación;Reducir diámetro;Frenar el eje;B;Permite absorber desalineaciones y vibraciones.
+69;Metrología;Instrumentos;¿Qué instrumento mide espesores con alta precisión?;Regla;Calibrador;Micrómetro exterior;Flexómetro;C;El micrómetro ofrece mayor precisión que el calibrador.
+70;Metrología;Unidades;¿Cuál es la unidad del SI para la fuerza?;Joule;Pascal;Newton;Watt;C;El newton es la unidad de fuerza en el SI.
+71;Hidráulica;Caudal;¿Cómo se define el caudal volumétrico?;Presión por área;Volumen por tiempo;Fuerza por área;Energía por tiempo;B;El caudal es el volumen que fluye por unidad de tiempo.
+72;Hidráulica;Circuitos;¿Qué válvula permite el paso del fluido en un solo sentido?;Direccional;De alivio;Check (retención);Reguladora;C;La válvula check evita el retorno del fluido.
+73;Neumática;Compresores;¿Qué tipo de compresor es común en talleres pequeños?;Centrífugo;Tornillo;Alternativo;Axial;C;Los compresores alternativos son comunes en aplicaciones pequeñas.
+74;Neumática;FRL;¿Qué significa FRL en neumática?;Filtro–Regulador–Lubricador;Fuerza–Retorno–Línea;Flujo–Regulación–Lubricación;Filtro–Retorno–Lubricación;A;El conjunto FRL acondiciona el aire comprimido.
+75;Fluidos;Presión;¿Cómo se define la presión?;Fuerza por volumen;Energía por área;Fuerza por área;Masa por área;C;La presión es la fuerza aplicada por unidad de área.
+76;Fluidos;Medición;¿Qué instrumento mide presión en sistemas de fluidos?;Termómetro;Manómetro;Caudalímetro;Tacómetro;B;El manómetro mide presión.
+77;Electricidad;Resistencia;¿Qué material es buen conductor eléctrico?;Plástico;Vidrio;Cobre;Madera;C;El cobre tiene baja resistividad eléctrica.
+78;Electricidad;Protección;¿Qué dispositivo protege contra fugas a tierra?;Fusible;Interruptor diferencial;Transformador;Contactor;B;El interruptor diferencial protege a las personas contra descargas.
+79;Electrónica;Fuentes;¿Qué convierte corriente alterna en continua?;Capacitor;Transformador;Rectificador;Inductor;C;El rectificador (diodos) convierte CA en CC.
+80;Diseño mecánico;Ingeniería;¿Qué etapa del diseño define dimensiones y materiales?;Conceptual;Básica;Detalle;Fabricación;C;El diseño de detalle define dimensiones, tolerancias y materiales.
+81;Mecánica;Fuerzas;¿Qué ley explica la relación entre fuerza, masa y aceleración?;Ley de Hooke;Ley de Pascal;Segunda ley de Newton;Ley de Ohm;C;La segunda ley de Newton establece F = m·a.
+82;Mecánica;Estática;¿Qué condición debe cumplirse para que un cuerpo esté en equilibrio?;Fuerzas máximas;Suma de fuerzas nula;Velocidad constante;Aceleración constante;B;En equilibrio, la suma de fuerzas es cero.
+83;Materiales;Propiedades;¿Qué propiedad mide la resistencia a la penetración?;Ductilidad;Dureza;Tenacidad;Elasticidad;B;La dureza indica resistencia a la indentación o rayado.
+84;Materiales;Comportamiento;¿Qué tipo de material presenta gran deformación antes de romperse?;Frágil;Dúctil;Cerámico;Vítreo;B;Los materiales dúctiles se deforman ampliamente antes de fracturar.
+85;Tribología;Desgaste;¿Qué desgaste ocurre por contacto metal–metal sin lubricación?;Abrasivo;Adhesivo;Corrosivo;Fatiga;B;El desgaste adhesivo ocurre por micro-soldaduras superficiales.
+86;Tribología;Lubricación;¿Qué función cumple un lubricante?;Aumentar fricción;Disminuir desgaste;Aumentar rigidez;Elevar temperatura;B;El lubricante reduce fricción y desgaste entre superficies.
+87;Elementos de máquinas;Ejes;¿Cuál es la función principal de un eje?;Soportar cargas;Transmitir potencia;Reducir fricción;Sellar fluidos;B;Los ejes transmiten par y movimiento rotacional.
+88;Elementos de máquinas;Engranajes;¿Qué ventaja tienen los engranajes frente a las fajas?;Menor ruido;No patinan;Bajo costo;Mayor elasticidad;B;Los engranajes transmiten movimiento sin deslizamiento.
+89;Elementos de máquinas;Acoplamientos;¿Qué tipo de acoplamiento absorbe vibraciones?;Rígido;Flexible;Dentado;Magnético;B;Los acoplamientos flexibles compensan vibraciones y desalineaciones.
+90;Metrología;Medición;¿Qué instrumento mide longitudes con precisión media?;Regla;Calibrador Vernier;Micrómetro;Comparador;B;El calibrador ofrece buena precisión para uso general.
+91;Metrología;Error;¿Qué es un error sistemático en medición?;Error aleatorio;Error constante;Error humano;Error despreciable;B;El error sistemático se repite siempre en el mismo sentido.
+92;Hidráulica;Fluidos;¿Qué fluido se considera prácticamente incompresible?;Aire;Vapor;Aceite;Gas natural;C;Los líquidos, como el aceite, son prácticamente incompresibles.
+93;Hidráulica;Energía;¿Qué convierte energía mecánica en energía hidráulica?;Válvula;Bomba;Filtro;Cilindro;B;La bomba transforma energía mecánica en energía del fluido.
+94;Neumática;Aire;¿Qué característica tiene el aire comprimido?;Incompresible;Muy viscoso;Compresible;Líquido;C;El aire es altamente compresible.
+95;Neumática;Presión;¿Qué componente regula la presión del aire?;Filtro;Lubricador;Regulador;Compresor;C;El regulador ajusta la presión de trabajo.
+96;Fluidos;Caudal;¿Qué instrumento mide caudal?;Manómetro;Caudalímetro;Termómetro;Tacómetro;B;El caudalímetro mide volumen o masa por tiempo.
+97;Fluidos;Flujo;¿Qué régimen de flujo es más estable?;Turbulento;Caótico;Laminar;Compresible;C;El flujo laminar es ordenado y estable.
+98;Electricidad;Magnitudes;¿Qué unidad mide la resistencia eléctrica?;Voltio;Ampere;Ohmio;Watt;C;El ohmio es la unidad de resistencia.
+99;Electricidad;Circuitos;¿Qué sucede si se abre un circuito eléctrico?;Aumenta corriente;No circula corriente;Aumenta voltaje;Se quema la carga;B;Un circuito abierto impide el paso de corriente.
+100;Seguridad;Ingeniería;¿Por qué es importante la seguridad en ingeniería?;Para reducir costos;Para cumplir normas;Para evitar accidentes;Para acelerar procesos;C;La seguridad protege personas, equipos y procesos.
+101;Mecánica;Trabajo;¿Qué magnitud física es el producto de una fuerza por un desplazamiento?;Potencia;Trabajo;Energía;Presión;B;El trabajo se define como fuerza aplicada por desplazamiento en su dirección.
+102;Mecánica;Potencia;¿Qué indica la potencia mecánica?;Fuerza aplicada;Energía total;Trabajo por unidad de tiempo;Velocidad angular;C;La potencia mide qué tan rápido se realiza trabajo.
+103;Materiales;Estructura;¿Qué tipo de material tiene estructura cristalina ordenada?;Polímero amorfo;Metal;Vidrio;Caucho;B;Los metales presentan estructura cristalina definida.
+104;Materiales;Clasificación;¿Cuál de los siguientes es un material cerámico?;Acero;Aluminio;Vidrio;Cobre;C;El vidrio pertenece a la familia de los cerámicos.
+105;Tribología;Fricción;¿En qué caso la fricción es necesaria para el funcionamiento?;Rodamientos;Frenos;Lubricación;Sellos;B;Los frenos funcionan gracias a la fricción controlada.
+106;Tribología;Desgaste;¿Qué fenómeno se incrementa con mayor fricción?;Vida útil;Temperatura;Eficiencia;Precisión;B;La fricción genera calor por disipación de energía.
+107;Elementos de máquinas;Tornillos;¿Qué función cumple principalmente un tornillo?;Transmitir potencia;Unir piezas;Reducir fricción;Guiar movimiento;B;Los tornillos se utilizan para unir componentes mecánicos.
+108;Elementos de máquinas;Remaches;¿Qué tipo de unión genera un remache?;Desmontable;Flexible;Permanente;Ajustable;C;Los remaches crean uniones permanentes.
+109;Elementos de máquinas;Engranajes;¿Qué parámetro define la relación de transmisión en engranajes?;Diámetro exterior;Número de dientes;Ancho del diente;Material;B;La relación depende del número de dientes de los engranajes.
+110;Metrología;Precisión;¿Qué instrumento ofrece mayor precisión dimensional?;Regla;Calibrador;Micrómetro;Cinta;C;El micrómetro permite medir con precisión del orden de micras.
+111;Metrología;Calibración;¿Por qué se calibra un instrumento de medición?;Para limpiarlo;Para ajustarlo a un patrón;Para reducir tamaño;Para cambiar escala;B;La calibración asegura mediciones confiables respecto a un patrón.
+112;Hidráulica;Presión;¿Qué sucede con la presión al reducir el área manteniendo la fuerza?;Disminuye;No cambia;Aumenta;Se anula;C;Según P = F/A, menor área implica mayor presión.
+113;Hidráulica;Sistemas;¿Qué componente almacena el fluido hidráulico?;Bomba;Cilindro;Depósito;Válvula;C;El depósito contiene y acondiciona el fluido hidráulico.
+114;Neumática;Energía;¿Qué fuente de energía usa la neumática?;Eléctrica;Hidráulica;Aire comprimido;Vapor;C;La neumática utiliza aire comprimido como medio energético.
+115;Neumática;Ventajas;¿Qué ventaja tiene la neumática en ambientes explosivos?;Mayor presión;Mayor fuerza;No genera chispas;Menor tamaño;C;El aire no genera riesgo de incendio o explosión.
+116;Fluidos;Densidad;¿Qué propiedad relaciona masa y volumen?;Viscosidad;Presión;Densidad;Caudal;C;La densidad es la masa por unidad de volumen.
+117;Fluidos;Estática;¿Qué variable aumenta con la profundidad en un fluido en reposo?;Temperatura;Presión;Velocidad;Caudal;B;La presión hidrostática aumenta con la profundidad.
+118;Electricidad;Voltaje;¿Qué representa el voltaje eléctrico?;Flujo de electrones;Energía por carga;Resistencia total;Potencia disipada;B;El voltaje es la energía disponible por unidad de carga.
+119;Electricidad;Conexiones;¿Qué ocurre al conectar resistencias en serie?;Aumenta corriente;Disminuye resistencia;Aumenta resistencia total;Se anula voltaje;C;En serie, las resistencias se suman.
+120;Seguridad;Riesgos;¿Qué acción reduce riesgos en equipos mecánicos?;Aumentar velocidad;Eliminar protecciones;Aplicar mantenimiento;Sobrecargar equipos;C;El mantenimiento reduce fallas y accidentes.
+121;Mecánica;Movimiento;¿Qué magnitud describe el cambio de posición en el tiempo?;Fuerza;Velocidad;Trabajo;Energía;B;La velocidad indica qué tan rápido cambia la posición.
+122;Mecánica;Movimiento;¿Qué magnitud describe el cambio de velocidad en el tiempo?;Aceleración;Potencia;Trabajo;Masa;A;La aceleración es la variación de la velocidad respecto al tiempo.
+123;Materiales;Clasificación;¿Cuál de los siguientes es un polímero?;Acero;Vidrio;Polietileno;Aluminio;C;El polietileno es un polímero termoplástico.
+124;Materiales;Propiedades;¿Qué propiedad indica la capacidad de resistir deformación permanente?;Elasticidad;Dureza;Límite elástico;Tenacidad;C;El límite elástico marca el inicio de la deformación plástica.
+125;Tribología;Lubricación;¿Qué función cumple el lubricante en un rodamiento?;Aumentar carga;Reducir fricción y desgaste;Incrementar velocidad;Sellar presión;B;El lubricante separa superficies y reduce contacto directo.
+126;Tribología;Desgaste;¿Qué tipo de desgaste ocurre por cargas repetidas?;Abrasivo;Adhesivo;Fatiga;Corrosivo;C;El desgaste por fatiga se debe a esfuerzos cíclicos.
+127;Elementos de máquinas;Ejes;¿Qué tipo de esfuerzo actúa principalmente sobre un eje transmisor?;Compresión;Tracción;Torsión;Flexión pura;C;Los ejes transmiten torque, generando esfuerzo torsional.
+128;Elementos de máquinas;Cojinetes;¿Qué elemento reduce fricción entre eje y soporte?;Tornillo;Cojinete;Chaveta;Acople;B;Los cojinetes permiten el giro con menor fricción.
+129;Elementos de máquinas;Engranajes;¿Qué engranaje produce menor ruido a altas velocidades?;Recto;Cónico;Helicoidal;Planetario;C;Los engranajes helicoidales tienen contacto progresivo.
+130;Metrología;Medición;¿Qué instrumento se usa para medir ángulos con precisión?;Regla;Transportador;Goniómetro;Calibrador;C;El goniómetro permite medir ángulos con mayor precisión.
+131;Metrología;Tolerancias;¿Qué indica una tolerancia amplia?;Mayor precisión;Menor variación;Mayor libertad dimensional;Error de diseño;C;Una tolerancia amplia permite mayor variación dimensional.
+132;Hidráulica;Flujo;¿Qué ocurre si se bloquea una línea hidráulica con la bomba operando?;Disminuye presión;Se mantiene caudal;Aumenta presión;Se enfría el sistema;C;La presión aumenta hasta el límite del sistema o válvula de alivio.
+133;Hidráulica;Seguridad;¿Qué componente evita daños por sobrepresión?;Bomba;Válvula direccional;Válvula de alivio;Filtro;C;La válvula de alivio limita la presión máxima.
+134;Neumática;Limitaciones;¿Qué efecto tiene una fuga de aire en un sistema neumático?;Mejora eficiencia;Reduce consumo;Disminuye presión;Aumenta fuerza;C;Las fugas reducen presión y eficiencia del sistema.
+135;Neumática;Actuadores;¿Qué determina la fuerza de un cilindro neumático?;Velocidad;Diámetro del pistón;Longitud del cilindro;Tipo de válvula;B;La fuerza depende del área del pistón y la presión.
+136;Fluidos;Flujo;¿Qué régimen de flujo genera mayores pérdidas de energía?;Laminar;Estable;Turbulento;Uniforme;C;El flujo turbulento incrementa las pérdidas por fricción.
+137;Fluidos;Medición;¿Qué instrumento mide velocidad de un fluido?;Caudalímetro;Anemómetro;Manómetro;Termómetro;B;El anemómetro mide velocidad del fluido (especialmente aire).
+138;Electricidad;Seguridad;¿Qué riesgo implica una mala puesta a tierra?;Ahorro energético;Choque eléctrico;Menor voltaje;Mejor protección;B;Una mala puesta a tierra aumenta riesgo de descarga eléctrica.
+139;Electricidad;Circuitos;¿Qué tipo de conexión mantiene el mismo voltaje en cada carga?;Serie;Paralelo;Mixto;Abierto;B;En paralelo, el voltaje es igual en todas las ramas.
+140;Seguridad;Industria;¿Qué equipo protege al trabajador contra riesgos físicos?;Herramienta;EPP;Sensor;Fusible;B;El Equipo de Protección Personal reduce riesgos laborales.
+141;Mecánica;Dinámica;¿Qué magnitud se conserva en ausencia de fuerzas externas?;Velocidad;Energía;Cantidad de movimiento;Aceleración;C;El momento lineal se conserva si no actúan fuerzas externas.
+142;Mecánica;Estática;¿Qué tipo de fuerza mantiene un cuerpo sobre una superficie sin atravesarla?;Fricción;Normal;Peso;Inercial;B;La fuerza normal es perpendicular a la superficie de contacto.
+143;Materiales;Clasificación;¿Qué material pertenece a los compuestos?;Acero;Concreto armado;Aluminio;Cobre;B;El concreto armado combina matriz y refuerzo, siendo un compuesto.
+144;Materiales;Propiedades;¿Qué propiedad indica resistencia a la deformación elástica?;Dureza;Módulo de elasticidad;Ductilidad;Tenacidad;B;El módulo de elasticidad mide la rigidez del material.
+145;Tribología;Fricción;¿Qué condición incrementa la fricción seca?;Lubricación;Superficie pulida;Mayor carga normal;Menor contacto;C;La fricción seca es proporcional a la fuerza normal.
+146;Tribología;Lubricación;¿Qué lubricación separa completamente las superficies en movimiento?;Límite;Mixta;Hidrodinámica;Seca;C;En lubricación hidrodinámica existe película completa de fluido.
+147;Elementos de máquinas;Engranajes;¿Qué engranaje se usa comúnmente en cajas de transmisión automotriz?;Recto;Helicoidal;Cónico;Tornillo sin fin;B;Los helicoidales reducen ruido y vibraciones.
+148;Elementos de máquinas;Rodamientos;¿Qué rodamiento soporta cargas axiales principalmente?;De bolas radial;De rodillos cilíndricos;De empuje;De agujas;C;Los rodamientos de empuje están diseñados para cargas axiales.
+149;Elementos de máquinas;Fajas;¿Qué parámetro influye directamente en la transmisión por fricción?;Longitud;Material;Tensión;Color;C;La tensión adecuada asegura transmisión sin patinaje.
+150;Metrología;Instrumentos;¿Qué instrumento compara una medida con un patrón sin indicar valor absoluto?;Micrómetro;Comparador;Calibrador;Regla;B;El comparador indica desviaciones respecto a un patrón.
+151;Metrología;Control;¿Qué técnica se usa para asegurar calidad dimensional en producción?;Inspección visual;Control estadístico;Ajuste manual;Ensamble forzado;B;El control estadístico reduce variabilidad y defectos.
+152;Hidráulica;Caudal;¿Qué sucede con el caudal si aumenta la velocidad del fluido?;Disminuye;No cambia;Aumenta;Se anula;C;El caudal es proporcional a la velocidad del fluido.
+153;Hidráulica;Actuadores;¿Qué factor aumenta la fuerza de un cilindro hidráulico?;Mayor carrera;Mayor presión;Mayor velocidad;Mayor retorno;B;La fuerza depende de presión y área del pistón.
+154;Neumática;Control;¿Qué válvula controla el sentido del movimiento del actuador?;Reguladora;De alivio;Direccional;Check;C;Las válvulas direccionales controlan el flujo hacia el actuador.
+155;Neumática;Consumo;¿Qué aumenta el consumo de aire comprimido?;Buena estanqueidad;Presión adecuada;Fugas;Regulación correcta;C;Las fugas incrementan pérdidas de aire y energía.
+156;Fluidos;Régimen;¿Qué condición favorece flujo laminar?;Alta velocidad;Alta rugosidad;Baja velocidad;Diámetro grande;C;Menor velocidad reduce el número de Reynolds.
+157;Fluidos;Energía;¿Qué principio relaciona velocidad y presión en un fluido?;Pascal;Bernoulli;Arquímedes;Newton;B;El principio de Bernoulli vincula presión, velocidad y altura.
+158;Electricidad;Potencia;¿Qué unidad mide la potencia eléctrica?;Joule;Ampere;Watt;Volt;C;El watt es la unidad de potencia en el SI.
+159;Electricidad;Circuitos;¿Qué ocurre si se conecta una carga en paralelo?;Aumenta resistencia total;Disminuye corriente total;Mantiene voltaje;Se abre el circuito;C;En paralelo, cada carga recibe el mismo voltaje.
+160;Seguridad;Normas;¿Por qué se aplican normas de seguridad industrial?;Para limitar producción;Para proteger personas y equipos;Para reducir mantenimiento;Para aumentar costos;B;Las normas buscan minimizar riesgos y accidentes.
+161;Mecánica;Energía;¿Qué tipo de energía posee un cuerpo por su movimiento?;Potencial;Térmica;Cinética;Elástica;C;La energía cinética depende de la velocidad del cuerpo.
+162;Mecánica;Estática;¿Qué condición define equilibrio estático?;Velocidad constante;Aceleración cero;Fuerzas y momentos nulos;Energía mínima;C;En equilibrio estático, la suma de fuerzas y momentos es cero.
+163;Materiales;Clasificación;¿Qué material es metálico?;Polietileno;Vidrio;Acero;Epoxi;C;El acero es una aleación metálica.
+164;Materiales;Propiedades;¿Qué propiedad indica resistencia a la rotura bajo impacto?;Dureza;Tenacidad;Elasticidad;Fragilidad;B;La tenacidad mide la energía absorbida antes de fracturar.
+165;Tribología;Fricción;¿Qué ocurre si disminuye el coeficiente de fricción en una faja?;Aumenta transmisión;Disminuye patinaje;Aumenta patinaje;No cambia nada;C;Menor fricción favorece el deslizamiento entre faja y polea.
+166;Tribología;Desgaste;¿Qué factor acelera el desgaste de superficies en contacto?;Lubricación adecuada;Superficie limpia;Contaminación;Baja carga;C;Las partículas contaminantes generan desgaste abrasivo.
+167;Elementos de máquinas;Ejes;¿Qué esfuerzo aparece cuando un eje transmite potencia?;Tracción;Compresión;Torsión;Corte;C;La transmisión de par genera esfuerzo torsional.
+168;Elementos de máquinas;Rodamientos;¿Qué condición indica una posible falla incipiente en un rodamiento?;Baja temperatura;Vibración anormal;Funcionamiento silencioso;Lubricación correcta;B;Vibraciones anómalas suelen ser indicio temprano de falla.
+169;Elementos de máquinas;Engranajes;¿Qué factor reduce la vida útil de un engranaje?;Lubricación adecuada;Carga excesiva;Alineación correcta;Material adecuado;B;Las sobrecargas generan esfuerzos superiores al diseño.
+170;Metrología;Medición;¿Qué instrumento mide desviaciones muy pequeñas respecto a una referencia?;Regla;Calibrador;Comparador;Micrómetro;C;El comparador mide variaciones pequeñas respecto a un patrón.
+171;Metrología;Calidad;¿Qué se busca con el control dimensional?;Aumentar producción;Reducir costos;Garantizar funcionalidad;Evitar inspección;C;El control dimensional asegura el correcto funcionamiento del conjunto.
+172;Hidráulica;Fluidos;¿Qué parámetro influye directamente en la fuerza de un actuador hidráulico?;Caudal;Presión;Temperatura;Viscosidad;B;La fuerza depende de la presión y el área del pistón.
+173;Hidráulica;Pérdidas;¿Qué provoca una caída de presión excesiva en un sistema hidráulico?;Mayor eficiencia;Menor temperatura;Pérdidas por fricción;Mayor caudal útil;C;La fricción interna reduce la presión disponible.
+174;Neumática;Seguridad;¿Qué se debe hacer antes de intervenir un sistema neumático?;Aumentar presión;Cerrar válvula y purgar;Cambiar filtro;Acelerar compresor;B;Es necesario eliminar presión para trabajar con seguridad.
+175;Neumática;Mantenimiento;¿Qué indica un aumento continuo de consumo de aire?;Buen sellado;Alta eficiencia;Fugas en el sistema;Mejor regulación;C;Las fugas elevan el consumo energético.
+176;Fluidos;Tuberías;¿Qué efecto tiene aumentar el diámetro de una tubería?;Aumenta pérdidas;Disminuye caudal;Reduce pérdidas;Aumenta viscosidad;C;Un mayor diámetro reduce la velocidad y las pérdidas por fricción.
+177;Fluidos;Hidrostática;¿De qué depende la presión en un punto de un fluido en reposo?;Área;Profundidad;Velocidad;Caudal;B;La presión hidrostática depende de la profundidad y densidad.
+178;Electricidad;Circuitos;¿Qué sucede si una resistencia se quema en un circuito en serie?;El resto funciona;Se interrumpe el circuito;Aumenta corriente;Baja voltaje;B;En serie, la falla de un elemento abre el circuito.
+179;Electricidad;Seguridad;¿Qué riesgo existe al trabajar con conductores energizados?;Ruido;Choque eléctrico;Menor eficiencia;Vibración;B;El contacto con conductores energizados puede causar electrocución.
+180;Seguridad;Industria;¿Qué práctica reduce accidentes en planta?;Improvisación;Capacitación del personal;Sobrecarga de equipos;Eliminación de normas;B;La capacitación mejora conductas seguras y prevención.
+181;Mecánica;Trabajo;¿Cuándo se realiza trabajo mecánico sobre un cuerpo?;Cuando hay fuerza sin movimiento;Cuando hay movimiento sin fuerza;Cuando fuerza y desplazamiento actúan;Cuando hay aceleración;C;El trabajo requiere fuerza y desplazamiento en la dirección de la fuerza.
+182;Mecánica;Energía;¿Qué tipo de energía almacena un resorte comprimido?;Cinética;Térmica;Elástica;Potencial gravitatoria;C;Los resortes almacenan energía potencial elástica.
+183;Materiales;Propiedades;¿Qué propiedad se evalúa con el ensayo Charpy?;Dureza;Tenacidad al impacto;Elasticidad;Fluencia;B;El ensayo Charpy mide energía absorbida ante impacto.
+184;Materiales;Tratamientos;¿Qué tratamiento térmico busca aliviar tensiones internas?;Templado;Revenido;Recocido;Normalizado;C;El recocido reduce tensiones y aumenta ductilidad.
+185;Tribología;Fricción;¿Qué ocurre si la fricción es excesiva en un mecanismo?;Aumenta eficiencia;Disminuye temperatura;Aumenta desgaste;Mejora vida útil;C;Fricción excesiva genera calor y desgaste acelerado.
+186;Tribología;Lubricación;¿Qué lubricante es más común en engranajes industriales?;Agua;Grasa;Aceite;Aire;C;Los aceites permiten buena lubricación y disipación de calor.
+187;Elementos de máquinas;Transmisión;¿Qué elemento transmite potencia entre ejes paralelos sin contacto directo?;Engranaje;Faja;Cadena;Acople rígido;B;Las fajas transmiten potencia por fricción sin contacto rígido.
+188;Elementos de máquinas;Chavetas;¿Qué ocurre si una chaveta falla?;Aumenta velocidad;Se pierde transmisión de torque;Mejora alineación;Disminuye fricción;B;"La chaveta transmite par; su falla interrumpe la transmisión."
+189;Elementos de máquinas;Acoplamientos;¿Qué ventaja tiene un acoplamiento flexible?;Mayor rigidez;Compensa desalineaciones;Aumenta potencia;Reduce diámetro;B;Los acoplamientos flexibles absorben desalineaciones y vibraciones.
+190;Metrología;Medición;¿Qué instrumento se usa para verificar paralelismo?;Micrómetro;Comparador;Regla;Vernier;B;El comparador detecta desviaciones pequeñas como paralelismo.
+191;Metrología;Control;¿Qué se controla al aplicar tolerancias geométricas?;Material;Forma y posición;Peso;Color;B;Las tolerancias geométricas controlan forma, orientación y posición.
+192;Hidráulica;Sistemas;¿Qué sucede si una válvula de alivio está mal calibrada?;Mejora eficiencia;Puede dañarse el sistema;Aumenta caudal;Reduce pérdidas;B;Una válvula mal ajustada puede permitir sobrepresión peligrosa.
+193;Hidráulica;Fluido;¿Por qué es crítico mantener limpio el aceite hidráulico?;Mejora color;Reduce desgaste;Aumenta presión;Reduce caudal;B;La contaminación acelera desgaste y fallas del sistema.
+194;Neumática;Aire;¿Por qué se elimina humedad del aire comprimido?;Reducir ruido;Evitar corrosión y fallas;Aumentar presión;Reducir temperatura;B;La humedad provoca corrosión y mal funcionamiento.
+195;Neumática;Mantenimiento;¿Qué elemento del FRL se encarga de la lubricación?;Filtro;Regulador;Lubricador;Compresor;C;El lubricador añade aceite al aire comprimido.
+196;Fluidos;Flujo;¿Qué fenómeno aparece al aumentar excesivamente la velocidad del fluido?;Flujo laminar;Cavitación;Turbulencia;Compresión;C;Altas velocidades favorecen régimen turbulento.
+197;Fluidos;Bombas;¿Qué problema puede causar cavitación?;Aumento de eficiencia;Daño en bombas;Mayor caudal;Reducción de vibración;B;La cavitación erosiona superficies y daña equipos.
+198;Electricidad;Protección;¿Qué protege un fusible?;Contra sobrecarga leve;Contra sobrecorriente;Contra fuga a tierra;Contra ruido;B;El fusible se funde ante sobrecorriente.
+199;Electricidad;Motores;¿Qué factor aumenta la temperatura de un motor eléctrico?;Ventilación adecuada;Sobrecarga;Alineación correcta;Voltaje nominal;B;La sobrecarga incrementa corriente y calentamiento.
+200;Seguridad;Ingeniería;¿Cuál es el objetivo principal del diseño seguro?;Reducir costos;Evitar mantenimiento;Proteger personas y activos;Aumentar complejidad;C;La ingeniería segura prioriza la protección de personas y equipos.

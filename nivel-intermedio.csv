@@ -1,0 +1,201 @@
+ID;Área;Subtema;Pregunta;A;B;C;D;Respuesta correcta;Explicación técnica
+I-01;Mecánica;Dinámica;Un bloque se mueve con velocidad constante sobre una superficie horizontal. ¿Qué se puede afirmar sobre la fuerza neta?;Es máxima;Es igual al peso;Es cero;Es variable;C;Velocidad constante implica aceleración cero, por lo tanto fuerza neta nula.
+I-02;Mecánica;Estática;Una viga está en equilibrio. ¿Qué condición adicional a ?F=0 debe cumplirse?;?v=0;?M=0;?a=0;?E=0;B;Para equilibrio estático deben anularse fuerzas y momentos.
+I-03;Materiales;Selección;Para un eje sometido a cargas cíclicas, ¿qué propiedad es más relevante?;Dureza;Módulo elástico;Resistencia a fatiga;Conductividad;C;La fatiga es el modo de falla típico bajo cargas repetidas.
+I-04;Materiales;Tratamientos;¿Por qué un acero templado se vuelve frágil si no se revenida?;Baja dureza;Tensiones internas;Baja densidad;Exceso de ductilidad;B;El templado genera tensiones internas que se alivian con el revenido.
+I-05;Tribología;Fricción;¿Qué efecto tiene subestimar el coeficiente de fricción en un diseño?;Aumenta seguridad;Reduce costos;Riesgo de deslizamiento;Mejora eficiencia;C;Un ? menor al real puede causar fallas por deslizamiento.
+I-06;Tribología;Lubricación;¿Qué ocurre si se pierde la película lubricante en un contacto metálico?;Flujo laminar;Desgaste adhesivo;Menor temperatura;Mayor vida útil;B;Sin lubricación aparecen micro-soldaduras y desgaste adhesivo.
+I-07;Elementos de máquinas;Rodamientos;¿Qué consecuencia tiene una desalineación en un rodamiento?;Menor carga;Aumento de vida;Vibración y desgaste;Mejor lubricación;C;La desalineación genera cargas adicionales y vibraciones.
+I-08;Elementos de máquinas;Fajas;¿Qué efecto tiene una tensión excesiva en una faja?;Menor desgaste;Mayor eficiencia;Sobrecarga en ejes;Menor patinaje sin efectos;C;La tensión excesiva sobrecarga rodamientos y ejes.
+I-09;Elementos de máquinas;Engranajes;¿Qué ventaja tiene un engranaje helicoidal frente a uno recto?;Menor costo;Menor contacto;Menor ruido;Mayor patinaje;C;El contacto progresivo reduce ruido y vibraciones.
+I-10;Metrología;Tolerancias;¿Qué ocurre si se especifican tolerancias demasiado estrictas sin justificación?;Mejora calidad;Reduce reprocesos;Aumenta costos;Elimina inspección;C;Tolerancias innecesariamente cerradas elevan costos de fabricación.
+I-11;Metrología;Ajustes;¿Por qué el aro interno de un rodamiento suele montarse con interferencia?;Facilitar desmontaje;Evitar giro relativo;Reducir fricción;Aumentar holgura;B;Evita que el aro gire sobre el eje.
+I-12;Hidráulica;Sistemas;¿Por qué se dice que una bomba hidráulica no “genera presión”?;Porque no gira;Porque solo entrega caudal;Porque enfría el fluido;Porque regula fuerza;B;La presión depende de la carga del sistema, no de la bomba.
+I-13;Hidráulica;Pérdidas;¿Qué aumenta las pérdidas de carga en una tubería?;Mayor diámetro;Menor rugosidad;Mayor longitud;Menor velocidad;C;Mayor longitud incrementa fricción fluido-pared.
+I-14;Neumática;Precisión;¿Por qué la neumática es menos precisa que la hidráulica?;Menor presión;Aire compresible;Mayor velocidad;Menor costo;B;La compresibilidad del aire reduce precisión de posicionamiento.
+I-15;Neumática;Energía;¿Qué factor reduce la eficiencia energética de la neumática?;Aire limpio;Fugas;Reguladores;Filtros;B;Las fugas representan pérdidas energéticas significativas.
+I-16;Fluidos;Régimen;¿Qué parámetro define si un flujo es laminar o turbulento?;Presión;Viscosidad;Número de Reynolds;Caudal;C;El número de Reynolds caracteriza el régimen de flujo.
+I-17;Fluidos;Diseño;¿Por qué se evitan cambios bruscos de sección en tuberías?;Aumentan caudal;Reducen presión;Generan pérdidas locales;Disminuyen velocidad;C;Las pérdidas locales reducen energía disponible.
+I-18;Electricidad;Motores;¿Qué ocurre si un motor opera con sobrecorriente prolongada?;Aumenta torque;Se enfría;Se sobrecalienta;Mejora rendimiento;C;La sobrecorriente incrementa pérdidas y temperatura.
+I-19;Electricidad;Protección;¿Qué función cumple un relé térmico?;Medir voltaje;Proteger contra cortocircuito;Proteger contra sobrecarga;Arranque suave;C;El relé térmico protege al motor ante sobrecarga prolongada.
+I-20;Seguridad;Ingeniería;¿Por qué se usa un factor de seguridad en diseño?;Simplificar cálculos;Reducir peso;Compensar incertidumbres;Evitar normas;C;Considera variaciones reales de carga, material y uso.
+I-21;Mecánica;Trabajo–energía;Si no hay pérdidas, ¿qué principio permite relacionar velocidad y altura?;Pascal;Conservación de energía;Hooke;Coulomb;B;La energía mecánica se conserva en ausencia de pérdidas.
+I-22;Mecánica;Dinámica;Un cuerpo acelera aun con fuerza constante. ¿Qué cambia?;Masa;Dirección de fuerza;Velocidad;Peso;C;Una fuerza constante produce aceleración constante, cambiando la velocidad.
+I-23;Materiales;Selección;Para un componente sometido a impacto, ¿qué propiedad priorizarías?;Dureza;Tenacidad;Conductividad;Módulo;B;La tenacidad indica capacidad de absorber energía sin fracturar.
+I-24;Materiales;Tratamientos;¿Qué efecto tiene el revenido sobre un acero templado?;Aumenta fragilidad;Reduce dureza a cero;Reduce fragilidad;Cambia composición;C;El revenido alivia tensiones y reduce la fragilidad.
+I-25;Tribología;Fricción;¿Qué error común ocurre al usar ? cinético para iniciar movimiento?;Sobreestimar fuerza;Subestimar fuerza;No cambia el resultado;Aumentar seguridad;B;"Para iniciar movimiento debe usarse ? estático; usar ?k subestima la fuerza requerida."
+I-26;Tribología;Lubricación;¿Qué régimen ofrece menor desgaste en operación estable?;Límite;Mixto;Hidrodinámico;Seco;C;La película completa separa superficies, minimizando desgaste.
+I-27;Elementos de máquinas;Rodamientos;¿Qué condición aumenta la vida útil de un rodamiento?;Desalineación;Contaminación;Lubricación adecuada;Sobrecarga;C;Lubricación correcta reduce fricción y desgaste interno.
+I-28;Elementos de máquinas;Rodamientos;¿Qué sucede si se incrementa la carga radial sin redimensionar?;Aumenta vida;Disminuye vida;No afecta;Reduce ruido;B;La vida L10 disminuye con mayor carga equivalente.
+I-29;Elementos de máquinas;Engranajes;¿Qué problema aparece con lubricación insuficiente?;Menor ruido;Picado de dientes;Mayor eficiencia;Menor temperatura;B;Falta de lubricación genera desgaste y picado superficial.
+I-30;Metrología;Ajustes;¿Qué ajuste usarías para un eje que debe desmontarse con frecuencia?;Interferencia;Transición;Con juego;Forzado;C;El ajuste con juego facilita montaje y desmontaje.
+I-31;Metrología;Calidad;¿Qué indicador revela variabilidad del proceso?;Media;Rango;Desviación estándar;Tolerancia;C;La desviación estándar mide dispersión de datos.
+I-32;Hidráulica;Sistemas;¿Qué ocurre si el caudal supera la capacidad del actuador?;Aumenta fuerza;Aumenta velocidad;No hay efecto;Reduce presión;B;Mayor caudal incrementa la velocidad del actuador.
+I-33;Hidráulica;Pérdidas;¿Qué elemento genera pérdidas locales significativas?;Tubería recta;Válvula;Depósito;Bomba ideal;B;Válvulas y accesorios generan pérdidas locales.
+I-34;Neumática;Control;¿Qué limita la fuerza máxima de un cilindro neumático?;Carrera;Presión disponible;Tipo de válvula;Velocidad;B;La fuerza depende de presión y área del pistón.
+I-35;Neumática;Eficiencia;¿Qué acción mejora la eficiencia energética?;Aumentar presión;Reparar fugas;Reducir filtros;Acelerar compresor;B;Eliminar fugas reduce pérdidas de aire y energía.
+I-36;Fluidos;Diseño;¿Por qué se usan transiciones suaves en tuberías?;Reducir costos;Aumentar caudal;Minimizar pérdidas;Cambiar régimen;C;Las transiciones suaves reducen pérdidas locales.
+I-37;Fluidos;Bombas;¿Qué condición favorece cavitación?;Alta presión de succión;Baja presión de succión;Baja velocidad;Fluido limpio;B;Presión de succión insuficiente provoca cavitación.
+I-38;Electricidad;Motores;¿Qué causa principal eleva la corriente en un motor?;Ventilación;Sobrecarga mecánica;Alineación correcta;Voltaje nominal;B;Mayor carga mecánica demanda más corriente.
+I-39;Electricidad;Protección;¿Qué protege contra cortocircuito de forma rápida?;Relé térmico;Interruptor termomagnético;Variador;Contactor;B;La protección magnética actúa instantáneamente ante cortos.
+I-40;Seguridad;Operación;¿Qué práctica reduce fallas por error humano?;Aumentar turnos;Capacitación y procedimientos;Eliminar controles;Improvisación;B;La estandarización y capacitación reducen errores operativos.
+I-41;Mecánica;Estática;¿Qué ocurre si una estructura es hiperestática?;No puede analizarse;Tiene más incógnitas que ecuaciones;Es inestable;No soporta carga;B;Una estructura hiperestática requiere métodos adicionales para su análisis.
+I-42;Mecánica;Dinámica;¿Qué efecto tiene aumentar la masa manteniendo la misma fuerza?;Aumenta aceleración;Disminuye aceleración;No cambia;Aumenta velocidad;B;Según F = m·a, mayor masa reduce la aceleración.
+I-43;Materiales;Comportamiento;¿Por qué los aceros dúctiles son preferidos en estructuras?;Son más baratos;Fallan sin aviso;Absorben energía antes de romperse;No se oxidan;C;La ductilidad permite deformación visible antes de la falla.
+I-44;Materiales;Selección;¿Qué material es más adecuado para alta temperatura sostenida?;Aluminio;Plástico;Acero aleado;Polietileno;C;Los aceros aleados mantienen propiedades a altas temperaturas.
+I-45;Tribología;Fricción;¿Qué efecto tiene aumentar la rugosidad superficial?;Reduce fricción;No cambia;Aumenta fricción;Elimina desgaste;C;Mayor rugosidad incrementa el contacto real entre superficies.
+I-46;Tribología;Lubricación;¿Qué lubricante es más adecuado para altas velocidades?;Grasa;Aceite;Agua;Aire;B;El aceite fluye mejor y disipa calor a altas velocidades.
+I-47;Elementos de máquinas;Rodamientos;¿Qué indica un aumento progresivo de temperatura en un rodamiento?;Operación normal;Mejor lubricación;Posible falla;Menor carga;C;El aumento térmico suele asociarse a fricción o daño interno.
+I-48;Elementos de máquinas;Rodamientos;¿Qué error reduce drásticamente la vida del rodamiento?;Lubricar correctamente;Alinear ejes;Montaje incorrecto;Carga nominal;C;Un montaje inadecuado introduce tensiones internas.
+I-49;Elementos de máquinas;Engranajes;¿Qué condición provoca desgaste desigual en engranajes?;Buena alineación;Lubricación correcta;Desalineación;Material adecuado;C;La desalineación concentra esfuerzos en los dientes.
+I-50;Metrología;Medición;¿Por qué se usan bloques patrón?;Medir peso;Ajustar tornillos;Calibrar instrumentos;Inspección visual;C;Los bloques patrón sirven como referencia dimensional.
+I-51;Metrología;Proceso;¿Qué error aparece por variaciones del operador?;Sistemático;Instrumental;Aleatorio;Nulo;C;Los errores aleatorios cambian de magnitud y sentido.
+I-52;Hidráulica;Sistemas;¿Qué sucede si se estrangula el retorno de un cilindro hidráulico?;Aumenta fuerza;Aumenta velocidad;Disminuye velocidad;Se anula presión;C;La restricción limita el caudal y reduce velocidad.
+I-53;Hidráulica;Fluido;¿Por qué se controla la temperatura del aceite?;Color;Estética;Mantener viscosidad adecuada;Aumentar presión;C;La viscosidad influye en lubricación y pérdidas.
+I-54;Neumática;Control;¿Qué efecto tiene aumentar la presión de trabajo?;Menor fuerza;Mayor fuerza;Menor consumo;Menor desgaste;B;La fuerza del actuador depende de presión × área.
+I-55;Neumática;Seguridad;¿Qué riesgo existe al no purgar líneas neumáticas?;Bajo ruido;Golpes de actuadores;Menor presión;Mayor eficiencia;B;La energía acumulada puede generar movimientos bruscos.
+I-56;Fluidos;Pérdidas;¿Qué factor NO incrementa pérdidas de carga?;Mayor rugosidad;Mayor longitud;Mayor diámetro;Mayor velocidad;C;Un mayor diámetro reduce la velocidad y las pérdidas.
+I-57;Fluidos;Bombas;¿Qué síntoma típico indica cavitación?;Funcionamiento silencioso;Vibración y ruido;Mayor caudal;Menor consumo;B;La cavitación genera ruido y vibraciones características.
+I-58;Electricidad;Motores;¿Qué problema genera bajo voltaje en un motor?;Menor corriente;Mayor eficiencia;Sobrecalentamiento;Mejor arranque;C;El motor demanda más corriente para mantener torque.
+I-59;Electricidad;Protección;¿Qué protege a las personas ante fugas a tierra?;Fusible;Interruptor diferencial;Relé térmico;Contactor;B;El diferencial actúa ante corrientes de fuga.
+I-60;Seguridad;Mantenimiento;¿Qué práctica reduce fallas repetitivas?;Reparación reactiva;Mantenimiento correctivo;Análisis de causa raíz;Ignorar historial;C;El análisis de causa raíz evita recurrencia de fallas.
+I-61;Mecánica;Vibraciones;¿Qué problema suele indicar una vibración elevada en maquinaria rotativa?;Mayor eficiencia;Desbalance o desalineación;Buena lubricación;Menor carga;B;Las vibraciones anómalas suelen deberse a desbalance, desalineación o fallas mecánicas.
+I-62;Mecánica;Resistencia;¿Qué esfuerzo predomina en un eje sometido a transmisión de potencia?;Tracción;Compresión;Torsión;Corte;C;La transmisión de par genera esfuerzo torsional.
+I-63;Materiales;Fatiga;¿Por qué una grieta por fatiga es peligrosa?;Crece lentamente;Es visible desde el inicio;Progresa sin aviso;Reduce dureza;C;La fatiga puede causar falla súbita sin deformación previa.
+I-64;Materiales;Selección;¿Qué material elegirías para resistir desgaste por abrasión?;Cobre;Aluminio;Acero endurecido;Plástico;C;Los aceros endurecidos ofrecen mayor resistencia al desgaste abrasivo.
+I-65;Tribología;Lubricación;¿Qué efecto tiene una viscosidad excesiva del lubricante?;Reduce pérdidas;Mejora enfriamiento;Aumenta pérdidas por fricción;Elimina desgaste;C;Alta viscosidad incrementa resistencia al movimiento.
+I-66;Tribología;Desgaste;¿Qué tipo de desgaste ocurre por contacto repetitivo bajo carga?;Abrasivo;Adhesivo;Fatiga superficial;Corrosivo;C;La fatiga superficial aparece por esfuerzos cíclicos.
+I-67;Elementos de máquinas;Rodamientos;¿Qué parámetro es clave para calcular la vida L10?;Velocidad;Diámetro;Carga equivalente;Temperatura;C;La vida del rodamiento depende fuertemente de la carga aplicada.
+I-68;Elementos de máquinas;Rodamientos;¿Qué indica una vibración periódica a frecuencia de giro?;Desgaste general;Desbalance;Lubricación correcta;Cavitación;B;El desbalance genera vibraciones a 1× la velocidad de giro.
+I-69;Elementos de máquinas;Transmisión;¿Qué sistema requiere menor mantenimiento periódico?;Fajas;Cadenas;Engranajes;Poleas;C;Los engranajes, bien lubricados, requieren menos ajustes.
+I-70;Metrología;Instrumentación;¿Por qué no debe usarse un micrómetro sin calibrar?;Daños físicos;Medidas incorrectas;Mayor precisión;Cambio de escala;B;Sin calibración, las mediciones pierden confiabilidad.
+I-71;Metrología;Calidad;¿Qué representa Cp y Cpk en control de procesos?;Precisión del operador;Capacidad del proceso;Costo de producción;Tolerancia dimensional;B;Cp y Cpk evalúan la capacidad del proceso frente a tolerancias.
+I-72;Hidráulica;Circuitos;¿Qué ocurre si se instala una válvula check al revés?;Mejora control;Bloquea flujo;Reduce presión;Aumenta caudal;B;La válvula impediría el flujo normal del sistema.
+I-73;Hidráulica;Actuadores;¿Qué factor NO influye directamente en la fuerza del cilindro?;Presión;Área del pistón;Caudal;Tipo de sello;C;El caudal influye en velocidad, no en fuerza.
+I-74;Neumática;Compresión;¿Por qué se enfría el aire después de la compresión?;Para aumentar presión;Para eliminar humedad;Para reducir ruido;Para aumentar velocidad;B;El enfriamiento condensa la humedad del aire.
+I-75;Neumática;Seguridad;¿Qué riesgo genera presión residual en líneas neumáticas?;Bajo rendimiento;Movimiento inesperado;Menor fuerza;Menor consumo;B;La energía almacenada puede causar accionamientos inesperados.
+I-76;Fluidos;Pérdidas;¿Qué genera mayores pérdidas locales?;Tramo recto largo;Codo brusco;Diámetro grande;Superficie lisa;B;Los cambios bruscos generan pérdidas locales significativas.
+I-77;Fluidos;Bombas;¿Qué parámetro se compara con NPSHr para evitar cavitación?;Presión atmosférica;NPSHa;Caudal;Potencia;B;Debe cumplirse NPSHa > NPSHr.
+I-78;Electricidad;Motores;¿Qué efecto tiene desalinear un motor con la carga?;Reduce vibración;Aumenta vida;Incrementa vibración;Mejora eficiencia;C;La desalineación genera vibraciones y desgaste.
+I-79;Electricidad;Protección;¿Qué dispositivo protege principalmente contra sobrecarga prolongada?;Fusible;Interruptor diferencial;Relé térmico;Contactor;C;El relé térmico actúa ante sobrecargas sostenidas.
+I-80;Seguridad;Procedimientos;¿Qué documento define pasos seguros para una tarea?;Plano;Manual técnico;Procedimiento de trabajo;Lista de materiales;C;Los procedimientos estandarizan y reducen riesgos operativos.
+I-81;Mecánica;Estabilidad;¿Qué condición puede provocar pandeo en una columna?;Alta dureza;Carga axial elevada;Baja temperatura;Alta ductilidad;B;El pandeo ocurre por cargas de compresión críticas.
+I-82;Mecánica;Resistencia;¿Qué parámetro geométrico influye más en la rigidez a flexión?;Área;Perímetro;Momento de inercia;Longitud;C;La rigidez a flexión depende fuertemente del momento de inercia.
+I-83;Materiales;Fatiga;¿Dónde suele iniciarse una grieta por fatiga?;En zonas pulidas;En concentradores de esfuerzo;En zonas frías;En áreas lubricadas;B;Las concentraciones de esfuerzo favorecen inicio de grietas.
+I-84;Materiales;Tratamientos;¿Qué tratamiento mejora resistencia al desgaste superficial sin afectar el núcleo?;Recocido;Cementado;Normalizado;Revenido;B;El cementado endurece la superficie manteniendo núcleo tenaz.
+I-85;Tribología;Fricción;¿Qué efecto tiene la lubricación insuficiente en engranajes?;Menor ruido;Mayor eficiencia;Incremento de temperatura;Reducción de carga;C;Falta de lubricación aumenta fricción y calor.
+I-86;Tribología;Lubricantes;¿Qué propiedad del lubricante es clave para altas temperaturas?;Color;Punto de inflamación;Densidad;pH;B;Un alto punto de inflamación evita degradación térmica.
+I-87;Elementos de máquinas;Ejes;¿Qué tipo de carga combinada suele actuar en un eje real?;Solo torsión;Solo flexión;Torsión y flexión;Tracción pura;C;En la práctica, los ejes trabajan con cargas combinadas.
+I-88;Elementos de máquinas;Rodamientos;¿Qué condición genera marcas de paso en pistas del rodamiento?;Lubricación excesiva;Carga estática elevada;Alta velocidad;Baja temperatura;B;Las cargas estáticas producen indentaciones permanentes.
+I-89;Elementos de máquinas;Engranajes;¿Qué fenómeno aparece por contacto repetido en dientes?;Fluencia;Picado;Pandeo;Oxidación;B;El picado es fatiga superficial por esfuerzos cíclicos.
+I-90;Metrología;Medición;¿Por qué se controla la temperatura en mediciones de precisión?;Estética;Seguridad;Dilatación térmica;Ruido ambiental;C;La dilatación afecta dimensiones medidas.
+I-91;Metrología;Calidad;¿Qué indica un Cpk bajo aunque Cp sea alto?;Buen centrado;Proceso descentrado;Alta precisión;Baja variabilidad;B;El proceso es capaz pero no está centrado en la tolerancia.
+I-92;Hidráulica;Actuadores;¿Qué ocurre si hay aire atrapado en un sistema hidráulico?;Mayor rigidez;Movimiento errático;Aumento de presión;Mejor respuesta;B;El aire es compresible y genera movimientos irregulares.
+I-93;Hidráulica;Fluido;¿Qué efecto tiene la contaminación sólida en el aceite?;Mejora sellado;Reduce desgaste;Aumenta desgaste;Reduce presión;C;Las partículas sólidas aceleran desgaste de componentes.
+I-94;Neumática;Control;¿Qué limita la velocidad máxima de un cilindro neumático?;Presión;Caudal disponible;Diámetro;Tipo de sello;B;La velocidad depende del caudal que alimenta el actuador.
+I-95;Neumática;Mantenimiento;¿Qué síntoma indica un filtro neumático saturado?;Mayor presión;Caída de presión;Mayor caudal;Menor consumo;B;Un filtro sucio genera pérdidas de presión.
+I-96;Fluidos;Tuberías;¿Qué material reduce pérdidas por fricción?;Rugoso;Corrugado;Liso;Flexible;C;Superficies lisas reducen fricción fluido-pared.
+I-97;Fluidos;Bombas;¿Qué parámetro indica energía entregada por la bomba al fluido?;Caudal;Altura manométrica;Densidad;Diámetro;B;La altura representa energía por unidad de peso.
+I-98;Electricidad;Motores;¿Qué condición reduce el factor de potencia de un motor?;Carga nominal;Sobrecarga;Operación en vacío;Alineación correcta;C;A baja carga, el factor de potencia disminuye.
+I-99;Electricidad;Arranque;¿Por qué se limita la corriente de arranque de motores grandes?;Reducir torque;Proteger la red;Aumentar velocidad;Reducir eficiencia;B;Altas corrientes afectan la red y equipos.
+I-100;Seguridad;Ingeniería;¿Qué se busca con el análisis de riesgos?;Eliminar normas;Identificar peligros;Aumentar producción;Reducir inspección;B;El análisis de riesgos permite prevenir accidentes.
+I-101;Mecánica;Resistencia;¿Qué condición incrementa el riesgo de pandeo en columnas esbeltas?;Mayor sección;Menor longitud;Mayor esbeltez;Apoyo fijo;C;A mayor esbeltez (L/k), menor carga crítica de pandeo.
+I-102;Mecánica;Dinámica;¿Qué magnitud se conserva en un choque elástico ideal?;Energía térmica;Energía mecánica;Cantidad de movimiento;Presión;C;En choques elásticos se conserva el momento lineal.
+I-103;Materiales;Selección;Para ambientes corrosivos, ¿qué propiedad priorizarías?;Dureza;Resistencia a corrosión;Conductividad;Módulo elástico;B;La resistencia a la corrosión asegura vida útil del componente.
+I-104;Materiales;Tratamientos;¿Qué proceso endurece solo la superficie manteniendo núcleo dúctil?;Normalizado;Recocido;Nitruración;Revenido;C;La nitruración endurece la capa superficial sin templar el núcleo.
+I-105;Tribología;Fricción;¿Qué error común aumenta pérdidas en transmisiones por faja?;Tensión correcta;Desalineación;Lubricación adecuada;Poleas limpias;B;La desalineación incrementa fricción y desgaste.
+I-106;Tribología;Lubricantes;¿Qué propiedad indica la resistencia del aceite a fluir?;Densidad;Viscosidad;pH;Color;B;La viscosidad define la resistencia al flujo.
+I-107;Elementos de máquinas;Ejes;¿Qué fallo es típico en ejes con chaveteros?;Pandeo;Fatiga;Fluencia;Corrosión uniforme;B;Los chaveteros concentran esfuerzos y favorecen fatiga.
+I-108;Elementos de máquinas;Rodamientos;¿Qué montaje incorrecto genera precarga no deseada?;Ajuste con juego;Ajuste flojo;Interferencia excesiva;Lubricación correcta;C;La interferencia excesiva introduce tensiones internas.
+I-109;Elementos de máquinas;Engranajes;¿Qué condición reduce el picado superficial?;Alta carga;Baja lubricación;Lubricación adecuada;Desalineación;C;Una película lubricante adecuada reduce fatiga superficial.
+I-110;Metrología;Medición;¿Qué factor ambiental afecta más la precisión dimensional?;Iluminación;Ruido;Temperatura;Color;C;La temperatura provoca dilataciones que alteran medidas.
+I-111;Metrología;Calidad;¿Qué indica un proceso con Cp alto y Cpk bajo?;Proceso incapaz;Proceso centrado;Proceso descentrado;Baja variabilidad;C;El proceso es capaz pero no está centrado en la tolerancia.
+I-112;Hidráulica;Sistemas;¿Qué efecto tiene una válvula de alivio permanentemente abierta?;Mayor presión;Pérdida de eficiencia;Mayor caudal;Mejor control;B;El fluido retorna al tanque sin realizar trabajo útil.
+I-113;Hidráulica;Actuadores;¿Qué reduce la velocidad de un cilindro hidráulico?;Mayor caudal;Menor presión;Restricción en línea;Mayor área;C;La restricción limita el caudal y reduce velocidad.
+I-114;Neumática;Aire;¿Por qué se usa secador de aire en sistemas neumáticos?;Aumentar presión;Eliminar humedad;Reducir ruido;Aumentar caudal;B;La humedad causa corrosión y fallas de válvulas.
+I-115;Neumática;Eficiencia;¿Qué práctica reduce consumo energético?;Aumentar presión;Reparar fugas;Usar válvulas grandes;Acelerar ciclos;B;Las fugas representan pérdidas directas de energía.
+I-116;Fluidos;Diseño;¿Qué incrementa las pérdidas por fricción en tuberías?;Superficie lisa;Mayor diámetro;Mayor rugosidad;Menor velocidad;C;La rugosidad aumenta la fricción fluido-pared.
+I-117;Fluidos;Bombas;¿Qué indica una disminución del NPSHa?;Mayor seguridad;Riesgo de cavitación;Mayor caudal;Mejor eficiencia;B;NPSHa bajo favorece cavitación.
+I-118;Electricidad;Motores;¿Qué efecto tiene un desbalance de fases?;Mayor eficiencia;Vibración y calentamiento;Menor corriente;Arranque suave;B;El desbalance genera corrientes desiguales y calor.
+I-119;Electricidad;Protección;¿Qué protege contra sobrecorriente instantánea?;Relé térmico;Interruptor magnético;Diferencial;Contactor;B;La protección magnética actúa rápidamente ante cortos.
+I-120;Seguridad;Operación;¿Qué medida reduce incidentes durante mantenimiento?;Trabajo en caliente;Bloqueo y etiquetado;Aumentar turnos;Improvisación;B;LOTO evita energización accidental.
+I-121;Mecánica;Vibraciones;¿Qué efecto tiene el desbalance en un rotor?;Reduce fricción;Genera vibración periódica;Mejora eficiencia;Disminuye carga;B;El desbalance provoca fuerzas centrífugas que generan vibraciones.
+I-122;Mecánica;Dinámica;¿Qué sucede si aumenta el momento de inercia manteniendo el mismo torque?;Aumenta aceleración angular;Disminuye aceleración angular;No cambia;Aumenta velocidad final;B;Según T = I·?, mayor inercia reduce aceleración angular.
+I-123;Materiales;Fatiga;¿Qué factor acelera la falla por fatiga?;Superficie pulida;Radio grande;Concentradores de esfuerzo;Baja carga media;C;Las discontinuidades concentran esfuerzos y aceleran grietas.
+I-124;Materiales;Selección;¿Qué material es más adecuado para piezas sometidas a impacto?;Fundición gris;Cerámica;Acero dúctil;Vidrio;C;Los materiales dúctiles absorben energía antes de fallar.
+I-125;Tribología;Fricción;¿Qué condición aumenta el coeficiente de fricción?;Lubricación adecuada;Superficie rugosa;Baja carga;Superficie pulida;B;Mayor rugosidad incrementa el contacto real.
+I-126;Tribología;Lubricación;¿Qué régimen aparece durante el arranque de maquinaria?;Hidrodinámico;Límite;Elastohidrodinámico;Hidrostático;B;Al arranque no existe película completa de lubricante.
+I-127;Elementos de máquinas;Ejes;¿Qué esfuerzo aparece por poleas o engranajes montados en un eje?;Torsión;Flexión;Compresión;Corte puro;B;Las cargas radiales generan flexión adicional.
+I-128;Elementos de máquinas;Rodamientos;¿Qué síntoma suele indicar falta de lubricación?;Menor temperatura;Ruido anormal;Funcionamiento silencioso;Menor vibración;B;La fricción seca genera ruido y calor.
+I-129;Elementos de máquinas;Engranajes;¿Qué condición produce desgaste localizado en dientes?;Buena alineación;Carga uniforme;Desalineación;Lubricación correcta;C;La desalineación concentra carga en zonas pequeñas.
+I-130;Metrología;Medición;¿Qué instrumento es más adecuado para verificar concentricidad?;Micrómetro;Regla;Comparador;Vernier;C;El comparador permite detectar variaciones radiales.
+I-131;Metrología;Calidad;¿Qué indica una carta de control fuera de límites?;Proceso estable;Variación normal;Proceso fuera de control;Alta calidad;C;Señala causas especiales que deben investigarse.
+I-132;Hidráulica;Sistemas;¿Qué ocurre si se bloquea la salida de una bomba positiva?;Disminuye presión;No pasa nada;Aumenta presión peligrosamente;Aumenta caudal;C;Las bombas positivas generan presión hasta causar daño.
+I-133;Hidráulica;Fluido;¿Por qué se filtra continuamente el aceite hidráulico?;Mejorar color;Reducir temperatura;Eliminar contaminantes;Aumentar presión;C;La contaminación acelera desgaste y fallas.
+I-134;Neumática;Control;¿Qué elemento regula velocidad de cilindros neumáticos?;Filtro;Regulador;Válvula reguladora de caudal;Lubricador;C;La velocidad depende del caudal de aire.
+I-135;Neumática;Seguridad;¿Qué peligro existe al aumentar excesivamente la presión?;Menor fuerza;Fugas controladas;Daño a componentes;Menor consumo;C;Superar presión de diseño daña equipos.
+I-136;Fluidos;Régimen;¿Qué efecto tiene disminuir viscosidad manteniendo velocidad?;Aumenta Reynolds;Disminuye Reynolds;No cambia;Flujo laminar;A;Menor viscosidad aumenta el número de Reynolds.
+I-137;Fluidos;Bombas;¿Qué síntoma NO está asociado a cavitación?;Ruido;Vibración;Pérdida de caudal;Funcionamiento silencioso;D;La cavitación produce ruido y vibraciones.
+I-138;Electricidad;Motores;¿Qué consecuencia tiene un mal factor de potencia?;Menor corriente;Penalizaciones y pérdidas;Mejor eficiencia;Menor calentamiento;B;Un FP bajo aumenta corriente y costos.
+I-139;Electricidad;Protección;¿Qué equipo protege principalmente a personas?;Fusible;Relé térmico;Interruptor diferencial;Interruptor magnético;C;El diferencial actúa ante fugas a tierra.
+I-140;Seguridad;Gestión;¿Qué herramienta identifica peligros antes de ejecutar una tarea?;Cronograma;IPERC;Lista de materiales;Plano;B;El IPERC evalúa peligros y riesgos previamente.
+I-141;Mecánica;Dinámica rotacional;¿Qué efecto tiene aumentar el radio de giro manteniendo la masa?;Disminuye inercia;Aumenta inercia;No cambia;Reduce torque;B;El momento de inercia crece con la distribución radial de la masa.
+I-142;Mecánica;Resistencia;¿Qué condición reduce la tensión máxima en una viga a flexión?;Mayor carga;Menor inercia;Mayor momento de inercia;Menor sección;C;Un mayor momento de inercia reduce la tensión ? = M·y/I.
+I-143;Materiales;Corrosión;¿Qué combinación favorece la corrosión galvánica?;Metales iguales y secos;Metales distintos y electrolito;Alta temperatura sin humedad;Superficie pintada;B;Requiere metales distintos en contacto eléctrico y un electrolito.
+I-144;Materiales;Selección;¿Qué propiedad es clave para recipientes a presión?;Dureza;Tenacidad;Límite elástico;Conductividad;C;El límite elástico controla la deformación segura bajo presión.
+I-145;Tribología;Desgaste;¿Qué mecanismo domina en superficies con partículas duras?;Adhesivo;Abrasivo;Fatiga;Corrosivo;B;Las partículas duras producen rayado y arranque de material.
+I-146;Tribología;Lubricación;¿Qué parámetro del lubricante influye más en arranque en frío?;Densidad;Viscosidad a baja T;Color;pH;B;La viscosidad a baja temperatura gobierna el flujo inicial.
+I-147;Elementos de máquinas;Transmisión;¿Qué ventaja tiene una transmisión por cadena frente a faja?;Menor ruido;No patina;Menor mantenimiento;Mayor elasticidad;B;La cadena transmite sin deslizamiento.
+I-148;Elementos de máquinas;Rodamientos;¿Qué práctica reduce el false brinelling en rodamientos parados?;Alta carga;Micro-movimientos;Bloqueo rígido;Lubricación adecuada;D;La lubricación adecuada protege las pistas ante microvibraciones.
+I-149;Elementos de máquinas;Engranajes;¿Qué parámetro ajusta la capacidad de carga del diente?;Módulo;Número de dientes;Ancho de cara;Material;C;El ancho de cara aumenta el área de contacto y capacidad de carga.
+I-150;Metrología;Medición;¿Qué error aparece por mala alineación del instrumento?;Sistemático;Aleatorio;Ambiental;Despreciable;A;La desalineación introduce un sesgo constante.
+I-151;Metrología;GD&T;¿Qué controla la tolerancia de posición?;Tamaño;Forma;Ubicación;Rugosidad;C;La posición define la ubicación del elemento respecto a referencias.
+I-152;Hidráulica;Circuitos;¿Qué efecto tiene estrangular el caudal en la salida del actuador?;Aumenta fuerza;Aumenta presión;Reduce velocidad;Anula movimiento;C;Menor caudal implica menor velocidad del actuador.
+I-153;Hidráulica;Bombas;¿Qué tipo de bomba es sensible a bloqueo de descarga?;Centrífuga;Axial;Positiva;Turbina;C;Las bombas positivas generan presión peligrosa si se bloquean.
+I-154;Neumática;Aire;¿Por qué se usa un depósito (pulmón) de aire?;Aumentar presión;Estabilizar suministro;Enfriar aire;Lubricar sistema;B;El pulmón amortigua variaciones de demanda.
+I-155;Neumática;Control;¿Qué válvula permite invertir el sentido del actuador?;Check;Reguladora;Direccional;Alivio;C;Las direccionales controlan el sentido del flujo.
+I-156;Fluidos;Tuberías;¿Qué efecto tiene aumentar la velocidad del fluido?;Menores pérdidas;Mayor Reynolds;Menor fricción;Flujo laminar;B;La velocidad eleva Reynolds y pérdidas.
+I-157;Fluidos;Bombas;¿Qué condición mejora el NPSHa?;Mayor temperatura;Menor presión de succión;Mayor nivel del tanque;Mayor rugosidad;C;Mayor columna de succión aumenta NPSHa.
+I-158;Electricidad;Motores;¿Qué problema causa el arranque frecuente?;Menor desgaste;Calentamiento excesivo;Mejor FP;Menor corriente;B;Los arranques elevan pérdidas térmicas acumuladas.
+I-159;Electricidad;Variadores;¿Qué beneficio principal aporta un VFD?;Aumentar potencia;Control de velocidad;Eliminar protecciones;Reducir torque;B;El VFD regula velocidad y mejora control del proceso.
+I-160;Seguridad;Operación;¿Qué práctica previene energización inesperada?;Señalización;LOTO;Inspección visual;Permiso verbal;B;Bloqueo y etiquetado previene arranques accidentales.
+I-161;Mecánica;Dinámica;¿Qué efecto tiene incrementar el torque aplicado manteniendo la inercia?;Reduce velocidad;Reduce aceleración;Aumenta aceleración angular;No cambia;C;Por T = I·?, mayor torque produce mayor aceleración angular.
+I-162;Mecánica;Resistencia;¿Qué condición reduce el riesgo de falla por flexión?;Menor inercia;Mayor momento flector;Mayor inercia;Menor sección;C;Un mayor momento de inercia reduce tensiones a flexión.
+I-163;Materiales;Corrosión;¿Qué método protege el acero mediante sacrificio de otro metal?;Pintura;Galvanizado;Pasivado;Anodizado;B;El zinc se sacrifica protegiendo el acero base.
+I-164;Materiales;Fatiga;¿Qué variable influye más en la vida a fatiga?;Color;Carga alternante;Densidad;Conductividad;B;La amplitud de carga alternante domina la vida a fatiga.
+I-165;Tribología;Fricción;¿Qué situación incrementa el desgaste adhesivo?;Lubricación adecuada;Alta presión de contacto;Superficie dura;Baja temperatura;B;Alta presión favorece micro-soldaduras entre superficies.
+I-166;Tribología;Lubricantes;¿Qué indica un índice de viscosidad alto?;Viscosidad constante con T;Menor densidad;Mayor lubricidad;Mayor pH;A;Un alto IV indica menor variación de viscosidad con temperatura.
+I-167;Elementos de máquinas;Ejes;¿Qué práctica reduce concentración de esfuerzos en ejes?;Chaveteros agudos;Radios generosos;Superficies rugosas;Ajustes forzados;B;Los radios reducen concentradores de esfuerzo.
+I-168;Elementos de máquinas;Rodamientos;¿Qué síntoma suele indicar contaminación interna?;Operación silenciosa;Ruido irregular;Menor temperatura;Mayor eficiencia;B;Partículas generan ruido y vibración irregular.
+I-169;Elementos de máquinas;Engranajes;¿Qué acción reduce ruido en engranajes?;Mayor carga;Lubricación adecuada;Desalineación;Menor módulo;B;La lubricación amortigua contacto y vibraciones.
+I-170;Metrología;Medición;¿Qué error aparece por deriva térmica del instrumento?;Aleatorio;Sistemático;Humano;Despreciable;B;La deriva introduce un sesgo progresivo en la medición.
+I-171;Metrología;Calidad;¿Qué indica una tendencia en carta de control?;Variación normal;Proceso estable;Desplazamiento del proceso;Alta capacidad;C;Las tendencias indican cambios graduales del proceso.
+I-172;Hidráulica;Sistemas;¿Qué ocurre si se usa aceite con viscosidad muy baja?;Mejor sellado;Mayor fuerza;Fugas internas;Menor velocidad;C;Baja viscosidad aumenta fugas y reduce eficiencia.
+I-173;Hidráulica;Actuadores;¿Qué incrementa la fuerza del cilindro sin cambiar presión?;Mayor carrera;Mayor diámetro;Mayor velocidad;Menor caudal;B;La fuerza depende del área del pistón.
+I-174;Neumática;Control;¿Qué problema genera una válvula subdimensionada?;Mayor fuerza;Caída de presión;Menor consumo;Mejor control;B;El subdimensionamiento estrangula el flujo.
+I-175;Neumática;Aire;¿Qué factor aumenta condensación en líneas?;Aire seco;Baja humedad;Enfriamiento del aire;Alta presión;C;Al enfriarse el aire, la humedad condensa.
+I-176;Fluidos;Régimen;¿Qué cambio reduce el número de Reynolds?;Aumentar velocidad;Aumentar diámetro;Aumentar viscosidad;Reducir rugosidad;C;Reynolds es inversamente proporcional a la viscosidad.
+I-177;Fluidos;Bombas;¿Qué consecuencia tiene operar lejos del BEP?;Mayor eficiencia;Menor vibración;Vibración y desgaste;Menor consumo;C;Fuera del BEP aumentan fuerzas hidráulicas y vibraciones.
+I-178;Electricidad;Motores;¿Qué efecto tiene una sobrecarga prolongada?;Menor corriente;Mayor vida;Degradación del aislamiento;Mejor FP;C;El calor acelera envejecimiento del aislamiento.
+I-179;Electricidad;Protección;¿Qué protege simultáneamente contra sobrecarga y cortocircuito?;Fusible;Interruptor termomagnético;Relé térmico;Diferencial;B;Combina protección térmica y magnética.
+I-180;Seguridad;Gestión;¿Qué documento autoriza trabajos de alto riesgo?;IPERC;PETS;Permiso de trabajo;Check list;C;El permiso formal controla trabajos críticos.
+I-181;Mecánica;Resistencia;¿Qué medida reduce tensiones en un cambio brusco de sección?;Esquinas vivas;Radios de transición;Menor material;Mayor carga;B;Los radios reducen concentradores de esfuerzo.
+I-182;Mecánica;Dinámica;¿Qué variable controla directamente la aceleración angular?;Velocidad;Torque aplicado;Masa;Diámetro;B;Por T = I·?, el torque gobierna la aceleración angular.
+I-183;Materiales;Fatiga;¿Qué tratamiento superficial mejora la vida a fatiga?;Pulido;Granallado;Recocido;Normalizado;B;El granallado induce esfuerzos residuales compresivos.
+I-184;Materiales;Selección;¿Qué material es más adecuado para cargas cíclicas altas?;Fundición gris;Cerámica;Acero dúctil;Vidrio;C;La ductilidad mejora resistencia a fatiga.
+I-185;Tribología;Desgaste;¿Qué condición reduce el desgaste adhesivo?;Alta presión;Contacto seco;Lubricación adecuada;Superficie blanda;C;La lubricación separa superficies y evita micro-soldaduras.
+I-186;Tribología;Lubricantes;¿Qué propiedad ayuda a mantener película lubricante estable?;Color;Índice de viscosidad;Densidad;Conductividad;B;Un IV alto reduce variación de viscosidad con temperatura.
+I-187;Elementos de máquinas;Ejes;¿Qué condición suele provocar falla prematura en ejes?;Radios amplios;Buen acabado;Concentradores de esfuerzo;Alineación correcta;C;Las discontinuidades concentran esfuerzos y aceleran fatiga.
+I-188;Elementos de máquinas;Rodamientos;¿Qué práctica reduce fallas por contaminación?;Abrir sellos;Lubricar en exceso;Sellado y filtración;Mayor carga;C;El sellado y filtración evitan ingreso de partículas.
+I-189;Elementos de máquinas;Engranajes;¿Qué factor incrementa la capacidad de carga del engranaje?;Menor módulo;Mayor ancho de cara;Menor dureza;Menor lubricación;B;Más ancho distribuye mejor la carga.
+I-190;Metrología;Medición;¿Qué efecto tiene la dilatación térmica en mediciones?;No influye;Introduce error dimensional;Mejora precisión;Reduce tolerancia;B;La temperatura altera dimensiones reales.
+I-191;Metrología;Calidad;¿Qué indica un proceso con puntos fuera de control?;Variación normal;Causas especiales;Alta capacidad;Buen centrado;B;Señala problemas que requieren acción correctiva.
+I-192;Hidráulica;Sistemas;¿Qué riesgo genera una válvula direccional atascada?;Mayor eficiencia;Pérdida de control;Mayor caudal;Menor presión;B;Un actuador puede moverse de forma inesperada.
+I-193;Hidráulica;Fluido;¿Qué propiedad del aceite influye más en pérdidas internas?;Color;Viscosidad;pH;Densidad;B;La viscosidad controla fugas y fricción interna.
+I-194;Neumática;Control;¿Qué causa un movimiento irregular del cilindro?;Aire seco;Presión estable;Aire con humedad;Regulación correcta;C;La humedad afecta válvulas y sellos.
+I-195;Neumática;Seguridad;¿Qué se debe hacer antes de desmontar una válvula?;Aumentar presión;Purgar el sistema;Cambiar filtro;Ajustar regulador;B;Es vital eliminar energía almacenada.
+I-196;Fluidos;Tuberías;¿Qué efecto tiene un codo mal diseñado?;Reduce pérdidas;Aumenta caudal;Incrementa pérdidas locales;Mejora flujo;C;Los cambios bruscos generan pérdidas adicionales.
+I-197;Fluidos;Bombas;¿Qué condición indica operación cercana al BEP?;Ruido elevado;Vibración mínima;Cavitación;Baja eficiencia;B;En el BEP la bomba opera más estable.
+I-198;Electricidad;Motores;¿Qué variable se incrementa con baja tensión en carga?;Velocidad;Corriente;Factor de potencia;Eficiencia;B;El motor demanda más corriente para el mismo torque.
+I-199;Electricidad;Protección;¿Qué protege equipos electrónicos sensibles?;Fusible;Relé térmico;Supresor de picos;Contactor;C;Los supresores limitan sobretensiones transitorias.
+I-200;Seguridad;Ingeniería;¿Qué principio rige la jerarquía de controles?;EPP primero;Eliminar el peligro;Señalizar riesgos;Capacitar únicamente;B;La eliminación del peligro es la medida más efectiva.
