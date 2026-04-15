@@ -4408,29 +4408,91 @@ function nextQuestion() {
 }
 
 function showResults() {
+    const rawText = `¡Acabo de completar la Trivia de Ingeniería en Ingeniamente en el nivel ${currentState.level} con ${currentState.score.correct} aciertos! ¿Puedes superarme? 🚀🔧`;
+    const shareText = encodeURIComponent(rawText);
+    const shareUrl = encodeURIComponent(window.location.href);
+
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${shareText} ${shareUrl}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+    // Facebook has deprecated quote parameter, using basic sharing URL
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+
+    const nativeShareHTML = navigator.share ? `
+        <button onclick="shareNative()" class="w-full mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-3.5 px-6 rounded-2xl hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
+            <i class="fa-solid fa-share-nodes text-xl"></i> Compartir resultado
+        </button>
+        <div class="relative flex items-center py-2 mb-4">
+            <div class="flex-grow border-t border-slate-200"></div>
+            <span class="flex-shrink-0 mx-4 text-slate-400 text-xs font-semibold uppercase tracking-wider">O usa redes sociales</span>
+            <div class="flex-grow border-t border-slate-200"></div>
+        </div>
+    ` : `<h3 class="text-sm font-bold text-slate-400 mb-6 uppercase tracking-widest">Comparte tu resultado</h3>`;
+
     els.game.innerHTML = `
-        <div class="text-center py-10">
-            <div class="inline-block p-6 rounded-full bg-blue-50 text-blue-600 text-5xl mb-6">
+        <div class="text-center py-4 fade-in">
+            <div class="inline-block p-6 rounded-full bg-blue-50 text-blue-600 text-5xl mb-6 shadow-inner ring-4 ring-blue-50 mt-4">
                 <i class="fa-solid fa-medal"></i>
             </div>
-            <h2 class="text-3xl font-bold text-slate-800 mb-4">¡Juego Completado!</h2>
-            <p class="text-slate-600 mb-8">Has completado el nivel ${currentState.level}</p>
+            <h2 class="text-4xl font-black text-slate-800 mb-3 tracking-tight">¡Misión Cumplida!</h2>
+            <p class="text-slate-600 text-lg mb-8 font-medium">Has completado el nivel <span class="capitalize font-bold text-blue-600">${currentState.level}</span></p>
             
-            <div class="grid grid-cols-2 gap-6 max-w-md mx-auto mb-10">
-                <div class="bg-green-50 p-6 rounded-2xl border border-green-100">
-                    <div class="text-4xl font-bold text-green-600 mb-2">${currentState.score.correct}</div>
-                    <div class="text-green-800 font-medium">Aciertos</div>
+            <div class="grid grid-cols-2 gap-4 max-w-md mx-auto mb-10">
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-3xl border border-emerald-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300"><i class="fa-solid fa-check text-8xl text-emerald-500"></i></div>
+                    <div class="text-5xl font-black text-emerald-600 mb-1 relative z-10">${currentState.score.correct}</div>
+                    <div class="text-emerald-800 font-bold tracking-widest uppercase text-xs relative z-10 opacity-80">Aciertos</div>
                 </div>
-                <div class="bg-red-50 p-6 rounded-2xl border border-red-100">
-                    <div class="text-4xl font-bold text-red-600 mb-2">${currentState.score.incorrect}</div>
-                    <div class="text-red-800 font-medium">Errores</div>
+                <div class="bg-gradient-to-br from-red-50 to-rose-50 p-6 rounded-3xl border border-rose-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300"><i class="fa-solid fa-xmark text-8xl text-rose-500"></i></div>
+                    <div class="text-5xl font-black text-rose-600 mb-1 relative z-10">${currentState.score.incorrect}</div>
+                    <div class="text-rose-800 font-bold tracking-widest uppercase text-xs relative z-10 opacity-80">Errores</div>
                 </div>
             </div>
             
-            <button onclick="location.reload()" class="bg-slate-900 hover:bg-slate-800 text-white text-lg font-bold py-3 px-8 rounded-xl transition-all shadow-lg">
-                Volver al Inicio
+            <!-- Redes Sociales Modernizado -->
+            <div class="mb-10 max-w-md mx-auto bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                ${nativeShareHTML}
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="javascript:void(0)" onclick="openShareWindow('${whatsappUrl}')" class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#25D366] text-white hover:bg-[#1ebd5e] hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openShareWindow('${twitterUrl}')" class="w-14 h-14 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/40 transition-all duration-300" title="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter text-2xl"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openShareWindow('${facebookUrl}')" class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#1877F2] text-white hover:bg-[#166fe5] hover:-translate-y-1 hover:shadow-lg hover:shadow-[#1877F2]/40 transition-all duration-300" title="Facebook">
+                        <i class="fa-brands fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openShareWindow('${linkedinUrl}')" class="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#0A66C2] text-white hover:bg-[#0958a8] hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0A66C2]/40 transition-all duration-300" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <button onclick="location.reload()" class="bg-slate-900 hover:bg-slate-800 text-white text-lg font-bold py-4 px-10 rounded-2xl transition-all duration-300 shadow-xl shadow-slate-900/20 hover:-translate-y-1 flex items-center justify-center gap-3 mx-auto">
+                <i class="fa-solid fa-rotate-right"></i> Jugar de Nuevo
             </button>
         </div>
     `;
 }
+
+window.openShareWindow = function(url) {
+    const width = 600;
+    const height = 600;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    window.open(url, 'share_window', `width=${width},height=${height},top=${top},left=${left},toolbar=0,location=0,menubar=0,scrollbars=yes,resizable=yes`);
+};
+
+window.shareNative = function() {
+    if (navigator.share) {
+        const rawText = `¡Acabo de completar la Trivia de Ingeniería en Ingeniamente en el nivel ${currentState.level} con ${currentState.score.correct} aciertos! ¿Puedes superarme? 🚀🔧`;
+        navigator.share({
+            title: 'Trivia de Ingeniería - Ingeniamente',
+            text: rawText,
+            url: window.location.href,
+        }).catch(err => console.log('Share error:', err));
+    }
+};
 
